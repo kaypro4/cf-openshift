@@ -5,6 +5,7 @@
 # ruby, etc.
 
 DRUPAL_SETTINGS=$OPENSHIFT_REPO_DIR/sites/default/settings.php
+DRUPAL_SALT = date | md5sum
 
 # check and set the symlink for files dir
 if [ ! -d "$OPENSHIFT_REPO_DIR/sites/default/files" ]; then
@@ -32,11 +33,13 @@ else
     echo !!! sites directory already exists - skipping symlink...
 fi
 
+
+
 cat > $DRUPAL_SETTINGS << EOF
 <?php
 
 \$update_free_access = FALSE;
-\$drupal_hash_salt = 'fbKO2wsCjqm44RwY5UgVsajejcYS7pTR4HvYiuc7lJ8';
+\$drupal_hash_salt = '$DRUPAL_SALT';
 
 ini_set('session.gc_probability', 1);
 ini_set('session.gc_divisor', 100);
