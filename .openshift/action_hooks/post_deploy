@@ -22,9 +22,7 @@ fi
 touch $DRUPAL_SETTINGS
 
 chmod u+w $DRUPAL_SETTINGS $OPENSHIFT_REPO_DIR/default
-cat $DRUPAL_SETTINGS | ruby -e "puts STDIN.read.gsub(/\\\$databases\s*=\s*array.*?\)\;/m, '# Replaced by OpenShift')" > $OPENSHIFT_TMP_DIR/settings.php
-cat << "END" >> $OPENSHIFT_TMP_DIR/settings.php
-
+cat > $DRUPAL_SETTINGS << EOF
 
 if [ ! -f "$OPENSHIFT_REPO_DIR/default/settings.php" ]; then
 	$databases = array (
@@ -32,7 +30,7 @@ if [ ! -f "$OPENSHIFT_REPO_DIR/default/settings.php" ]; then
 	  array (
 		'default' => 
 		array (
-      		'database' => 'cityfruit',
+      		 'database' => getenv('OPENSHIFT_APP_NAME'),
      		 'username' => getenv('OPENSHIFT_MYSQL_DB_USERNAME'),
       		'password' => getenv('OPENSHIFT_MYSQL_DB_PASSWORD'),
       		'host' => getenv('OPENSHIFT_MYSQL_DB_HOST'),
@@ -42,5 +40,4 @@ if [ ! -f "$OPENSHIFT_REPO_DIR/default/settings.php" ]; then
 		),
 	  ),
 	);
-END
-  cat $OPENSHIFT_TMP_DIR/settings.php > $DRUPAL_SETTINGS
+EOF
