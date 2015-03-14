@@ -19,29 +19,21 @@ else
     echo !!! sites directory already exists - skipping symlink...
 fi
 
-if [ ! -f "$OPENSHIFT_REPO_DIR/default/settings.php" ]
-then
-
-if (array_key_exists('OPENSHIFT_APP_NAME', $_SERVER)) {
-  $src = $_SERVER;
-} else {
-  $src = $_ENV;
-}
-
-$databases = array (
-  'default' => 
-  array (
-    'default' => 
-    array (
-      'database' => $src['OPENSHIFT_APP_NAME'],
-      'username' => $src['OPENSHIFT_MYSQL_DB_USERNAME'],
-      'password' => $src['OPENSHIFT_MYSQL_DB_PASSWORD'],
-      'host' => $src['OPENSHIFT_MYSQL_DB_HOST'],
-      'port' => $src['OPENSHIFT_MYSQL_DB_PORT'],
-      'driver' => 'mysql',
-      'prefix' => '',
-    ),
-  ),
-);
+if [ ! -f "$OPENSHIFT_REPO_DIR/default/settings.php" ]; then
+	$databases = array (
+	  'default' => 
+	  array (
+		'default' => 
+		array (
+      		'database' => 'cityfruit',
+     		 'username' => getenv('OPENSHIFT_MYSQL_DB_USERNAME'),
+      		'password' => getenv('OPENSHIFT_MYSQL_DB_PASSWORD'),
+      		'host' => getenv('OPENSHIFT_MYSQL_DB_HOST'),
+      		'port' => getenv('OPENSHIFT_MYSQL_DB_PORT'),
+		  'driver' => 'mysql',
+		  'prefix' => '',
+		),
+	  ),
+	);
 END
   cat $OPENSHIFT_REPO_DIR/settings.php > $DRUPAL_SETTINGS
