@@ -67,3 +67,5 @@ ini_set('session.cookie_lifetime', 2000000);
 EOF
 
 chmod u+w $DRUPAL_SETTINGS $OPENSHIFT_REPO_DIR/sites/default
+
+cp $OPENSHIFT_DATA_DIR/.htaccess $OPENSHIFT_REPO_DIR/.htaccess
