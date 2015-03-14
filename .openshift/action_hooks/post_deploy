@@ -66,6 +66,12 @@ ini_set('session.cookie_lifetime', 2000000);
 );
 EOF
 
-chmod u+w $DRUPAL_SETTINGS $OPENSHIFT_REPO_DIR/sites/default
+chmod -R 0755 $OPENSHIFT_REPO_DIR/sites/default
+chmod 0444 $DRUPAL_SETTINGS
+echo !!! perms set on sites default and settings file
 
 cp $OPENSHIFT_DATA_DIR/.htaccess $OPENSHIFT_REPO_DIR/.htaccess
+echo !!! htaccess copied from data dir to repo root
+
+
+
