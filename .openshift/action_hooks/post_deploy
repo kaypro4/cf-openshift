@@ -1,0 +1,19 @@
+#!/bin/bash
+# This deploy hook gets executed after dependencies are resolved and the
+# build hook has been run but before the application has been started back
+# up again.  This script gets executed directly, so it could be python, php,
+# ruby, etc.
+
+
+# check and set the symlink for vendor dir
+if [ ! -d "$OPENSHIFT_REPO_DIR/sites" ]; then
+    echo !!! vendor directory does NOT exist - creating symlink...
+    #mkdir $OPENSHIFT_DATA_DIR/sites
+    echo !!! created vendor directory - creating symlink...
+    ln -s $OPENSHIFT_DATA_DIR/sites $OPENSHIFT_REPO_DIR/sites
+    echo !!! created symlink - setting permissions on directory...
+    #chmod -R 0777 $OPENSHIFT_DATA_DIR/vendor
+    #echo !!! permissions have been set on vendor directory!
+else
+    echo !!! sites directory already exists - skipping symlink...
+fi
