@@ -19,9 +19,11 @@ else
     echo !!! sites directory already exists - skipping symlink...
 fi
 
-chmod u+w $DRUPAL_SETTINGS $DRUPAL_SITE_DIR/default
+touch $DRUPAL_SETTINGS
+
+chmod u+w $DRUPAL_SETTINGS $OPENSHIFT_REPO_DIR/default
 cat $DRUPAL_SETTINGS | ruby -e "puts STDIN.read.gsub(/\\\$databases\s*=\s*array.*?\)\;/m, '# Replaced by OpenShift')" > $OPENSHIFT_TMP_DIR/settings.php
-cat << "END" >> ${OPENSHIFT_TMP_DIR}/settings.php
+cat << "END" >> $OPENSHIFT_TMP_DIR/settings.php
 
 
 if [ ! -f "$OPENSHIFT_REPO_DIR/default/settings.php" ]; then
@@ -41,4 +43,4 @@ if [ ! -f "$OPENSHIFT_REPO_DIR/default/settings.php" ]; then
 	  ),
 	);
 END
-  cat $OPENSHIFT_REPO_DIR/settings.php > $DRUPAL_SETTINGS
+  cat $OPENSHIFT_TMP_DIR/settings.php > $DRUPAL_SETTINGS
