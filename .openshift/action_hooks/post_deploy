@@ -19,7 +19,6 @@ else
     echo !!! sites directory already exists - skipping symlink...
 fi
 
-chmod u+w $DRUPAL_SETTINGS $OPENSHIFT_REPO_DIR/sites/default
 cat > $DRUPAL_SETTINGS << EOF
 $databases = array (
   'default' => 
@@ -37,3 +36,5 @@ $databases = array (
   ),
 );
 EOF
+
+chmod u+w $DRUPAL_SETTINGS $OPENSHIFT_REPO_DIR/sites/default
