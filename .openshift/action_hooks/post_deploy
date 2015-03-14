@@ -14,7 +14,7 @@ if [ ! -d "$OPENSHIFT_REPO_DIR/sites/default/files" ]; then
     ln -s $OPENSHIFT_DATA_DIR/files $OPENSHIFT_REPO_DIR/sites/default/files
     echo !!! created symlink - setting permissions on directory...
     chmod -R 0755 $OPENSHIFT_DATA_DIR/files
-    echo !!! permissions have been set on files directory!
+    echo !!! permissions have been set on files directory
 else
     echo !!! sites directory already exists - skipping symlink...
 fi
@@ -26,8 +26,8 @@ if [ ! -d "$OPENSHIFT_REPO_DIR/sites/default/private" ]; then
     echo !!! created private directory - creating symlink...
     ln -s $OPENSHIFT_DATA_DIR/private $OPENSHIFT_REPO_DIR/sites/default/private
     echo !!! created symlink - setting permissions on directory...
-    chmod -R 0755 $OPENSHIFT_DATA_DIR/private
-    echo !!! permissions have been set on private directory!
+    chmod -R 0750 $OPENSHIFT_DATA_DIR/private
+    echo !!! permissions have been set on private directory
 else
     echo !!! sites directory already exists - skipping symlink...
 fi
@@ -66,8 +66,8 @@ ini_set('session.cookie_lifetime', 2000000);
 );
 EOF
 
-chmod -R 0755 $OPENSHIFT_REPO_DIR/sites/default
-chmod 0444 $DRUPAL_SETTINGS
+#chmod -R 0755 $OPENSHIFT_REPO_DIR/sites/default
+chmod 0400 $DRUPAL_SETTINGS
 echo !!! perms set on sites default and settings file
 
 cp $OPENSHIFT_DATA_DIR/.htaccess $OPENSHIFT_REPO_DIR/.htaccess
