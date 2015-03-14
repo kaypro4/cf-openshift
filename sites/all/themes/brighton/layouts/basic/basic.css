@@ -1,0 +1,11 @@
+#page-manager-edit .container:before,
+#page-manager-edit .container:after {
+  content: " ";
+  display: table;
+}
+#page-manager-edit .container:after {
+  clear: both;
+}
+#page-manager-edit .auto-menu {
+  display: none;
+}

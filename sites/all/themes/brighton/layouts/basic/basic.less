@@ -1,0 +1,19 @@
+
+#page-manager-edit {
+
+  .container {
+    &:before,
+    &:after {
+      content: " "; // 1
+      display: table; // 2
+    }
+    &:after {
+      clear: both;
+    }
+  }
+
+  .auto-menu {
+    display: none;
+  }
+}
+

@@ -1,0 +1,19 @@
+#page-manager-edit .container:before,
+#page-manager-edit .container:after {
+  content: " ";
+  display: table;
+}
+#page-manager-edit .container:after {
+  clear: both;
+}
+#page-manager-edit .auto-menu {
+  display: none;
+}
+#page-manager-edit .nav-col {
+  width: 16.666666666666664%;
+  float: left;
+}
+#page-manager-edit .content-col {
+  width: 83.33333333333334%;
+  float: right;
+}

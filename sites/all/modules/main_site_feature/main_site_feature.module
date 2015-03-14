@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Main site feature feature.
+ */
+
+include_once 'main_site_feature.features.inc';
