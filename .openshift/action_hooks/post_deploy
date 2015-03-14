@@ -5,7 +5,6 @@
 # ruby, etc.
 
 DRUPAL_SETTINGS=$OPENSHIFT_REPO_DIR/sites/default/settings.php
-DRUPAL_SALT = date | md5sum
 
 # check and set the symlink for files dir
 if [ ! -d "$OPENSHIFT_REPO_DIR/sites/default/files" ]; then
