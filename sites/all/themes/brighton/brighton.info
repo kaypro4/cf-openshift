@@ -33,6 +33,7 @@ scripts[] = 'js/custom.js'
 scripts[] = 'js/jquery.magnific-popup.min.js'
 scripts[] = 'js/addthisevent.min.js'
 
+
 ; For information on choosing the desired method, please read the Drupal
 ; Bootstrap sub-theme "how-to" documentation:
 ; https://drupal.org/node/1978010
