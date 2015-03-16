@@ -721,6 +721,8 @@ content: "\2014 \2009";
 
 
 
+
+
 /*Event node */
 
 h3.event-date {
@@ -774,6 +776,7 @@ h3.event-date {
     #views-bootstrap-carousel-1 .carousel-controls {
         display: none;
     }
+    
 
 }
 
@@ -789,8 +792,6 @@ h3.event-date {
         padding-top: 0px !important;
         padding-bottom: 12px;
     }
-
-
 
 
     .navbar-header {
