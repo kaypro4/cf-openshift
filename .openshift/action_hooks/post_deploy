@@ -9,9 +9,9 @@ DRUPAL_SETTINGS=$OPENSHIFT_REPO_DIR/sites/default/settings.php
 # check and set the symlink for files dir
 if [ ! -d "$OPENSHIFT_REPO_DIR/sites/default/files" ]; then
     echo !!! files symlink does NOT exist - creating symlink...
-    mkdir $OPENSHIFT_REPO_DIRsites/default/files
+    mkdir /var/lib/openshift/55047fb8fcf933e89a000093/app-root/runtime/repo/sites/default/files
     echo !!! created files directory - creating symlink...
-    ln -s $OPENSHIFT_DATA_DIR/files $OPENSHIFT_REPO_DIRsites/default/files
+    ln -s $OPENSHIFT_DATA_DIR/files /var/lib/openshift/55047fb8fcf933e89a000093/app-root/runtime/repo/sites/default/files
     echo !!! created symlink - setting permissions on directory...
     chmod -R 0755 $OPENSHIFT_DATA_DIR/files
     echo !!! permissions have been set on files directory
