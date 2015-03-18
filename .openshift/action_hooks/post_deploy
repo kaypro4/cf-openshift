@@ -10,7 +10,7 @@ DRUPAL_SETTINGS=$OPENSHIFT_REPO_DIR/sites/default/settings.php
 if [ ! -d "$OPENSHIFT_REPO_DIR/sites/default/files" ]; then
     echo !!! create files directory
 
-    mkdir /var/lib/openshift/55047fb8fcf933e89a000093/app-root/runtime/repo/sites/default/files
+    mkdir $OPENSHIFT_REPO_DIR/sites/default/files
 
     # echo !!! created files directory - creating symlink...
 
