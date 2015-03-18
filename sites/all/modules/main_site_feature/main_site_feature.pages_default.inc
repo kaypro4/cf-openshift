@@ -17,7 +17,7 @@ function main_site_feature_default_page_manager_handlers() {
   $handler->task = 'node_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = -24;
+  $handler->weight = -23;
   $handler->conf = array(
     'title' => 'Basic Page - No Right Sidebar',
     'no_blocks' => 0,
@@ -160,7 +160,7 @@ function main_site_feature_default_page_manager_handlers() {
   $handler->task = 'node_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = -25;
+  $handler->weight = -24;
   $handler->conf = array(
     'title' => 'Basic Page - With Right Sidebar',
     'no_blocks' => 0,
@@ -318,6 +318,41 @@ function main_site_feature_default_page_manager_handlers() {
     $pane->uuid = '1965e5d1-50cb-4ccb-a9c8-bfb314346f28';
     $display->content['new-1965e5d1-50cb-4ccb-a9c8-bfb314346f28'] = $pane;
     $display->panels['content'][2] = 'new-1965e5d1-50cb-4ccb-a9c8-bfb314346f28';
+    $pane = new stdClass();
+    $pane->pid = 'new-c78471cb-853e-4944-8e8d-23bb40d59664';
+    $pane->panel = 'content';
+    $pane->type = 'block';
+    $pane->subtype = 'webform-client-block-119';
+    $pane->shown = TRUE;
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'path_visibility',
+          'settings' => array(
+            'visibility_setting' => '1',
+            'paths' => 'volunteer/individual-volunteer-sign',
+          ),
+          'context' => 'empty',
+          'not' => FALSE,
+        ),
+      ),
+    );
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $pane->uuid = 'c78471cb-853e-4944-8e8d-23bb40d59664';
+    $display->content['new-c78471cb-853e-4944-8e8d-23bb40d59664'] = $pane;
+    $display->panels['content'][3] = 'new-c78471cb-853e-4944-8e8d-23bb40d59664';
     $pane = new stdClass();
     $pane->pid = 'new-8400f80f-c296-4a11-97cd-7e17a68df13a';
     $pane->panel = 'nav';
@@ -964,7 +999,7 @@ function main_site_feature_default_page_manager_handlers() {
   $handler->task = 'node_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = -26;
+  $handler->weight = -25;
   $handler->conf = array(
     'title' => 'Calendar Item',
     'no_blocks' => 0,
@@ -1269,7 +1304,7 @@ function main_site_feature_default_page_manager_handlers() {
   $handler->task = 'node_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = -23;
+  $handler->weight = -22;
   $handler->conf = array(
     'title' => 'Default',
     'no_blocks' => 0,
@@ -1602,6 +1637,208 @@ function main_site_feature_default_page_manager_handlers() {
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $export['node_view__home_page'] = $handler;
+
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'node_view__volunteer_calendar';
+  $handler->task = 'node_view';
+  $handler->subtask = '';
+  $handler->handler = 'panel_context';
+  $handler->weight = -26;
+  $handler->conf = array(
+    'title' => 'Volunteer Calendar',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'name' => 'volunteer_calendar',
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'path_visibility',
+          'settings' => array(
+            'visibility_setting' => '1',
+            'paths' => 'volunteer/calendar',
+          ),
+          'context' => 'empty',
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+  );
+  $display = new panels_display();
+  $display->layout = 'basic_right_col';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'title' => NULL,
+      'nav' => NULL,
+      'content' => NULL,
+      'right' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = 'd1190c6b-d296-4370-9164-0968d21bcc8c';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-f298ca9f-1193-4a5f-84c6-e4924d1f0b72';
+    $pane->panel = 'content';
+    $pane->type = 'entity_view';
+    $pane->subtype = 'node';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'view_mode' => 'full',
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'f298ca9f-1193-4a5f-84c6-e4924d1f0b72';
+    $display->content['new-f298ca9f-1193-4a5f-84c6-e4924d1f0b72'] = $pane;
+    $display->panels['content'][0] = 'new-f298ca9f-1193-4a5f-84c6-e4924d1f0b72';
+    $pane = new stdClass();
+    $pane->pid = 'new-9d69debe-478e-492a-bf5c-e59831197845';
+    $pane->panel = 'content';
+    $pane->type = 'block';
+    $pane->subtype = 'views-volunteer_calendar-block_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '9d69debe-478e-492a-bf5c-e59831197845';
+    $display->content['new-9d69debe-478e-492a-bf5c-e59831197845'] = $pane;
+    $display->panels['content'][1] = 'new-9d69debe-478e-492a-bf5c-e59831197845';
+    $pane = new stdClass();
+    $pane->pid = 'new-36ac292c-750a-443f-81e7-9613c1997412';
+    $pane->panel = 'content';
+    $pane->type = 'block';
+    $pane->subtype = 'block-11';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'padme-top',
+    );
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = '36ac292c-750a-443f-81e7-9613c1997412';
+    $display->content['new-36ac292c-750a-443f-81e7-9613c1997412'] = $pane;
+    $display->panels['content'][2] = 'new-36ac292c-750a-443f-81e7-9613c1997412';
+    $pane = new stdClass();
+    $pane->pid = 'new-cbc1edab-b213-46c0-a0b9-1fa47eea5868';
+    $pane->panel = 'right';
+    $pane->type = 'block';
+    $pane->subtype = 'block-6';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'cbc1edab-b213-46c0-a0b9-1fa47eea5868';
+    $display->content['new-cbc1edab-b213-46c0-a0b9-1fa47eea5868'] = $pane;
+    $display->panels['right'][0] = 'new-cbc1edab-b213-46c0-a0b9-1fa47eea5868';
+    $pane = new stdClass();
+    $pane->pid = 'new-b403608c-6854-4d8b-92fc-a32b9b2b6bb9';
+    $pane->panel = 'right';
+    $pane->type = 'block';
+    $pane->subtype = 'views-blog_on_homepage-block';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'From Our Blog',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = 'b403608c-6854-4d8b-92fc-a32b9b2b6bb9';
+    $display->content['new-b403608c-6854-4d8b-92fc-a32b9b2b6bb9'] = $pane;
+    $display->panels['right'][1] = 'new-b403608c-6854-4d8b-92fc-a32b9b2b6bb9';
+    $pane = new stdClass();
+    $pane->pid = 'new-019aaf0d-9279-4e24-9b5b-f46a8f7c806a';
+    $pane->panel = 'title';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'Title',
+      'title' => '',
+      'body' => '<h1>Volunteer Calendar</h1>
+',
+      'format' => 'full_html',
+      'substitute' => 1,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '019aaf0d-9279-4e24-9b5b-f46a8f7c806a';
+    $display->content['new-019aaf0d-9279-4e24-9b5b-f46a8f7c806a'] = $pane;
+    $display->panels['title'][0] = 'new-019aaf0d-9279-4e24-9b5b-f46a8f7c806a';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = 'new-f298ca9f-1193-4a5f-84c6-e4924d1f0b72';
+  $handler->conf['display'] = $display;
+  $export['node_view__volunteer_calendar'] = $handler;
 
   return $export;
 }

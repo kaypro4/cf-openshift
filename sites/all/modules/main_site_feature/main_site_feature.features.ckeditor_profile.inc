@@ -27,7 +27,7 @@ function main_site_feature_ckeditor_profile_defaults() {
     [\'IMCE\',\'Table\',\'SpecialChar\',\'Iframe\',\'Maximize\'],
     [\'Link\',\'Unlink\'],
     \'/\',
-    [\'Format\',\'Font\',\'FontSize\',\'Bold\',\'Italic\',\'Underline\',\'Strike\',\'-\',\'RemoveFormat\'],
+    [\'Format\',\'Font\',\'FontSize\',\'Bold\',\'Italic\',\'Underline\',\'BGColor\',\'Strike\',\'-\',\'RemoveFormat\'],
     [\'NumberedList\',\'BulletedList\',\'-\',\'Outdent\',\'Indent\'],
     [\'JustifyLeft\',\'JustifyCenter\',\'JustifyRight\',\'JustifyBlock\']
 ]',
