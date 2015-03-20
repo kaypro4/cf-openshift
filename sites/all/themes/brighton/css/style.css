@@ -826,11 +826,16 @@ h3.event-date {
         margin-top:10px;
     }
 
-    .navbar-nav > li {
-        padding-top: 0px !important;
-        padding-bottom: 12px;
+    .navbar-nav > li{
+        padding-top: 10px !important;
+        padding-bottom: 10px;
+        border-top: solid 1px #ddd;
     }
 
+
+    .navbar-nav > li.last {
+        border-bottom: solid 1px #ddd;
+    }
 
     .navbar-header {
         float: none;
@@ -859,8 +864,10 @@ h3.event-date {
     }
 
     .navbar-nav {
-        float: none!important;
+        float: none !important;
         margin-top: 7.5px;
+        padding-left: 10px;
+        padding-right: 15px;
     }
 
     .navbar-nav>li {
@@ -868,10 +875,25 @@ h3.event-date {
     }
 
     .navbar-nav>li>a {
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
     }
     
+    .navbar-nav>li>a:hover, .navbar-nav .open .dropdown-menu>li>a:hover, .navbar-nav>li>a:active{
+        background-color: #8ac54f !important;
+    }
+
+    .navbar-nav .open .dropdown-menu>li {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    } 
+
+    .dropdown .leaf {
+
+        border-top: solid 1px #ddd;
+    }
+
+
     .navbar-inverse .navbar-nav .open .dropdown-menu .divider{
         background-color: #ffffff;
     }
@@ -882,11 +904,6 @@ h3.event-date {
 
     .cta-list, .footer {
         padding-top: 20px;
-    }
-    
-    .nav>li>a {
-        padding-top: 0;
-        padding-bottom: 0;
     }
     
     #footer h4 {
