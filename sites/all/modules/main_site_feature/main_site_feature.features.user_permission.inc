@@ -131,15 +131,6 @@ function main_site_feature_user_default_permissions() {
     'module' => 'devel',
   );
 
-  // Exported permission: 'access google map api key'.
-  $permissions['access google map api key'] = array(
-    'name' => 'access google map api key',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'google_map_field',
-  );
-
   // Exported permission: 'access in-place editing'.
   $permissions['access in-place editing'] = array(
     'name' => 'access in-place editing',
@@ -722,13 +713,6 @@ function main_site_feature_user_default_permissions() {
     'module' => 'paragraphs_bundle_permissions',
   );
 
-  // Exported permission: 'create paragraph content map'.
-  $permissions['create paragraph content map'] = array(
-    'name' => 'create paragraph content map',
-    'roles' => array(),
-    'module' => 'paragraphs_bundle_permissions',
-  );
-
   // Exported permission: 'create paragraph content quote'.
   $permissions['create paragraph content quote'] = array(
     'name' => 'create paragraph content quote',
@@ -933,13 +917,6 @@ function main_site_feature_user_default_permissions() {
     'roles' => array(
       'Blogger' => 'Blogger',
     ),
-    'module' => 'paragraphs_bundle_permissions',
-  );
-
-  // Exported permission: 'delete paragraph content map'.
-  $permissions['delete paragraph content map'] = array(
-    'name' => 'delete paragraph content map',
-    'roles' => array(),
     'module' => 'paragraphs_bundle_permissions',
   );
 
@@ -1397,13 +1374,6 @@ function main_site_feature_user_default_permissions() {
     'module' => 'paragraphs_bundle_permissions',
   );
 
-  // Exported permission: 'update paragraph content map'.
-  $permissions['update paragraph content map'] = array(
-    'name' => 'update paragraph content map',
-    'roles' => array(),
-    'module' => 'paragraphs_bundle_permissions',
-  );
-
   // Exported permission: 'update paragraph content quote'.
   $permissions['update paragraph content quote'] = array(
     'name' => 'update paragraph content quote',
@@ -1579,15 +1549,6 @@ function main_site_feature_user_default_permissions() {
     'name' => 'view paragraph content full_width_text',
     'roles' => array(
       'Blogger' => 'Blogger',
-      'anonymous user' => 'anonymous user',
-    ),
-    'module' => 'paragraphs_bundle_permissions',
-  );
-
-  // Exported permission: 'view paragraph content map'.
-  $permissions['view paragraph content map'] = array(
-    'name' => 'view paragraph content map',
-    'roles' => array(
       'anonymous user' => 'anonymous user',
     ),
     'module' => 'paragraphs_bundle_permissions',

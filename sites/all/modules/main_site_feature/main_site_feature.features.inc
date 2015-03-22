@@ -220,6 +220,11 @@ function main_site_feature_paragraphs_info() {
       'bundle' => 'banner_image',
       'locked' => '1',
     ),
+    'block' => array(
+      'name' => 'Block (Experts Only)',
+      'bundle' => 'block',
+      'locked' => '1',
+    ),
     'call_to_action' => array(
       'name' => 'Call To Action',
       'bundle' => 'call_to_action',
@@ -228,11 +233,6 @@ function main_site_feature_paragraphs_info() {
     'full_width_text' => array(
       'name' => 'Full Width Text',
       'bundle' => 'full_width_text',
-      'locked' => '1',
-    ),
-    'map' => array(
-      'name' => 'Map',
-      'bundle' => 'map',
       'locked' => '1',
     ),
     'quote' => array(
@@ -248,6 +248,11 @@ function main_site_feature_paragraphs_info() {
     'video' => array(
       'name' => 'Video',
       'bundle' => 'video',
+      'locked' => '1',
+    ),
+    'webform' => array(
+      'name' => 'Webform',
+      'bundle' => 'webform',
       'locked' => '1',
     ),
   );

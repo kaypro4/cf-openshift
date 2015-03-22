@@ -224,7 +224,7 @@ function main_site_feature_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_banner_image',
     'label' => 'Banner Image',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'alt_field' => 1,
       'default_image' => 0,
@@ -637,7 +637,7 @@ function main_site_feature_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_banner_image',
     'label' => 'Banner Image',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'alt_field' => 1,
       'default_image' => 0,
@@ -662,10 +662,12 @@ function main_site_feature_field_default_field_instances() {
         'manualcrop_require_cropping' => array(
           'banner_image' => 0,
           'homepage_slide' => 0,
+          'slideshow_4_3' => 0,
         ),
         'manualcrop_styles_list' => array(
           'banner_image' => 'banner_image',
           'homepage_slide' => 0,
+          'slideshow_4_3' => 0,
         ),
         'manualcrop_styles_mode' => 'include',
         'manualcrop_thumblist' => 0,
@@ -861,47 +863,6 @@ function main_site_feature_field_default_field_instances() {
       ),
       'type' => 'file_generic',
       'weight' => 9,
-    ),
-  );
-
-  // Exported field_instance: 'node-event-field_event_location'
-  $field_instances['node-event-field_event_location'] = array(
-    'bundle' => 'event',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'google_map_field',
-        'settings' => array(
-          'quickedit' => array(
-            'editor' => 'form',
-          ),
-        ),
-        'type' => 'google_map_field_formatter_default',
-        'weight' => 3,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_event_location',
-    'label' => 'Event Location',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'google_map_field',
-      'settings' => array(),
-      'type' => 'google_map_field_widget',
-      'weight' => 5,
     ),
   );
 
@@ -1412,21 +1373,23 @@ function main_site_feature_field_default_field_instances() {
       'add_mode' => 'select',
       'allowed_bundles' => array(
         'banner_image' => 'banner_image',
+        'block' => 'block',
         'call_to_action' => 'call_to_action',
         'full_width_text' => 'full_width_text',
-        'map' => 'map',
         'quote' => 'quote',
         'slideshow' => 'slideshow',
         'video' => 'video',
+        'webform' => 'webform',
       ),
       'bundle_weights' => array(
         'banner_image' => -9,
+        'block' => 8,
         'call_to_action' => -8,
         'full_width_text' => -10,
-        'map' => -5,
         'quote' => -7,
         'slideshow' => -4,
         'video' => -6,
+        'webform' => -10,
       ),
       'default_edit_mode' => 'open',
       'title' => 'Section',
@@ -1549,6 +1512,50 @@ function main_site_feature_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'paragraphs_item-block-field_block_name'
+  $field_instances['paragraphs_item-block-field_block_name'] = array(
+    'bundle' => 'block',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'quickedit' => array(
+            'editor' => 'plain_text',
+          ),
+        ),
+        'type' => 'text_plain',
+        'weight' => 0,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_block_name',
+    'label' => 'Block Name',
+    'required' => 1,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
       'weight' => 1,
     ),
   );
@@ -1725,55 +1732,6 @@ function main_site_feature_field_default_field_instances() {
         'rows' => 8,
       ),
       'type' => 'text_textarea',
-      'weight' => 1,
-    ),
-  );
-
-  // Exported field_instance: 'paragraphs_item-map-field_map'
-  $field_instances['paragraphs_item-map-field_map'] = array(
-    'bundle' => 'map',
-    'default_value' => array(
-      0 => array(
-        'name' => '',
-        'lat' => 47.6062095,
-        'lon' => '-122.33207080000003',
-        'zoom' => 9,
-        'open_map' => 'Set Map Marker',
-      ),
-    ),
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'google_map_field',
-        'settings' => array(
-          'quickedit' => array(
-            'editor' => 'form',
-          ),
-        ),
-        'type' => 'google_map_field_formatter_default',
-        'weight' => 0,
-      ),
-      'paragraphs_editor_preview' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'paragraphs_item',
-    'field_name' => 'field_map',
-    'label' => 'Map',
-    'required' => 1,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'google_map_field',
-      'settings' => array(),
-      'type' => 'google_map_field_widget',
       'weight' => 1,
     ),
   );
@@ -2010,6 +1968,49 @@ function main_site_feature_field_default_field_instances() {
       'module' => 'youtube',
       'settings' => array(),
       'type' => 'youtube',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'paragraphs_item-webform-field_webform'
+  $field_instances['paragraphs_item-webform-field_webform'] = array(
+    'bundle' => 'webform',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 0,
+          'quickedit' => array(
+            'editor' => 'form',
+          ),
+          'view_mode' => 'teaser',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 0,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_webform',
+    'label' => 'Webform',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
       'weight' => 1,
     ),
   );
@@ -2322,6 +2323,7 @@ function main_site_feature_field_default_field_instances() {
   t('Attribution');
   t('Banner Image');
   t('Bio');
+  t('Block Name');
   t('Blog Sections');
   t('Body');
   t('Check this box if you would like this item to appear on the homepage.');
@@ -2333,14 +2335,12 @@ function main_site_feature_field_default_field_instances() {
   t('Event Category');
   t('Event Date');
   t('Event Files');
-  t('Event Location');
   t('Event Registration Link');
   t('Feature Link');
   t('Feature on Homepage');
   t('Full Name');
   t('Full Text');
   t('List in About Us?');
-  t('Map');
   t('Maybe something like "Donate Now"');
   t('Maybe something like "Help City Fruit harvest more fruit next year"');
   t('Optional, leave blank to link directly to the blog post.  ');
@@ -2362,6 +2362,7 @@ function main_site_feature_field_default_field_instances() {
   t('This is the full URL to the page or a page relative to the root of this site (e.g. /donate)');
   t('Title');
   t('Video URL');
+  t('Webform');
   t('Will show on the homepage if selected below and on the Calendar listing page.');
 
   return $field_instances;
