@@ -596,6 +596,35 @@ function main_site_feature_field_default_field_bases() {
     'type' => 'text_long',
   );
 
+  // Exported field_base: 'field_google_api_key'
+  $field_bases['field_google_api_key'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_google_api_key',
+    'foreign keys' => array(
+      'format' => array(
+        'columns' => array(
+          'format' => 'format',
+        ),
+        'table' => 'filter_format',
+      ),
+    ),
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
   // Exported field_base: 'field_list_in_about_us_'
   $field_bases['field_list_in_about_us_'] = array(
     'active' => 1,
@@ -620,6 +649,64 @@ function main_site_feature_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'list_boolean',
+  );
+
+  // Exported field_base: 'field_map_height'
+  $field_bases['field_map_height'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_map_height',
+    'foreign keys' => array(
+      'format' => array(
+        'columns' => array(
+          'format' => 'format',
+        ),
+        'table' => 'filter_format',
+      ),
+    ),
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
+  // Exported field_base: 'field_map_width'
+  $field_bases['field_map_width'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_map_width',
+    'foreign keys' => array(
+      'format' => array(
+        'columns' => array(
+          'format' => 'format',
+        ),
+        'table' => 'filter_format',
+      ),
+    ),
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
   );
 
   // Exported field_base: 'field_order_on_about_us'
@@ -652,6 +739,35 @@ function main_site_feature_field_default_field_bases() {
     'settings' => array(),
     'translatable' => 0,
     'type' => 'paragraphs',
+  );
+
+  // Exported field_base: 'field_place_name'
+  $field_bases['field_place_name'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_place_name',
+    'foreign keys' => array(
+      'format' => array(
+        'columns' => array(
+          'format' => 'format',
+        ),
+        'table' => 'filter_format',
+      ),
+    ),
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
   );
 
   // Exported field_base: 'field_profile_photo'

@@ -695,6 +695,13 @@ function main_site_feature_user_default_permissions() {
     'module' => 'paragraphs_bundle_permissions',
   );
 
+  // Exported permission: 'create paragraph content block'.
+  $permissions['create paragraph content block'] = array(
+    'name' => 'create paragraph content block',
+    'roles' => array(),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
   // Exported permission: 'create paragraph content call_to_action'.
   $permissions['create paragraph content call_to_action'] = array(
     'name' => 'create paragraph content call_to_action',
@@ -710,6 +717,13 @@ function main_site_feature_user_default_permissions() {
     'roles' => array(
       'Blogger' => 'Blogger',
     ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'create paragraph content google_map'.
+  $permissions['create paragraph content google_map'] = array(
+    'name' => 'create paragraph content google_map',
+    'roles' => array(),
     'module' => 'paragraphs_bundle_permissions',
   );
 
@@ -737,6 +751,13 @@ function main_site_feature_user_default_permissions() {
     'roles' => array(
       'Blogger' => 'Blogger',
     ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'create paragraph content webform'.
+  $permissions['create paragraph content webform'] = array(
+    'name' => 'create paragraph content webform',
+    'roles' => array(),
     'module' => 'paragraphs_bundle_permissions',
   );
 
@@ -902,6 +923,13 @@ function main_site_feature_user_default_permissions() {
     'module' => 'paragraphs_bundle_permissions',
   );
 
+  // Exported permission: 'delete paragraph content block'.
+  $permissions['delete paragraph content block'] = array(
+    'name' => 'delete paragraph content block',
+    'roles' => array(),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
   // Exported permission: 'delete paragraph content call_to_action'.
   $permissions['delete paragraph content call_to_action'] = array(
     'name' => 'delete paragraph content call_to_action',
@@ -917,6 +945,13 @@ function main_site_feature_user_default_permissions() {
     'roles' => array(
       'Blogger' => 'Blogger',
     ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'delete paragraph content google_map'.
+  $permissions['delete paragraph content google_map'] = array(
+    'name' => 'delete paragraph content google_map',
+    'roles' => array(),
     'module' => 'paragraphs_bundle_permissions',
   );
 
@@ -944,6 +979,13 @@ function main_site_feature_user_default_permissions() {
     'roles' => array(
       'Blogger' => 'Blogger',
     ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'delete paragraph content webform'.
+  $permissions['delete paragraph content webform'] = array(
+    'name' => 'delete paragraph content webform',
+    'roles' => array(),
     'module' => 'paragraphs_bundle_permissions',
   );
 
@@ -1356,6 +1398,13 @@ function main_site_feature_user_default_permissions() {
     'module' => 'paragraphs_bundle_permissions',
   );
 
+  // Exported permission: 'update paragraph content block'.
+  $permissions['update paragraph content block'] = array(
+    'name' => 'update paragraph content block',
+    'roles' => array(),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
   // Exported permission: 'update paragraph content call_to_action'.
   $permissions['update paragraph content call_to_action'] = array(
     'name' => 'update paragraph content call_to_action',
@@ -1371,6 +1420,13 @@ function main_site_feature_user_default_permissions() {
     'roles' => array(
       'Blogger' => 'Blogger',
     ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'update paragraph content google_map'.
+  $permissions['update paragraph content google_map'] = array(
+    'name' => 'update paragraph content google_map',
+    'roles' => array(),
     'module' => 'paragraphs_bundle_permissions',
   );
 
@@ -1398,6 +1454,13 @@ function main_site_feature_user_default_permissions() {
     'roles' => array(
       'Blogger' => 'Blogger',
     ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'update paragraph content webform'.
+  $permissions['update paragraph content webform'] = array(
+    'name' => 'update paragraph content webform',
+    'roles' => array(),
     'module' => 'paragraphs_bundle_permissions',
   );
 
@@ -1534,6 +1597,13 @@ function main_site_feature_user_default_permissions() {
     'module' => 'paragraphs_bundle_permissions',
   );
 
+  // Exported permission: 'view paragraph content block'.
+  $permissions['view paragraph content block'] = array(
+    'name' => 'view paragraph content block',
+    'roles' => array(),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
   // Exported permission: 'view paragraph content call_to_action'.
   $permissions['view paragraph content call_to_action'] = array(
     'name' => 'view paragraph content call_to_action',
@@ -1549,6 +1619,15 @@ function main_site_feature_user_default_permissions() {
     'name' => 'view paragraph content full_width_text',
     'roles' => array(
       'Blogger' => 'Blogger',
+      'anonymous user' => 'anonymous user',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'view paragraph content google_map'.
+  $permissions['view paragraph content google_map'] = array(
+    'name' => 'view paragraph content google_map',
+    'roles' => array(
       'anonymous user' => 'anonymous user',
     ),
     'module' => 'paragraphs_bundle_permissions',
@@ -1581,6 +1660,13 @@ function main_site_feature_user_default_permissions() {
       'Blogger' => 'Blogger',
       'anonymous user' => 'anonymous user',
     ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'view paragraph content webform'.
+  $permissions['view paragraph content webform'] = array(
+    'name' => 'view paragraph content webform',
+    'roles' => array(),
     'module' => 'paragraphs_bundle_permissions',
   );
 

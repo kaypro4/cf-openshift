@@ -108,7 +108,7 @@ addthisevent.settings({
   <?php print render($content['field_banner_image']) ?>
   <p><?php print render($content['body']) ?></p>
 
-
+  <?php print render($content['field_page_sections']) ?>
 
     <a href="#" title="Add to Calendar" class="addthisevent">
       Add to Your Calendar <i class="fa fa-chevron-down"></i>

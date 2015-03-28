@@ -235,6 +235,11 @@ function main_site_feature_paragraphs_info() {
       'bundle' => 'full_width_text',
       'locked' => '1',
     ),
+    'google_map' => array(
+      'name' => 'Google Map',
+      'bundle' => 'google_map',
+      'locked' => '1',
+    ),
     'quote' => array(
       'name' => 'Quote',
       'bundle' => 'quote',

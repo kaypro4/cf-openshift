@@ -398,21 +398,25 @@ function main_site_feature_field_default_field_instances() {
       'add_mode' => 'select',
       'allowed_bundles' => array(
         'banner_image' => -1,
+        'block' => -1,
         'call_to_action' => 'call_to_action',
         'full_width_text' => 'full_width_text',
-        'map' => 'map',
+        'google_map' => 'google_map',
         'quote' => 'quote',
         'slideshow' => 'slideshow',
         'video' => 'video',
+        'webform' => -1,
       ),
       'bundle_weights' => array(
         'banner_image' => -8,
+        'block' => 3,
         'call_to_action' => -7,
         'full_width_text' => -10,
-        'map' => -6,
+        'google_map' => 6,
         'quote' => -5,
         'slideshow' => -9,
         'video' => -4,
+        'webform' => 10,
       ),
       'default_edit_mode' => 'open',
       'title' => 'Section',
@@ -1025,6 +1029,74 @@ function main_site_feature_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-event-field_page_sections'
+  $field_instances['node-event-field_page_sections'] = array(
+    'bundle' => 'event',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'paragraphs',
+        'settings' => array(
+          'quickedit' => array(
+            'editor' => 'form',
+          ),
+          'view_mode' => 'full',
+        ),
+        'type' => 'paragraphs_view',
+        'weight' => 13,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_page_sections',
+    'label' => 'Page Sections',
+    'required' => 0,
+    'settings' => array(
+      'add_mode' => 'select',
+      'allowed_bundles' => array(
+        'banner_image' => -1,
+        'block' => -1,
+        'call_to_action' => 'call_to_action',
+        'full_width_text' => -1,
+        'google_map' => 'google_map',
+        'quote' => 'quote',
+        'slideshow' => 'slideshow',
+        'video' => 'video',
+        'webform' => -1,
+      ),
+      'bundle_weights' => array(
+        'banner_image' => 2,
+        'block' => 3,
+        'call_to_action' => 4,
+        'full_width_text' => 5,
+        'google_map' => 6,
+        'quote' => 7,
+        'slideshow' => 8,
+        'video' => 9,
+        'webform' => 10,
+      ),
+      'default_edit_mode' => 'open',
+      'title' => 'Page Section',
+      'title_multiple' => 'Page Sections',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'paragraphs',
+      'settings' => array(),
+      'type' => 'paragraphs_embed',
+      'weight' => 5,
+    ),
+  );
+
   // Exported field_instance: 'node-event-field_show_right_sidebar'
   $field_instances['node-event-field_show_right_sidebar'] = array(
     'bundle' => 'event',
@@ -1376,6 +1448,7 @@ function main_site_feature_field_default_field_instances() {
         'block' => 'block',
         'call_to_action' => 'call_to_action',
         'full_width_text' => 'full_width_text',
+        'google_map' => 'google_map',
         'quote' => 'quote',
         'slideshow' => 'slideshow',
         'video' => 'video',
@@ -1386,6 +1459,7 @@ function main_site_feature_field_default_field_instances() {
         'block' => 8,
         'call_to_action' => -8,
         'full_width_text' => -10,
+        'google_map' => -10,
         'quote' => -7,
         'slideshow' => -4,
         'video' => -6,
@@ -1732,6 +1806,194 @@ function main_site_feature_field_default_field_instances() {
         'rows' => 8,
       ),
       'type' => 'text_textarea',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'paragraphs_item-google_map-field_google_api_key'
+  $field_instances['paragraphs_item-google_map-field_google_api_key'] = array(
+    'bundle' => 'google_map',
+    'default_value' => array(
+      0 => array(
+        'value' => 'AIzaSyBCV-t5xOAHKQARc-eaVpKc3kaTeUMxONI',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'You should not need to change this.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(
+          'quickedit' => array(
+            'editor' => 'plain_text',
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_google_api_key',
+    'label' => 'Google API Key',
+    'required' => 1,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance: 'paragraphs_item-google_map-field_map_height'
+  $field_instances['paragraphs_item-google_map-field_map_height'] = array(
+    'bundle' => 'google_map',
+    'default_value' => array(
+      0 => array(
+        'value' => '300px',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Height of the map in pixels or percent.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'quickedit' => array(
+            'editor' => 'plain_text',
+          ),
+        ),
+        'type' => 'text_plain',
+        'weight' => 1,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_map_height',
+    'label' => 'Map Height',
+    'required' => 1,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'paragraphs_item-google_map-field_map_width'
+  $field_instances['paragraphs_item-google_map-field_map_width'] = array(
+    'bundle' => 'google_map',
+    'default_value' => array(
+      0 => array(
+        'value' => '100%',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Width of the map in pixels or percent.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'quickedit' => array(
+            'editor' => 'plain_text',
+          ),
+        ),
+        'type' => 'text_plain',
+        'weight' => 2,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_map_width',
+    'label' => 'Map Width',
+    'required' => 1,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'paragraphs_item-google_map-field_place_name'
+  $field_instances['paragraphs_item-google_map-field_place_name'] = array(
+    'bundle' => 'google_map',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Can be any "place name" that Google will recognize.  Addresses work well or even common landmarks.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'quickedit' => array(
+            'editor' => 'plain_text',
+          ),
+        ),
+        'type' => 'text_plain',
+        'weight' => 0,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_place_name',
+    'label' => 'Place Name',
+    'required' => 1,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
       'weight' => 1,
     ),
   );
@@ -2326,6 +2588,7 @@ function main_site_feature_field_default_field_instances() {
   t('Block Name');
   t('Blog Sections');
   t('Body');
+  t('Can be any "place name" that Google will recognize.  Addresses work well or even common landmarks.');
   t('Check this box if you would like this item to appear on the homepage.');
   t('Comment');
   t('Display Date Range');
@@ -2340,13 +2603,18 @@ function main_site_feature_field_default_field_instances() {
   t('Feature on Homepage');
   t('Full Name');
   t('Full Text');
+  t('Google API Key');
+  t('Height of the map in pixels or percent.');
   t('List in About Us?');
+  t('Map Height');
+  t('Map Width');
   t('Maybe something like "Donate Now"');
   t('Maybe something like "Help City Fruit harvest more fruit next year"');
   t('Optional, leave blank to link directly to the blog post.  ');
   t('Optional, leave blank to link directly to the calendar event.  ');
   t('Order on About Us');
   t('Page Sections');
+  t('Place Name');
   t('Profile Photo');
   t('Quote Text');
   t('Relationship to City Fruit');
@@ -2363,7 +2631,9 @@ function main_site_feature_field_default_field_instances() {
   t('Title');
   t('Video URL');
   t('Webform');
+  t('Width of the map in pixels or percent.');
   t('Will show on the homepage if selected below and on the Calendar listing page.');
+  t('You should not need to change this.');
 
   return $field_instances;
 }
