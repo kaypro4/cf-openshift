@@ -131,15 +131,6 @@ function main_site_feature_user_default_permissions() {
     'module' => 'devel',
   );
 
-  // Exported permission: 'access in-place editing'.
-  $permissions['access in-place editing'] = array(
-    'name' => 'access in-place editing',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'quickedit',
-  );
-
   // Exported permission: 'access own authorizations'.
   $permissions['access own authorizations'] = array(
     'name' => 'access own authorizations',
@@ -629,15 +620,6 @@ function main_site_feature_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'user',
-  );
-
-  // Exported permission: 'change layouts in place editing'.
-  $permissions['change layouts in place editing'] = array(
-    'name' => 'change layouts in place editing',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'panels',
   );
 
   // Exported permission: 'change own username'.
@@ -1491,15 +1473,6 @@ function main_site_feature_user_default_permissions() {
     'module' => 'drupagram',
   );
 
-  // Exported permission: 'use ipe with page manager'.
-  $permissions['use ipe with page manager'] = array(
-    'name' => 'use ipe with page manager',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'panels',
-  );
-
   // Exported permission: 'use page manager'.
   $permissions['use page manager'] = array(
     'name' => 'use page manager',
@@ -1521,15 +1494,6 @@ function main_site_feature_user_default_permissions() {
   // Exported permission: 'use panels dashboard'.
   $permissions['use panels dashboard'] = array(
     'name' => 'use panels dashboard',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'panels',
-  );
-
-  // Exported permission: 'use panels in place editing'.
-  $permissions['use panels in place editing'] = array(
-    'name' => 'use panels in place editing',
     'roles' => array(
       'administrator' => 'administrator',
     ),
@@ -1600,7 +1564,9 @@ function main_site_feature_user_default_permissions() {
   // Exported permission: 'view paragraph content block'.
   $permissions['view paragraph content block'] = array(
     'name' => 'view paragraph content block',
-    'roles' => array(),
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+    ),
     'module' => 'paragraphs_bundle_permissions',
   );
 
@@ -1666,7 +1632,9 @@ function main_site_feature_user_default_permissions() {
   // Exported permission: 'view paragraph content webform'.
   $permissions['view paragraph content webform'] = array(
     'name' => 'view paragraph content webform',
-    'roles' => array(),
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+    ),
     'module' => 'paragraphs_bundle_permissions',
   );
 
