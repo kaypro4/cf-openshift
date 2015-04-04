@@ -7,13 +7,20 @@
 DRUPAL_SETTINGS=$OPENSHIFT_REPO_DIR/sites/default/settings.php
 
 # check and set the symlink for files dir
-if [ ! -d "$OPENSHIFT_REPO_DIR/sites/default/files" ]; then
+if [ ! -d "$OPENSHIFT_REPO_DIR/sites/default" ]; then
     echo !!! create files directory
-
     mkdir $OPENSHIFT_REPO_DIR/sites/default
     # mkdir $OPENSHIFT_REPO_DIR/sites/default/files
+    echo !!! created files directory 
 
-    echo !!! created files directory - creating symlink...
+else
+    echo !!! default directory already exists
+fi
+
+# check and set the symlink for files dir
+if [ ! -d "$OPENSHIFT_REPO_DIR/sites/default/files" ]; then
+
+    echo !!! creating symlink...
 
     ln -s $OPENSHIFT_DATA_DIR/files $OPENSHIFT_REPO_DIR/sites/default/files
 
@@ -27,18 +34,23 @@ else
     echo !!! sites directory already exists - skipping symlink...
 fi
 
-# check and set the symlink for files dir
-# if [ ! -d "$OPENSHIFT_REPO_DIR/sites/default/private" ]; then
-#     echo !!! private symlink does NOT exist - creating symlink...
-#     mkdir $OPENSHIFT_REPO_DIRsites/default/private
-#     echo !!! created private directory - creating symlink...
-#     ln -s $OPENSHIFT_DATA_DIR/private $OPENSHIFT_REPO_DIRsites/default/private
-#     echo !!! created symlink - setting permissions on directory...
-#     chmod -R 0750 $OPENSHIFT_DATA_DIR/private
-#     echo !!! permissions have been set on private directory
-# else
-#     echo !!! sites directory already exists - skipping symlink...
-# fi
+# check and set the symlink for private dir
+if [ ! -d "$OPENSHIFT_REPO_DIR/sites/default/private" ]; then
+
+    echo !!! creating symlink...
+
+    ln -s $OPENSHIFT_DATA_DIR/private $OPENSHIFT_REPO_DIR/sites/default/private
+
+    echo !!! created symlink - setting permissions on directory...
+
+    chmod -R 0750 $OPENSHIFT_DATA_DIR/private
+
+    echo !!! permissions have been set on private directory
+
+else
+    echo !!! private directory already exists - skipping symlink...
+fi
+
 
 cp $OPENSHIFT_DATA_DIR/settings.php $DRUPAL_SETTINGS
 echo !!! settings.php copied from data dir to repo root
