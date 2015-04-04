@@ -4,22 +4,22 @@
 # up again.  This script gets executed directly, so it could be python, php,
 # ruby, etc.
 
-DRUPAL_SETTINGS=$OPENSHIFT_REPO_DIRsites/default/settings.php
+DRUPAL_SETTINGS=$OPENSHIFT_REPO_DIR/sites/default/settings.php
 
 # check and set the symlink for files dir
-if [ ! -d "$OPENSHIFT_REPO_DIRsites/default/files" ]; then
+if [ ! -d "$OPENSHIFT_REPO_DIR/sites/default/files" ]; then
     echo !!! create files directory
 
-    mkdir $OPENSHIFT_REPO_DIRsites/default
-    mkdir $OPENSHIFT_REPO_DIRsites/default/files
+    mkdir $OPENSHIFT_REPO_DIR/sites/default
+    mkdir $OPENSHIFT_REPO_DIR/sites/default/files
 
     echo !!! created files directory - creating symlink...
 
-    ln -s $OPENSHIFT_DATA_DIRfiles $OPENSHIFT_REPO_DIRsites/default/files
+    ln -s $OPENSHIFT_DATA_DIR/files $OPENSHIFT_REPO_DIR/sites/default/files
 
     echo !!! created symlink - setting permissions on directory...
 
-    chmod -R 0775 $OPENSHIFT_DATA_DIRfiles
+    chmod -R 0755 $OPENSHIFT_DATA_DIR/files
 
     echo !!! permissions have been set on files directory
 
@@ -40,12 +40,12 @@ fi
 #     echo !!! sites directory already exists - skipping symlink...
 # fi
 
-cp $OPENSHIFT_DATA_DIRsettings.php $DRUPAL_SETTINGS
+cp $OPENSHIFT_DATA_DIR/settings.php $DRUPAL_SETTINGS
 echo !!! settings.php copied from data dir to repo root
 
 #chmod -R 0755 $OPENSHIFT_REPO_DIR/sites/default
 chmod 0400 $DRUPAL_SETTINGS
 echo !!! perms set on sites default and settings file
 
-cp $OPENSHIFT_DATA_DIR.htaccess $OPENSHIFT_REPO_DIR.htaccess
+cp $OPENSHIFT_DATA_DIR/.htaccess $OPENSHIFT_REPO_DIR/.htaccess
 echo !!! htaccess copied from data dir to repo root
