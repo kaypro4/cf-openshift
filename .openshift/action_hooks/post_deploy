@@ -43,7 +43,7 @@ fi
 cp $OPENSHIFT_DATA_DIR/settings.php $DRUPAL_SETTINGS
 echo !!! settings.php copied from data dir to repo root
 
-#chmod -R 0755 $OPENSHIFT_REPO_DIR/sites/default
+chmod -R 0755 $OPENSHIFT_REPO_DIR/sites/default
 chmod 0400 $DRUPAL_SETTINGS
 echo !!! perms set on sites default and settings file
 
