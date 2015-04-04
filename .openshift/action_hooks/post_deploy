@@ -6,12 +6,12 @@
 
 DRUPAL_SETTINGS=$OPENSHIFT_REPO_DIR/sites/default/settings.php
 
-# check and set the symlink for files dir
+# check and set that the default directory exists in the repo
 if [ ! -d "$OPENSHIFT_REPO_DIR/sites/default" ]; then
-    echo !!! create files directory
+    echo !!! create sites/default directory
     mkdir $OPENSHIFT_REPO_DIR/sites/default
     # mkdir $OPENSHIFT_REPO_DIR/sites/default/files
-    echo !!! created files directory 
+    echo !!! created sites/default directory 
 
 else
     echo !!! default directory already exists
@@ -52,8 +52,10 @@ else
 fi
 
 
-chmod -R 0755 $OPENSHIFT_REPO_DIR/files
-rm $DRUPAL_SETTINGS
+chmod -R 0755 $OPENSHIFT_REPO_DIR/sites/default
+if [ ! -f "$DRUPAL_SETTINGS" ]; then
+	rm $DRUPAL_SETTINGS
+fi
 
 cp $OPENSHIFT_DATA_DIR/settings.php $DRUPAL_SETTINGS
 echo !!! settings.php removed and copied from data dir to repo
