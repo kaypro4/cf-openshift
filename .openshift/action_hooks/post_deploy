@@ -11,7 +11,7 @@ if [ ! -d "$OPENSHIFT_REPO_DIR/sites/default/files" ]; then
     echo !!! create files directory
 
     mkdir $OPENSHIFT_REPO_DIR/sites/default
-    mkdir $OPENSHIFT_REPO_DIR/sites/default/files
+    # mkdir $OPENSHIFT_REPO_DIR/sites/default/files
 
     echo !!! created files directory - creating symlink...
 
