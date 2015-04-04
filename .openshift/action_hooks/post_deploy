@@ -52,8 +52,11 @@ else
 fi
 
 
+chmod -R 0755 $OPENSHIFT_REPO_DIR/files
+rm $DRUPAL_SETTINGS
+
 cp $OPENSHIFT_DATA_DIR/settings.php $DRUPAL_SETTINGS
-echo !!! settings.php copied from data dir to repo root
+echo !!! settings.php removed and copied from data dir to repo
 
 chmod -R 0755 $OPENSHIFT_REPO_DIR/sites/default
 chmod 0400 $DRUPAL_SETTINGS
