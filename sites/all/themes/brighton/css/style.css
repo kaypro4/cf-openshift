@@ -113,7 +113,7 @@ i.fa {
     padding: 5px;
 }
 
-p {
+p,li,ul {
     font-weight: 300;
     line-height: 150%;
 }
@@ -423,7 +423,7 @@ Another concept:  http://designwall.s3.amazonaws.com/images/guide/dw_focus/home_
 }
 
 .auto-menu ul li {
-	padding: 6px 0;
+	padding: 3px 0;
 	border-top: 1px solid #f2f2f2;
 }
 
@@ -836,7 +836,7 @@ h3.event-date {
         border-top: solid 1px #ddd;
     }
 
-
+    
     .navbar-nav > li.last {
         border-bottom: solid 1px #ddd;
     }
@@ -896,7 +896,9 @@ h3.event-date {
 
         border-top: solid 1px #ddd;
     }
-
+    .dropdown .first.leaf{
+        border-bottom: solid 1px #ddd;
+    }
 
     .navbar-inverse .navbar-nav .open .dropdown-menu .divider{
         background-color: #ffffff;
