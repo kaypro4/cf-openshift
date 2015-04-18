@@ -364,6 +364,45 @@ function main_site_feature_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-article-field_feature_summary'
+  $field_instances['node-article-field_feature_summary'] = array(
+    'bundle' => 'article',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'A short summary that will be displayed on the homepage.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_feature_summary',
+    'label' => 'Feature Summary',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 2,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 8,
+    ),
+  );
+
   // Exported field_instance: 'node-article-field_page_sections'
   $field_instances['node-article-field_page_sections'] = array(
     'bundle' => 'article',
@@ -867,6 +906,47 @@ function main_site_feature_field_default_field_instances() {
       ),
       'type' => 'file_generic',
       'weight' => 9,
+    ),
+  );
+
+  // Exported field_instance: 'node-event-field_event_location'
+  $field_instances['node-event-field_event_location'] = array(
+    'bundle' => 'event',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'google_map_field',
+        'settings' => array(
+          'quickedit' => array(
+            'editor' => 'form',
+          ),
+        ),
+        'type' => 'google_map_field_formatter_default',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_event_location',
+    'label' => 'Event Location',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'google_map_field',
+      'settings' => array(),
+      'type' => 'google_map_field_widget',
+      'weight' => 5,
     ),
   );
 
@@ -2096,9 +2176,6 @@ function main_site_feature_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'field_slideshow',
         'settings' => array(
-          'quickedit' => array(
-            'editor' => 'form',
-          ),
           'slideshow_caption' => 'title',
           'slideshow_caption_link' => '',
           'slideshow_carousel_circular' => 0,
@@ -2579,6 +2656,7 @@ function main_site_feature_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('A short summary that will be displayed on the homepage.');
   t('Action Link');
   t('Action Link Text');
   t('Action Text');
@@ -2598,8 +2676,10 @@ function main_site_feature_field_default_field_instances() {
   t('Event Category');
   t('Event Date');
   t('Event Files');
+  t('Event Location');
   t('Event Registration Link');
   t('Feature Link');
+  t('Feature Summary');
   t('Feature on Homepage');
   t('Full Name');
   t('Full Text');

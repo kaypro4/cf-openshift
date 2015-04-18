@@ -69,6 +69,15 @@ function main_site_feature_user_default_permissions() {
     'module' => 'backup_migrate',
   );
 
+  // Exported permission: 'access broken links report'.
+  $permissions['access broken links report'] = array(
+    'name' => 'access broken links report',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'linkchecker',
+  );
+
   // Exported permission: 'access comments'.
   $permissions['access comments'] = array(
     'name' => 'access comments',
@@ -131,6 +140,15 @@ function main_site_feature_user_default_permissions() {
     'module' => 'devel',
   );
 
+  // Exported permission: 'access google map api key'.
+  $permissions['access google map api key'] = array(
+    'name' => 'access google map api key',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'google_map_field',
+  );
+
   // Exported permission: 'access own authorizations'.
   $permissions['access own authorizations'] = array(
     'name' => 'access own authorizations',
@@ -138,6 +156,15 @@ function main_site_feature_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'oauth_common',
+  );
+
+  // Exported permission: 'access own broken links report'.
+  $permissions['access own broken links report'] = array(
+    'name' => 'access own broken links report',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'linkchecker',
   );
 
   // Exported permission: 'access own consumers'.
@@ -331,6 +358,15 @@ function main_site_feature_user_default_permissions() {
     'module' => 'imce',
   );
 
+  // Exported permission: 'administer linkchecker'.
+  $permissions['administer linkchecker'] = array(
+    'name' => 'administer linkchecker',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'linkchecker',
+  );
+
   // Exported permission: 'administer media'.
   $permissions['administer media'] = array(
     'name' => 'administer media',
@@ -348,6 +384,15 @@ function main_site_feature_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'menu',
+  );
+
+  // Exported permission: 'administer meta tags'.
+  $permissions['administer meta tags'] = array(
+    'name' => 'administer meta tags',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
   );
 
   // Exported permission: 'administer module filter'.
@@ -620,6 +665,15 @@ function main_site_feature_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'user',
+  );
+
+  // Exported permission: 'change layouts in place editing'.
+  $permissions['change layouts in place editing'] = array(
+    'name' => 'change layouts in place editing',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'panels',
   );
 
   // Exported permission: 'change own username'.
@@ -1062,6 +1116,15 @@ function main_site_feature_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'edit link settings'.
+  $permissions['edit link settings'] = array(
+    'name' => 'edit link settings',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'linkchecker',
+  );
+
   // Exported permission: 'edit media'.
   $permissions['edit media'] = array(
     'name' => 'edit media',
@@ -1070,6 +1133,15 @@ function main_site_feature_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'media',
+  );
+
+  // Exported permission: 'edit meta tags'.
+  $permissions['edit meta tags'] = array(
+    'name' => 'edit meta tags',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
   );
 
   // Exported permission: 'edit own article content'.
@@ -1473,6 +1545,15 @@ function main_site_feature_user_default_permissions() {
     'module' => 'drupagram',
   );
 
+  // Exported permission: 'use ipe with page manager'.
+  $permissions['use ipe with page manager'] = array(
+    'name' => 'use ipe with page manager',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'panels',
+  );
+
   // Exported permission: 'use page manager'.
   $permissions['use page manager'] = array(
     'name' => 'use page manager',
@@ -1494,6 +1575,15 @@ function main_site_feature_user_default_permissions() {
   // Exported permission: 'use panels dashboard'.
   $permissions['use panels dashboard'] = array(
     'name' => 'use panels dashboard',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'panels',
+  );
+
+  // Exported permission: 'use panels in place editing'.
+  $permissions['use panels in place editing'] = array(
+    'name' => 'use panels in place editing',
     'roles' => array(
       'administrator' => 'administrator',
     ),
