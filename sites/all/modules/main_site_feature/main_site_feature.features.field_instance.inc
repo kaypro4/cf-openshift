@@ -1907,7 +1907,7 @@ function main_site_feature_field_default_field_instances() {
           'homepage_slide' => 0,
           'slideshow_4_3' => 0,
         ),
-        'manualcrop_styles_mode' => 'exclude',
+        'manualcrop_styles_mode' => 'include',
         'manualcrop_thumblist' => 0,
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
