@@ -32,6 +32,7 @@ stylesheets[all][] = css/magnific-popup.css
 scripts[] = 'js/custom.js'
 scripts[] = 'js/jquery.magnific-popup.min.js'
 scripts[] = 'js/addthisevent.min.js'
+scripts[] = 'js/countUp.min.js'
 
 
 ; For information on choosing the desired method, please read the Drupal

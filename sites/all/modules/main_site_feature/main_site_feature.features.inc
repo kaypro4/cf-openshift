@@ -230,6 +230,11 @@ function main_site_feature_paragraphs_info() {
       'bundle' => 'call_to_action',
       'locked' => '1',
     ),
+    'feature_block' => array(
+      'name' => 'Feature Block',
+      'bundle' => 'feature_block',
+      'locked' => '1',
+    ),
     'full_width_text' => array(
       'name' => 'Full Width Text',
       'bundle' => 'full_width_text',

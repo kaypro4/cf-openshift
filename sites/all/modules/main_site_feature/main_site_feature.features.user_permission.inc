@@ -747,6 +747,15 @@ function main_site_feature_user_default_permissions() {
     'module' => 'paragraphs_bundle_permissions',
   );
 
+  // Exported permission: 'create paragraph content feature_block'.
+  $permissions['create paragraph content feature_block'] = array(
+    'name' => 'create paragraph content feature_block',
+    'roles' => array(
+      'Blogger' => 'Blogger',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
   // Exported permission: 'create paragraph content full_width_text'.
   $permissions['create paragraph content full_width_text'] = array(
     'name' => 'create paragraph content full_width_text',
@@ -969,6 +978,15 @@ function main_site_feature_user_default_permissions() {
   // Exported permission: 'delete paragraph content call_to_action'.
   $permissions['delete paragraph content call_to_action'] = array(
     'name' => 'delete paragraph content call_to_action',
+    'roles' => array(
+      'Blogger' => 'Blogger',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'delete paragraph content feature_block'.
+  $permissions['delete paragraph content feature_block'] = array(
+    'name' => 'delete paragraph content feature_block',
     'roles' => array(
       'Blogger' => 'Blogger',
     ),
@@ -1468,6 +1486,15 @@ function main_site_feature_user_default_permissions() {
     'module' => 'paragraphs_bundle_permissions',
   );
 
+  // Exported permission: 'update paragraph content feature_block'.
+  $permissions['update paragraph content feature_block'] = array(
+    'name' => 'update paragraph content feature_block',
+    'roles' => array(
+      'Blogger' => 'Blogger',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
   // Exported permission: 'update paragraph content full_width_text'.
   $permissions['update paragraph content full_width_text'] = array(
     'name' => 'update paragraph content full_width_text',
@@ -1665,6 +1692,15 @@ function main_site_feature_user_default_permissions() {
     'name' => 'view paragraph content call_to_action',
     'roles' => array(
       'Blogger' => 'Blogger',
+      'anonymous user' => 'anonymous user',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'view paragraph content feature_block'.
+  $permissions['view paragraph content feature_block'] = array(
+    'name' => 'view paragraph content feature_block',
+    'roles' => array(
       'anonymous user' => 'anonymous user',
     ),
     'module' => 'paragraphs_bundle_permissions',

@@ -365,7 +365,7 @@ function main_site_feature_views_default_views() {
   $handler->display->display_options['fields']['view_node']['exclude'] = TRUE;
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['view_node']['text'] = 'Read more';
-  /* Field: Content: Feature Link */
+  /* Field: Field: Feature Link */
   $handler->display->display_options['fields']['field_feature_link']['id'] = 'field_feature_link';
   $handler->display->display_options['fields']['field_feature_link']['table'] = 'field_data_field_feature_link';
   $handler->display->display_options['fields']['field_feature_link']['field'] = 'field_feature_link';

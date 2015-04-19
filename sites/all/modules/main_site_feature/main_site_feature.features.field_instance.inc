@@ -1527,6 +1527,8 @@ function main_site_feature_field_default_field_instances() {
         'banner_image' => 'banner_image',
         'block' => 'block',
         'call_to_action' => 'call_to_action',
+        'counter' => -1,
+        'feature_block' => 'feature_block',
         'full_width_text' => 'full_width_text',
         'google_map' => 'google_map',
         'quote' => 'quote',
@@ -1535,15 +1537,17 @@ function main_site_feature_field_default_field_instances() {
         'webform' => 'webform',
       ),
       'bundle_weights' => array(
-        'banner_image' => -9,
-        'block' => 8,
+        'banner_image' => -10,
+        'block' => -1,
         'call_to_action' => -8,
-        'full_width_text' => -10,
-        'google_map' => -10,
+        'counter' => 5,
+        'feature_block' => -5,
+        'full_width_text' => -9,
+        'google_map' => -4,
         'quote' => -7,
-        'slideshow' => -4,
-        'video' => -6,
-        'webform' => -10,
+        'slideshow' => -6,
+        'video' => -2,
+        'webform' => -3,
       ),
       'default_edit_mode' => 'open',
       'title' => 'Section',
@@ -1613,9 +1617,6 @@ function main_site_feature_field_default_field_instances() {
         'settings' => array(
           'image_link' => '',
           'image_style' => 'banner_image',
-          'quickedit' => array(
-            'editor' => 'form',
-          ),
         ),
         'type' => 'image',
         'weight' => 0,
@@ -1843,6 +1844,213 @@ function main_site_feature_field_default_field_instances() {
       ),
       'type' => 'text_textfield',
       'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'paragraphs_item-feature_block-field_feature_image'
+  $field_instances['paragraphs_item-feature_block-field_feature_image'] = array(
+    'bundle' => 'feature_block',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => 'feature_image',
+        ),
+        'type' => 'image',
+        'weight' => 0,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_feature_image',
+    'label' => 'Feature Image',
+    'required' => 1,
+    'settings' => array(
+      'alt_field' => 1,
+      'default_image' => 0,
+      'file_directory' => 'feature-block-image',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '200x200',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'manualcrop_crop_info' => 1,
+        'manualcrop_default_crop_area' => 1,
+        'manualcrop_enable' => 1,
+        'manualcrop_inline_crop' => 0,
+        'manualcrop_instant_crop' => 0,
+        'manualcrop_instant_preview' => 1,
+        'manualcrop_require_cropping' => array(
+          'banner_image' => 0,
+          'feature_image' => 0,
+          'homepage_slide' => 0,
+          'slideshow_4_3' => 0,
+        ),
+        'manualcrop_styles_list' => array(
+          'banner_image' => 0,
+          'feature_image' => 'feature_image',
+          'homepage_slide' => 0,
+          'slideshow_4_3' => 0,
+        ),
+        'manualcrop_styles_mode' => 'exclude',
+        'manualcrop_thumblist' => 0,
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'paragraphs_item-feature_block-field_feature_link'
+  $field_instances['paragraphs_item-feature_block-field_feature_link'] = array(
+    'bundle' => 'feature_block',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_separate',
+        'weight' => 3,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_feature_link',
+    'label' => 'Feature Link',
+    'required' => 0,
+    'settings' => array(
+      'absolute_url' => 1,
+      'attributes' => array(
+        'class' => '',
+        'configurable_class' => 1,
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => 'default',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'rel_remove' => 'default',
+      'title' => 'required',
+      'title_label_use_field_label' => 0,
+      'title_maxlength' => 128,
+      'title_value' => '',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance: 'paragraphs_item-feature_block-field_feature_text'
+  $field_instances['paragraphs_item-feature_block-field_feature_text'] = array(
+    'bundle' => 'feature_block',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_feature_text',
+    'label' => 'Feature Text',
+    'required' => 1,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 3,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'paragraphs_item-feature_block-field_feature_title'
+  $field_instances['paragraphs_item-feature_block-field_feature_title'] = array(
+    'bundle' => 'feature_block',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Text that will appear at the top of the feature.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_feature_title',
+    'label' => 'Feature Title',
+    'required' => 1,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 2,
     ),
   );
 
@@ -2678,8 +2886,11 @@ function main_site_feature_field_default_field_instances() {
   t('Event Files');
   t('Event Location');
   t('Event Registration Link');
+  t('Feature Image');
   t('Feature Link');
   t('Feature Summary');
+  t('Feature Text');
+  t('Feature Title');
   t('Feature on Homepage');
   t('Full Name');
   t('Full Text');
@@ -2705,6 +2916,7 @@ function main_site_feature_field_default_field_instances() {
   t('Summary');
   t('Summary text that will appear on the blog listing page.');
   t('Tags');
+  t('Text that will appear at the top of the feature.');
   t('The full address of the event (e.g. 201 S Jackson St, Seattle WA 98118');
   t('The relative display order on the about us page.  ');
   t('This is the full URL to the page or a page relative to the root of this site (e.g. /donate)');

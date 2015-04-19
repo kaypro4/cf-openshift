@@ -736,6 +736,10 @@ content: "\2014 \2009";
 .field-slideshow-image, .field-slideshow-wrapper {
 	position:relative;
 }
+
+.field-slideshow {
+    margin-bottom: 5px;
+}
 .field-slideshow-caption {
 	position:absolute;
 	bottom:0px;
@@ -759,19 +763,14 @@ content: "\2014 \2009";
 }
 
 .field-slideshow-controls .prev {
-    margin-top: -5px;
-    left: 0px;
-    top: 50px;
 }
 
 .field-slideshow-controls .next {
-    margin-top: -5px;
+    position: absolute;
     right: 0px;
-    top: 50px;
 }
 
 .field-slideshow-controls {
-    position:absolute;
     width: 100%;
 }
 
@@ -1042,3 +1041,54 @@ h3.event-date {
 .addthisevent_dropdown .frs:hover       {color:#6d84b4;}
 .addthisevent                           {visibility:hidden;}
 
+
+/* Feature block styles */
+
+
+.lib-panel {
+    margin-bottom: 20px;
+
+}
+
+.lib-panel .field-item {
+    padding-bottom:0;
+}
+
+.lib-panel img {
+    width: 100%;
+    background-color: transparent;
+}
+
+.lib-panel .row,
+.lib-panel .col-xs-8 {
+    padding: 0;
+    background-color: #FFFFFF;
+}
+
+
+.lib-panel .lib-row {
+    padding: 0 0 0 10px;
+}
+
+
+.lib-panel .lib-row.lib-header .lib-header-seperator {
+    height: 2px;
+    width: 26px;
+    background-color: #d9d9d9;
+    margin: 0px 0 7px 0;
+}
+
+.lib-panel h3 {
+    margin-top:15px;
+}
+
+.lib-panel .lib-row.lib-desc a{
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    left: 20px;
+}
+
+.box-shadow {
+    border: 1px solid #ddd;
+}

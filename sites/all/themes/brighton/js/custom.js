@@ -84,6 +84,11 @@
                       '</div></div>'
             }
            });
+
+           $('.img-overlay').magnificPopup({ 
+            type: 'image'
+            // other options
+          });
                     
     });
     
