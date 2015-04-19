@@ -92,8 +92,8 @@ function main_site_feature_image_default_styles() {
         'module' => 'manualcrop',
         'name' => 'manualcrop_crop',
         'data' => array(
-          'width' => 200,
-          'height' => 200,
+          'width' => 680,
+          'height' => 680,
           'keepproportions' => 1,
           'style_name' => 'feature_image',
         ),
@@ -109,8 +109,8 @@ function main_site_feature_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 200,
-          'height' => 200,
+          'width' => 680,
+          'height' => 680,
         ),
         'weight' => 2,
       ),

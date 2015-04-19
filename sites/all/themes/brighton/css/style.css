@@ -1060,7 +1060,7 @@ h3.event-date {
 }
 
 .lib-panel .row,
-.lib-panel .col-xs-8 {
+.lib-panel .col-sm-8 {
     padding: 0;
     background-color: #FFFFFF;
 }

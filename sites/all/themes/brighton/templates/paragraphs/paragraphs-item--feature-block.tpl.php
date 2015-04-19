@@ -32,10 +32,10 @@
 <div class="row">
     
         <div class="lib-panel">
-                <div class="col-xs-4 feature-img">
+                <div class="col-xs-12 col-sm-6 col-md-4 feature-img">
                 	<?php print render($content['field_feature_image']); ?>
                 </div>
-                <div class="col-xs-7">
+                <div class="col-xs-12 col-sm-6 col-md-7">
                     <div class="lib-row lib-header">
                         <h3><?php print render($content['field_feature_title'][0]['#markup']); ?></h3>
                         <div class="lib-header-seperator"></div>
@@ -47,7 +47,7 @@
                     <a style="float:right; padding-top:10px; margin-right:20px;" href="<?php print render($content['field_feature_link'][0]['#element']['url']); ?> "><?php print render($content['field_feature_link'][0]['#element']['title']); ?>  <i class="fa fa-arrow-right"></i></a>
                 	<?php } ?>
                 </div>
-                <div class="col-xs-1">
+                <div class="col-md-1">
                 	
                 </div>
 
