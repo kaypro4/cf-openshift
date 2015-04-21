@@ -1297,7 +1297,7 @@ function main_site_feature_default_page_manager_handlers() {
     ),
   );
   $display = new panels_display();
-  $display->layout = 'basic_no_nav';
+  $display->layout = 'basic_right_col';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -1305,6 +1305,7 @@ function main_site_feature_default_page_manager_handlers() {
       'title' => NULL,
       'content' => NULL,
       'right' => NULL,
+      'nav' => NULL,
     ),
   );
   $display->cache = array();
@@ -1322,8 +1323,8 @@ function main_site_feature_default_page_manager_handlers() {
     $pane->configuration = array(
       'view_mode' => 'full',
       'context' => 'argument_entity_id:node_1',
-      'override_title' => 1,
-      'override_title_text' => 'Class Calendar',
+      'override_title' => 0,
+      'override_title_text' => '',
       'override_title_heading' => 'h1',
     );
     $pane->cache = array();
@@ -1360,6 +1361,32 @@ function main_site_feature_default_page_manager_handlers() {
     $pane->uuid = '4f981b70-ade0-49d3-9226-0afb629012c9';
     $display->content['new-4f981b70-ade0-49d3-9226-0afb629012c9'] = $pane;
     $display->panels['content'][1] = 'new-4f981b70-ade0-49d3-9226-0afb629012c9';
+    $pane = new stdClass();
+    $pane->pid = 'new-02298bb8-bc49-482e-8ff0-12fdc3db23ad';
+    $pane->panel = 'nav';
+    $pane->type = 'block';
+    $pane->subtype = 'menu_block-1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'auto-menu',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '02298bb8-bc49-482e-8ff0-12fdc3db23ad';
+    $display->content['new-02298bb8-bc49-482e-8ff0-12fdc3db23ad'] = $pane;
+    $display->panels['nav'][0] = 'new-02298bb8-bc49-482e-8ff0-12fdc3db23ad';
     $pane = new stdClass();
     $pane->pid = 'new-be514097-ee7a-4f3e-9ee1-39e26419d421';
     $pane->panel = 'right';
@@ -1406,6 +1433,32 @@ function main_site_feature_default_page_manager_handlers() {
     $pane->uuid = 'c14ed25e-a877-488e-b94f-9798eb012a11';
     $display->content['new-c14ed25e-a877-488e-b94f-9798eb012a11'] = $pane;
     $display->panels['right'][1] = 'new-c14ed25e-a877-488e-b94f-9798eb012a11';
+    $pane = new stdClass();
+    $pane->pid = 'new-dca0d41a-6258-44e5-ad9e-9dccb52860a2';
+    $pane->panel = 'title';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'Title',
+      'title' => '',
+      'body' => '<h1>Class Calendar</h1>
+',
+      'format' => 'full_html',
+      'substitute' => 1,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'dca0d41a-6258-44e5-ad9e-9dccb52860a2';
+    $display->content['new-dca0d41a-6258-44e5-ad9e-9dccb52860a2'] = $pane;
+    $display->panels['title'][0] = 'new-dca0d41a-6258-44e5-ad9e-9dccb52860a2';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-4f981b70-ade0-49d3-9226-0afb629012c9';
   $handler->conf['display'] = $display;
@@ -1877,6 +1930,32 @@ function main_site_feature_default_page_manager_handlers() {
     $pane->uuid = '36ac292c-750a-443f-81e7-9613c1997412';
     $display->content['new-36ac292c-750a-443f-81e7-9613c1997412'] = $pane;
     $display->panels['content'][2] = 'new-36ac292c-750a-443f-81e7-9613c1997412';
+    $pane = new stdClass();
+    $pane->pid = 'new-9c9fb18a-4ec8-4498-b538-e33fe54fd977';
+    $pane->panel = 'nav';
+    $pane->type = 'block';
+    $pane->subtype = 'menu_block-1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'auto-menu',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '9c9fb18a-4ec8-4498-b538-e33fe54fd977';
+    $display->content['new-9c9fb18a-4ec8-4498-b538-e33fe54fd977'] = $pane;
+    $display->panels['nav'][0] = 'new-9c9fb18a-4ec8-4498-b538-e33fe54fd977';
     $pane = new stdClass();
     $pane->pid = 'new-cbc1edab-b213-46c0-a0b9-1fa47eea5868';
     $pane->panel = 'right';
