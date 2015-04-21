@@ -40,7 +40,7 @@ require_once('inc/config.inc');
 	 	<div class="col-xs-12 column">
 	 	<br /><br />
 		 	<div class="form-group">
-				<label class="col-xs-1 control-label" for="amount">Amount</label>
+				<label class="col-xs-2 col-sm-1 control-label" for="amount">Amount</label>
 				<div class="col-xs-3">  
 				<input id="UnitPrice1" name="UnitPrice1" type="text" placeholder="$" class="form-control input-md" value="<?php if(isset($_GET['test'])) {echo '1.00';}?>">
 		  		<input name="ItemID1" type="hidden" id="ItemID1" value="1" />
@@ -70,7 +70,7 @@ require_once('inc/config.inc');
 	 	</div>
 	 	
 	 	
-	 	<div class="col-xs-6 column">
+	 	<div class="col-xs-12 col-sm-6 column">
 	 	<!-- Left column Begin -->
 		  
 			<div class="form-group">
@@ -149,7 +149,7 @@ require_once('inc/config.inc');
 		
 		<!-- Left column End -->
 		</div>
-	  	<div class="col-xs-6 column">
+	  	<div class="col-xs-12 col-sm-6 column">
 	  	<!-- Right column Begin -->
 	  	
 		  		

@@ -572,6 +572,10 @@ content: "\2014 \2009";
 }
 
 
+.form-item {
+    padding-bottom: 10px;
+}
+
 .thumbnail-tag {
     position:absolute; 
     bottom: 8px; 
