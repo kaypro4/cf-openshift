@@ -17,7 +17,7 @@ function main_site_feature_default_page_manager_handlers() {
   $handler->task = 'node_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = -23;
+  $handler->weight = -22;
   $handler->conf = array(
     'title' => 'Basic Page - No Right Sidebar',
     'no_blocks' => 0,
@@ -160,7 +160,7 @@ function main_site_feature_default_page_manager_handlers() {
   $handler->task = 'node_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = -24;
+  $handler->weight = -23;
   $handler->conf = array(
     'title' => 'Basic Page - With Right Sidebar',
     'no_blocks' => 0,
@@ -964,7 +964,7 @@ function main_site_feature_default_page_manager_handlers() {
   $handler->task = 'node_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = -25;
+  $handler->weight = -24;
   $handler->conf = array(
     'title' => 'Calendar Item',
     'no_blocks' => 0,
@@ -1265,11 +1265,160 @@ function main_site_feature_default_page_manager_handlers() {
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
+  $handler->name = 'node_view__class_calendar';
+  $handler->task = 'node_view';
+  $handler->subtask = '';
+  $handler->handler = 'panel_context';
+  $handler->weight = -25;
+  $handler->conf = array(
+    'title' => 'Class Calendar',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'name' => 'class_calendar',
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'path_visibility',
+          'settings' => array(
+            'visibility_setting' => '1',
+            'paths' => 'learn/class-calendar',
+          ),
+          'context' => 'empty',
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+  );
+  $display = new panels_display();
+  $display->layout = 'basic_no_nav';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'title' => NULL,
+      'content' => NULL,
+      'right' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = '4322bc85-854d-40af-872f-05650eef313c';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-512f8627-cf62-4463-9fa9-14dce03a09a2';
+    $pane->panel = 'content';
+    $pane->type = 'entity_view';
+    $pane->subtype = 'node';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'view_mode' => 'full',
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 1,
+      'override_title_text' => 'Class Calendar',
+      'override_title_heading' => 'h1',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '512f8627-cf62-4463-9fa9-14dce03a09a2';
+    $display->content['new-512f8627-cf62-4463-9fa9-14dce03a09a2'] = $pane;
+    $display->panels['content'][0] = 'new-512f8627-cf62-4463-9fa9-14dce03a09a2';
+    $pane = new stdClass();
+    $pane->pid = 'new-4f981b70-ade0-49d3-9226-0afb629012c9';
+    $pane->panel = 'content';
+    $pane->type = 'block';
+    $pane->subtype = 'views-class_calendar-block_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '4f981b70-ade0-49d3-9226-0afb629012c9';
+    $display->content['new-4f981b70-ade0-49d3-9226-0afb629012c9'] = $pane;
+    $display->panels['content'][1] = 'new-4f981b70-ade0-49d3-9226-0afb629012c9';
+    $pane = new stdClass();
+    $pane->pid = 'new-be514097-ee7a-4f3e-9ee1-39e26419d421';
+    $pane->panel = 'right';
+    $pane->type = 'block';
+    $pane->subtype = 'block-6';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'be514097-ee7a-4f3e-9ee1-39e26419d421';
+    $display->content['new-be514097-ee7a-4f3e-9ee1-39e26419d421'] = $pane;
+    $display->panels['right'][0] = 'new-be514097-ee7a-4f3e-9ee1-39e26419d421';
+    $pane = new stdClass();
+    $pane->pid = 'new-c14ed25e-a877-488e-b94f-9798eb012a11';
+    $pane->panel = 'right';
+    $pane->type = 'block';
+    $pane->subtype = 'views-blog_on_homepage-block';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = 'c14ed25e-a877-488e-b94f-9798eb012a11';
+    $display->content['new-c14ed25e-a877-488e-b94f-9798eb012a11'] = $pane;
+    $display->panels['right'][1] = 'new-c14ed25e-a877-488e-b94f-9798eb012a11';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = 'new-4f981b70-ade0-49d3-9226-0afb629012c9';
+  $handler->conf['display'] = $display;
+  $export['node_view__class_calendar'] = $handler;
+
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
   $handler->name = 'node_view__default';
   $handler->task = 'node_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = -22;
+  $handler->weight = -21;
   $handler->conf = array(
     'title' => 'Default',
     'no_blocks' => 0,
