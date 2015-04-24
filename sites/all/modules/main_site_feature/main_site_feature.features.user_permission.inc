@@ -313,6 +313,15 @@ function main_site_feature_user_default_permissions() {
     'module' => 'conditional_fields',
   );
 
+  // Exported permission: 'administer disqus'.
+  $permissions['administer disqus'] = array(
+    'name' => 'administer disqus',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'disqus',
+  );
+
   // Exported permission: 'administer features'.
   $permissions['administer features'] = array(
     'name' => 'administer features',
@@ -1070,6 +1079,15 @@ function main_site_feature_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
+  // Exported permission: 'display disqus comments on profile'.
+  $permissions['display disqus comments on profile'] = array(
+    'name' => 'display disqus comments on profile',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'disqus',
+  );
+
   // Exported permission: 'display drupal links'.
   $permissions['display drupal links'] = array(
     'name' => 'display drupal links',
@@ -1452,6 +1470,15 @@ function main_site_feature_user_default_permissions() {
     'module' => 'devel',
   );
 
+  // Exported permission: 'toggle disqus comments'.
+  $permissions['toggle disqus comments'] = array(
+    'name' => 'toggle disqus comments',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'disqus',
+  );
+
   // Exported permission: 'unblock expired accounts'.
   $permissions['unblock expired accounts'] = array(
     'name' => 'unblock expired accounts',
@@ -1635,6 +1662,16 @@ function main_site_feature_user_default_permissions() {
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'filter',
+  );
+
+  // Exported permission: 'view disqus comments'.
+  $permissions['view disqus comments'] = array(
+    'name' => 'view disqus comments',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+    ),
+    'module' => 'disqus',
   );
 
   // Exported permission: 'view media'.
