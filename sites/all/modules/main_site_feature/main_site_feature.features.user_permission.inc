@@ -331,6 +331,15 @@ function main_site_feature_user_default_permissions() {
     'module' => 'features',
   );
 
+  // Exported permission: 'administer field collections'.
+  $permissions['administer field collections'] = array(
+    'name' => 'administer field collections',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'field_collection',
+  );
+
   // Exported permission: 'administer filters'.
   $permissions['administer filters'] = array(
     'name' => 'administer filters',

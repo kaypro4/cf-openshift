@@ -195,6 +195,138 @@ function main_site_feature_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'field_collection_item-field_collect_slide-field_image'
+  $field_instances['field_collection_item-field_collect_slide-field_image'] = array(
+    'bundle' => 'field_collect_slide',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_image',
+    'label' => 'Image',
+    'required' => 1,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => 'slideshow-images',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '831x623',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'manualcrop_crop_info' => 1,
+        'manualcrop_default_crop_area' => 1,
+        'manualcrop_enable' => 1,
+        'manualcrop_inline_crop' => 0,
+        'manualcrop_instant_crop' => 0,
+        'manualcrop_instant_preview' => 1,
+        'manualcrop_require_cropping' => array(
+          'banner_image' => 0,
+          'feature_image' => 0,
+          'homepage_slide' => 0,
+          'slideshow_4_3' => 0,
+        ),
+        'manualcrop_styles_list' => array(
+          'banner_image' => 0,
+          'feature_image' => 0,
+          'homepage_slide' => 0,
+          'slideshow_4_3' => 'slideshow_4_3',
+        ),
+        'manualcrop_styles_mode' => 'exclude',
+        'manualcrop_thumblist' => 0,
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance: 'field_collection_item-field_collect_slide-field_slide_caption'
+  $field_instances['field_collection_item-field_collect_slide-field_slide_caption'] = array(
+    'bundle' => 'field_collect_slide',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_slide_caption',
+    'label' => 'Caption',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'field_collection_item-field_collect_slide-field_slide_title'
+  $field_instances['field_collection_item-field_collect_slide-field_slide_title'] = array(
+    'bundle' => 'field_collect_slide',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_slide_title',
+    'label' => 'Title',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 1,
+    ),
+  );
+
   // Exported field_instance: 'node-article-field_banner_image'
   $field_instances['node-article-field_banner_image'] = array(
     'bundle' => 'article',
@@ -2374,9 +2506,10 @@ function main_site_feature_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'paragraphs_item-slideshow-field_slide'
-  $field_instances['paragraphs_item-slideshow-field_slide'] = array(
+  // Exported field_instance: 'paragraphs_item-slideshow-field_collect_slide'
+  $field_instances['paragraphs_item-slideshow-field_collect_slide'] = array(
     'bundle' => 'slideshow',
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -2384,7 +2517,7 @@ function main_site_feature_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'field_slideshow',
         'settings' => array(
-          'slideshow_caption' => 'title',
+          'slideshow_caption' => 'field_slide_title',
           'slideshow_caption_link' => '',
           'slideshow_carousel_circular' => 0,
           'slideshow_carousel_follow' => 0,
@@ -2402,21 +2535,21 @@ function main_site_feature_field_default_field_instances() {
           'slideshow_controls' => 1,
           'slideshow_controls_pause' => 0,
           'slideshow_controls_position' => 'after',
-          'slideshow_field_collection_image' => '',
+          'slideshow_field_collection_image' => 'field_image',
           'slideshow_fx' => 'fade',
           'slideshow_image_style' => 'slideshow_4_3',
           'slideshow_link' => '',
           'slideshow_order' => '',
           'slideshow_pager' => '',
-          'slideshow_pager_image_style' => 'thumbnail',
+          'slideshow_pager_image_style' => '',
           'slideshow_pager_position' => 'after',
-          'slideshow_pause' => 1,
+          'slideshow_pause' => 0,
           'slideshow_speed' => 1000,
           'slideshow_start_on_hover' => 0,
           'slideshow_timeout' => 4000,
         ),
         'type' => 'slideshow',
-        'weight' => 0,
+        'weight' => 3,
       ),
       'paragraphs_editor_preview' => array(
         'label' => 'above',
@@ -2426,47 +2559,18 @@ function main_site_feature_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'paragraphs_item',
-    'field_name' => 'field_slide',
+    'field_name' => 'field_collect_slide',
     'label' => 'Slide',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
-      'alt_field' => 0,
-      'default_image' => 0,
-      'file_directory' => 'slideshow-images',
-      'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '',
-      'max_resolution' => '',
-      'min_resolution' => '831x623',
-      'title_field' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 1,
-      'module' => 'image',
-      'settings' => array(
-        'manualcrop_crop_info' => 0,
-        'manualcrop_default_crop_area' => 1,
-        'manualcrop_enable' => 1,
-        'manualcrop_inline_crop' => 0,
-        'manualcrop_instant_crop' => 0,
-        'manualcrop_instant_preview' => 0,
-        'manualcrop_require_cropping' => array(
-          'banner_image' => 0,
-          'homepage_slide' => 0,
-          'slideshow_4_3' => 0,
-        ),
-        'manualcrop_styles_list' => array(
-          'banner_image' => 0,
-          'homepage_slide' => 0,
-          'slideshow_4_3' => 'slideshow_4_3',
-        ),
-        'manualcrop_styles_mode' => 'include',
-        'manualcrop_thumblist' => 0,
-        'preview_image_style' => 'thumbnail',
-        'progress_indicator' => 'throbber',
-      ),
-      'type' => 'image_image',
-      'weight' => 1,
+      'active' => 0,
+      'module' => 'field_collection',
+      'settings' => array(),
+      'type' => 'field_collection_embed',
+      'weight' => 4,
     ),
   );
 
@@ -2875,6 +2979,7 @@ function main_site_feature_field_default_field_instances() {
   t('Blog Sections');
   t('Body');
   t('Can be any "place name" that Google will recognize.  Addresses work well or even common landmarks.');
+  t('Caption');
   t('Check this box if you would like this item to appear on the homepage.');
   t('Comment');
   t('Display Date Range');
@@ -2896,6 +3001,7 @@ function main_site_feature_field_default_field_instances() {
   t('Full Text');
   t('Google API Key');
   t('Height of the map in pixels or percent.');
+  t('Image');
   t('List in About Us?');
   t('Map Height');
   t('Map Width');

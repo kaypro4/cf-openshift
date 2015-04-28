@@ -15,6 +15,9 @@
 
 
     $(window).load(function() {
+
+      $('.field-name-field-full-text img').captionate();
+
       var boxheight = $('#views-bootstrap-carousel-1 .carousel-inner').innerHeight();
       var itemlength = $('#views-bootstrap-carousel-1 .item').length;
       var triggerheight = Math.round(boxheight/itemlength+0.5);

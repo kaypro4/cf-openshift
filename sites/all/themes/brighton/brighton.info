@@ -26,10 +26,13 @@ plugins[panels][layouts] = layouts
 ;; Stylesheets
 ;;;;;;;;;;;;;;;;;;;;;
 
+
+
 stylesheets[all][] = css/style.css
 stylesheets[all][] = css/magnific-popup.css
 
 scripts[] = 'js/custom.js'
+scripts[] = 'js/jquery.captionate.js'
 scripts[] = 'js/jquery.magnific-popup.min.js'
 scripts[] = 'js/addthisevent.min.js'
 scripts[] = 'js/countUp.min.js'
@@ -47,18 +50,8 @@ scripts[] = 'js/countUp.min.js'
 ; ;; Scripts
 ; ;;;;;;;;;;;;;;;;;;;;;
 ; 
- scripts[] = 'bootstrap/js/affix.js'
- scripts[] = 'bootstrap/js/alert.js'
- scripts[] = 'bootstrap/js/button.js'
- scripts[] = 'bootstrap/js/carousel.js'
- scripts[] = 'bootstrap/js/collapse.js'
- scripts[] = 'bootstrap/js/dropdown.js'
- scripts[] = 'bootstrap/js/modal.js'
- scripts[] = 'bootstrap/js/tooltip.js'
- scripts[] = 'bootstrap/js/popover.js'
- scripts[] = 'bootstrap/js/scrollspy.js'
- scripts[] = 'bootstrap/js/tab.js'
- scripts[] = 'bootstrap/js/transition.js'
+ scripts[] = 'bootstrap/js/bootstrap.min.js'
+
 ;
 ; ; Disable BootstrapCDN if using Bootstrap source files in your sub-theme.
  settings[bootstrap_cdn] = ''
