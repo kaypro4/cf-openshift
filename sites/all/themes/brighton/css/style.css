@@ -627,6 +627,11 @@ figcaption {display: block; text-align: left; font-size: 0.8em; font-style: ital
        /*      animation: fadein 2s; */
 }
 
+.thumbnail .tag a {
+    background-color: #DCDCDC;
+    padding: 3px 4px 3px 4px;
+    font-size: 80%;
+}
    
 .thumbnail p.feature-link {
     position:absolute;

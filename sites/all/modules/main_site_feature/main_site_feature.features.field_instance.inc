@@ -249,7 +249,7 @@ function main_site_feature_field_default_field_instances() {
           'homepage_slide' => 0,
           'slideshow_4_3' => 'slideshow_4_3',
         ),
-        'manualcrop_styles_mode' => 'exclude',
+        'manualcrop_styles_mode' => 'include',
         'manualcrop_thumblist' => 0,
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
@@ -339,9 +339,6 @@ function main_site_feature_field_default_field_instances() {
         'settings' => array(
           'image_link' => '',
           'image_style' => 'banner_image',
-          'quickedit' => array(
-            'editor' => 'form',
-          ),
         ),
         'type' => 'image',
         'weight' => 0,
@@ -546,9 +543,6 @@ function main_site_feature_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'paragraphs',
         'settings' => array(
-          'quickedit' => array(
-            'editor' => 'form',
-          ),
           'view_mode' => 'full',
         ),
         'type' => 'paragraphs_view',
@@ -692,13 +686,9 @@ function main_site_feature_field_default_field_instances() {
     'description' => 'Enter a comma-separated list of words to describe your content.',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'taxonomy',
-        'settings' => array(
-          'quickedit' => array(
-            'editor' => 'form',
-          ),
-        ),
+        'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
         'weight' => 2,
       ),
