@@ -618,7 +618,7 @@ figcaption {display: block; text-align: left; font-size: 0.8em; font-style: ital
 .thumbnail {
     position: relative;
     padding: 0px;
-    padding-bottom: 20px;
+    padding-bottom: 5px;
     min-height: 340px;
             /* -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
        /* -moz-animation: fadein 2s; /* Firefox < 16 */
@@ -631,6 +631,9 @@ figcaption {display: block; text-align: left; font-size: 0.8em; font-style: ital
     background-color: #DCDCDC;
     padding: 3px 4px 3px 4px;
     font-size: 80%;
+    white-space: nowrap;
+    line-height: 220%;
+    color: white;
 }
    
 .thumbnail p.feature-link {
