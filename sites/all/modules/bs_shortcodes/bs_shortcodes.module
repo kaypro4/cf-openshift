@@ -1173,10 +1173,12 @@ function bs_shortcodes_tabs( $attrs, $content = '' ) {
     }
     $i = 0;
     foreach( $attrs_map as $tab ) {
+      $tab_title = str_replace(' ', '', $tab["tab"]["title"]);
+
       $tabs[] = sprintf(
         '<li%s><a href="#%s" data-toggle="tab">%s</a></li>',
         ( !empty($tab["tab"]["active"]) || ($GLOBALS['tabs_default_active'] && $i == 0) ) ? ' class="active"' : '',
-        'custom-tab-' . $GLOBALS['tabs_count'] . '-' . check_plain( $tab["tab"]["title"] ),
+        'custom-tab-' . $GLOBALS['tabs_count'] . '-' . check_plain( $tab_title ),
         $tab["tab"]["title"]
       );
       $i++;
@@ -1225,7 +1227,9 @@ function bs_shortcodes_tab( $attrs, $content = '' ) {
   $class .= ( $active != '' )          ? ' active' : '';
   $class .= ( $active != '' && $fade != '' ) ? ' in' : '';
 
-  $id = 'custom-tab-'. $GLOBALS['tabs_count'] . '-'. check_plain( $title );
+  $tab_title = str_replace(' ', '', $title);
+
+  $id = 'custom-tab-'. $GLOBALS['tabs_count'] . '-'. check_plain( $tab_title );
 
   $data_props = _bs_shortcodes_parse_data_attributes( $data );
 
@@ -2088,4 +2092,3 @@ function _bs_shortcodes_strip_paragraph( $content ) {
   $content = str_ireplace( '</p>','',$content );
   return $content;
 }
-
