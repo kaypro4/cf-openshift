@@ -335,6 +335,11 @@ function main_site_feature_paragraphs_info() {
       'bundle' => 'slideshow',
       'locked' => '1',
     ),
+    'upcoming_events_listing' => array(
+      'name' => 'Upcoming Events Listing',
+      'bundle' => 'upcoming_events_listing',
+      'locked' => '1',
+    ),
     'video' => array(
       'name' => 'Video',
       'bundle' => 'video',

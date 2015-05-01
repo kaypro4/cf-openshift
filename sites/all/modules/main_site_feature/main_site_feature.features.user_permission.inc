@@ -808,6 +808,15 @@ function main_site_feature_user_default_permissions() {
     'module' => 'paragraphs_bundle_permissions',
   );
 
+  // Exported permission: 'create paragraph content upcoming_events_listing'.
+  $permissions['create paragraph content upcoming_events_listing'] = array(
+    'name' => 'create paragraph content upcoming_events_listing',
+    'roles' => array(
+      'Blogger' => 'Blogger',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
   // Exported permission: 'create paragraph content video'.
   $permissions['create paragraph content video'] = array(
     'name' => 'create paragraph content video',
@@ -1039,6 +1048,15 @@ function main_site_feature_user_default_permissions() {
   // Exported permission: 'delete paragraph content slideshow'.
   $permissions['delete paragraph content slideshow'] = array(
     'name' => 'delete paragraph content slideshow',
+    'roles' => array(
+      'Blogger' => 'Blogger',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'delete paragraph content upcoming_events_listing'.
+  $permissions['delete paragraph content upcoming_events_listing'] = array(
+    'name' => 'delete paragraph content upcoming_events_listing',
     'roles' => array(
       'Blogger' => 'Blogger',
     ),
@@ -1565,6 +1583,15 @@ function main_site_feature_user_default_permissions() {
     'module' => 'paragraphs_bundle_permissions',
   );
 
+  // Exported permission: 'update paragraph content upcoming_events_listing'.
+  $permissions['update paragraph content upcoming_events_listing'] = array(
+    'name' => 'update paragraph content upcoming_events_listing',
+    'roles' => array(
+      'Blogger' => 'Blogger',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
   // Exported permission: 'update paragraph content video'.
   $permissions['update paragraph content video'] = array(
     'name' => 'update paragraph content video',
@@ -1785,6 +1812,16 @@ function main_site_feature_user_default_permissions() {
   // Exported permission: 'view paragraph content slideshow'.
   $permissions['view paragraph content slideshow'] = array(
     'name' => 'view paragraph content slideshow',
+    'roles' => array(
+      'Blogger' => 'Blogger',
+      'anonymous user' => 'anonymous user',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'view paragraph content upcoming_events_listing'.
+  $permissions['view paragraph content upcoming_events_listing'] = array(
+    'name' => 'view paragraph content upcoming_events_listing',
     'roles' => array(
       'Blogger' => 'Blogger',
       'anonymous user' => 'anonymous user',

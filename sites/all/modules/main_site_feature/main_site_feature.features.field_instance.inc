@@ -1655,6 +1655,7 @@ function main_site_feature_field_default_field_instances() {
         'google_map' => 'google_map',
         'quote' => 'quote',
         'slideshow' => 'slideshow',
+        'upcoming_events_listing' => 'upcoming_events_listing',
         'video' => 'video',
         'webform' => 'webform',
       ),
@@ -1668,6 +1669,7 @@ function main_site_feature_field_default_field_instances() {
         'google_map' => -4,
         'quote' => -7,
         'slideshow' => -6,
+        'upcoming_events_listing' => -10,
         'video' => -2,
         'webform' => -3,
       ),
@@ -2564,6 +2566,83 @@ function main_site_feature_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'paragraphs_item-upcoming_events_listing-field_event_categories'
+  $field_instances['paragraphs_item-upcoming_events_listing-field_event_categories'] = array(
+    'bundle' => 'upcoming_events_listing',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Select one or more categories to filter on. ',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_plain',
+        'weight' => 0,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_event_categories',
+    'label' => 'Event Categories',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'paragraphs_item-upcoming_events_listing-field_listing_title'
+  $field_instances['paragraphs_item-upcoming_events_listing-field_listing_title'] = array(
+    'bundle' => 'upcoming_events_listing',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'An optional title to include above the listing of events.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_listing_title',
+    'label' => 'Listing Title',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 0,
+    ),
+  );
+
   // Exported field_instance: 'paragraphs_item-video-field_video_url'
   $field_instances['paragraphs_item-video-field_video_url'] = array(
     'bundle' => 'video',
@@ -2968,6 +3047,7 @@ function main_site_feature_field_default_field_instances() {
   t('Action Link');
   t('Action Link Text');
   t('Action Text');
+  t('An optional title to include above the listing of events.');
   t('Attribution');
   t('Banner Image');
   t('Bio');
@@ -2982,6 +3062,7 @@ function main_site_feature_field_default_field_instances() {
   t('Enter a comma-separated list of words to describe your content.');
   t('Enter a date which will trigger the item to be displayed.  You can optionally enter an end date which will auto expire it from the site.');
   t('Event Address');
+  t('Event Categories');
   t('Event Category');
   t('Event Date');
   t('Event Files');
@@ -2999,6 +3080,7 @@ function main_site_feature_field_default_field_instances() {
   t('Height of the map in pixels or percent.');
   t('Image');
   t('List in About Us?');
+  t('Listing Title');
   t('Map Height');
   t('Map Width');
   t('Maybe something like "Donate Now"');
@@ -3011,6 +3093,7 @@ function main_site_feature_field_default_field_instances() {
   t('Profile Photo');
   t('Quote Text');
   t('Relationship to City Fruit');
+  t('Select one or more categories to filter on. ');
   t('Short Description');
   t('Show Right Sidebar');
   t('Slide');

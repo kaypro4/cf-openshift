@@ -29,7 +29,10 @@ function main_site_feature_views_default_views() {
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '9';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['style_plugin'] = 'views_bootstrap_grid_plugin_style';
   $handler->display->display_options['style_options']['columns'] = '3';
   $handler->display->display_options['row_plugin'] = 'fields';
@@ -110,6 +113,8 @@ function main_site_feature_views_default_views() {
   /* Display: Feed */
   $handler = $view->new_display('feed', 'Feed', 'feed');
   $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'rss';
   $handler->display->display_options['row_plugin'] = 'node_rss';
   $handler->display->display_options['path'] = 'blog.xml';
@@ -1464,6 +1469,22 @@ function main_site_feature_views_default_views() {
   $handler->display->display_options['sorts']['field_event_date_value']['id'] = 'field_event_date_value';
   $handler->display->display_options['sorts']['field_event_date_value']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['sorts']['field_event_date_value']['field'] = 'field_event_date_value';
+  /* Contextual filter: Content: Event Category (field_event_category) */
+  $handler->display->display_options['arguments']['field_event_category_tid']['id'] = 'field_event_category_tid';
+  $handler->display->display_options['arguments']['field_event_category_tid']['table'] = 'field_data_field_event_category';
+  $handler->display->display_options['arguments']['field_event_category_tid']['field'] = 'field_event_category_tid';
+  $handler->display->display_options['arguments']['field_event_category_tid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_event_category_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_event_category_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_event_category_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_event_category_tid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['field_event_category_tid']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['field_event_category_tid']['validate_options']['vocabularies'] = array(
+    'calendar_event_category' => 'calendar_event_category',
+  );
+  $handler->display->display_options['arguments']['field_event_category_tid']['validate_options']['type'] = 'tids';
+  $handler->display->display_options['arguments']['field_event_category_tid']['validate']['fail'] = 'empty';
+  $handler->display->display_options['arguments']['field_event_category_tid']['break_phrase'] = TRUE;
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -1486,7 +1507,7 @@ function main_site_feature_views_default_views() {
   $handler->display->display_options['filters']['field_event_date_value2']['default_date'] = 'now';
 
   /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'block');
+  $handler = $view->new_display('block', 'Block', 'upcoming_events');
   $handler->display->display_options['link_url'] = 'calendar';
   $export['upcoming_events'] = $view;
 
