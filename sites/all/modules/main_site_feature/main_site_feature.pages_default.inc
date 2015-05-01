@@ -284,6 +284,41 @@ function main_site_feature_default_page_manager_handlers() {
     $display->content['new-1965e5d1-50cb-4ccb-a9c8-bfb314346f28'] = $pane;
     $display->panels['content'][1] = 'new-1965e5d1-50cb-4ccb-a9c8-bfb314346f28';
     $pane = new stdClass();
+    $pane->pid = 'new-e334239c-ead7-4b2a-82b6-f6f0815092d6';
+    $pane->panel = 'content';
+    $pane->type = 'block';
+    $pane->subtype = 'views-board_listing-block';
+    $pane->shown = TRUE;
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'path_visibility',
+          'settings' => array(
+            'visibility_setting' => '1',
+            'paths' => 'about-us/our-team',
+          ),
+          'context' => 'empty',
+          'not' => FALSE,
+        ),
+      ),
+    );
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'Board of Directors',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = 'e334239c-ead7-4b2a-82b6-f6f0815092d6';
+    $display->content['new-e334239c-ead7-4b2a-82b6-f6f0815092d6'] = $pane;
+    $display->panels['content'][2] = 'new-e334239c-ead7-4b2a-82b6-f6f0815092d6';
+    $pane = new stdClass();
     $pane->pid = 'new-c78471cb-853e-4944-8e8d-23bb40d59664';
     $pane->panel = 'content';
     $pane->type = 'block';
@@ -313,11 +348,11 @@ function main_site_feature_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 3;
     $pane->locks = array();
     $pane->uuid = 'c78471cb-853e-4944-8e8d-23bb40d59664';
     $display->content['new-c78471cb-853e-4944-8e8d-23bb40d59664'] = $pane;
-    $display->panels['content'][2] = 'new-c78471cb-853e-4944-8e8d-23bb40d59664';
+    $display->panels['content'][3] = 'new-c78471cb-853e-4944-8e8d-23bb40d59664';
     $pane = new stdClass();
     $pane->pid = 'new-8400f80f-c296-4a11-97cd-7e17a68df13a';
     $pane->panel = 'nav';

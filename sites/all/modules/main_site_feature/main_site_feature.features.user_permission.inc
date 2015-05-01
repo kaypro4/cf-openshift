@@ -1666,6 +1666,7 @@ function main_site_feature_user_default_permissions() {
   $permissions['use text format full_html'] = array(
     'name' => 'use text format full_html',
     'roles' => array(
+      'Blogger' => 'Blogger',
       'Editor' => 'Editor',
       'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',

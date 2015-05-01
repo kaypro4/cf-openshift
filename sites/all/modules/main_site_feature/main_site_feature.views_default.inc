@@ -202,6 +202,123 @@ function main_site_feature_views_default_views() {
   $export['blog_on_homepage'] = $view;
 
   $view = new view();
+  $view->name = 'board_listing';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'users';
+  $view->human_name = 'Board Listing';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Staff Listing';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['hide_empty'] = TRUE;
+  /* Field: User: Name */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'users';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['label'] = '';
+  $handler->display->display_options['fields']['name']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['name']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['name']['link_to_user'] = FALSE;
+  $handler->display->display_options['fields']['name']['format_username'] = FALSE;
+  /* Field: Username anchor */
+  $handler->display->display_options['fields']['name_1']['id'] = 'name_1';
+  $handler->display->display_options['fields']['name_1']['table'] = 'users';
+  $handler->display->display_options['fields']['name_1']['field'] = 'name';
+  $handler->display->display_options['fields']['name_1']['ui_name'] = 'Username anchor';
+  $handler->display->display_options['fields']['name_1']['label'] = '';
+  $handler->display->display_options['fields']['name_1']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['name_1']['alter']['text'] = '<a name="[name]"></a> ';
+  $handler->display->display_options['fields']['name_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['name_1']['link_to_user'] = FALSE;
+  /* Field: User: Full Name */
+  $handler->display->display_options['fields']['field_full_name']['id'] = 'field_full_name';
+  $handler->display->display_options['fields']['field_full_name']['table'] = 'field_data_field_full_name';
+  $handler->display->display_options['fields']['field_full_name']['field'] = 'field_full_name';
+  $handler->display->display_options['fields']['field_full_name']['label'] = '';
+  $handler->display->display_options['fields']['field_full_name']['element_type'] = 'h3';
+  $handler->display->display_options['fields']['field_full_name']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_full_name']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_full_name']['group_column'] = 'entity_id';
+  /* Field: User: Title */
+  $handler->display->display_options['fields']['field_title']['id'] = 'field_title';
+  $handler->display->display_options['fields']['field_title']['table'] = 'field_data_field_title';
+  $handler->display->display_options['fields']['field_title']['field'] = 'field_title';
+  $handler->display->display_options['fields']['field_title']['label'] = '';
+  $handler->display->display_options['fields']['field_title']['alter']['text'] = '[field_full_name], [field_title]';
+  $handler->display->display_options['fields']['field_title']['element_class'] = 'team-title';
+  $handler->display->display_options['fields']['field_title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_title']['group_column'] = 'entity_id';
+  /* Field: User: Profile Photo */
+  $handler->display->display_options['fields']['field_profile_photo']['id'] = 'field_profile_photo';
+  $handler->display->display_options['fields']['field_profile_photo']['table'] = 'field_data_field_profile_photo';
+  $handler->display->display_options['fields']['field_profile_photo']['field'] = 'field_profile_photo';
+  $handler->display->display_options['fields']['field_profile_photo']['label'] = '';
+  $handler->display->display_options['fields']['field_profile_photo']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_profile_photo']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_profile_photo']['settings'] = array(
+    'image_style' => 'profile_image',
+    'image_link' => '',
+  );
+  /* Field: User: Bio */
+  $handler->display->display_options['fields']['field_bio']['id'] = 'field_bio';
+  $handler->display->display_options['fields']['field_bio']['table'] = 'field_data_field_bio';
+  $handler->display->display_options['fields']['field_bio']['field'] = 'field_bio';
+  $handler->display->display_options['fields']['field_bio']['label'] = '';
+  $handler->display->display_options['fields']['field_bio']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_bio']['group_column'] = 'entity_id';
+  /* Field: User: Uid */
+  $handler->display->display_options['fields']['uid']['id'] = 'uid';
+  $handler->display->display_options['fields']['uid']['table'] = 'users';
+  $handler->display->display_options['fields']['uid']['field'] = 'uid';
+  $handler->display->display_options['fields']['uid']['label'] = '';
+  $handler->display->display_options['fields']['uid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['uid']['element_label_colon'] = FALSE;
+  /* Sort criterion: User: Order on About Us (field_order_on_about_us) */
+  $handler->display->display_options['sorts']['field_order_on_about_us_value']['id'] = 'field_order_on_about_us_value';
+  $handler->display->display_options['sorts']['field_order_on_about_us_value']['table'] = 'field_data_field_order_on_about_us';
+  $handler->display->display_options['sorts']['field_order_on_about_us_value']['field'] = 'field_order_on_about_us_value';
+  /* Sort criterion: User: Full Name (field_full_name) */
+  $handler->display->display_options['sorts']['field_full_name_value']['id'] = 'field_full_name_value';
+  $handler->display->display_options['sorts']['field_full_name_value']['table'] = 'field_data_field_full_name';
+  $handler->display->display_options['sorts']['field_full_name_value']['field'] = 'field_full_name_value';
+  /* Filter criterion: User: Active */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'users';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: User: Relationship to City Fruit (field_relationship_to_city_fruit) */
+  $handler->display->display_options['filters']['field_relationship_to_city_fruit_value']['id'] = 'field_relationship_to_city_fruit_value';
+  $handler->display->display_options['filters']['field_relationship_to_city_fruit_value']['table'] = 'field_data_field_relationship_to_city_fruit';
+  $handler->display->display_options['filters']['field_relationship_to_city_fruit_value']['field'] = 'field_relationship_to_city_fruit_value';
+  $handler->display->display_options['filters']['field_relationship_to_city_fruit_value']['value'] = array(
+    'Board' => 'Board',
+  );
+
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'block');
+  $export['board_listing'] = $view;
+
+  $view = new view();
   $view->name = 'calendar';
   $view->description = '';
   $view->tag = 'default';
@@ -1172,7 +1289,6 @@ function main_site_feature_views_default_views() {
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Staff Listing';
   $handler->display->display_options['use_more_always'] = FALSE;
-  $handler->display->display_options['group_by'] = TRUE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
@@ -1184,10 +1300,13 @@ function main_site_feature_views_default_views() {
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['hide_empty'] = TRUE;
-  /* Relationship: User: Content authored */
-  $handler->display->display_options['relationships']['uid']['id'] = 'uid';
-  $handler->display->display_options['relationships']['uid']['table'] = 'users';
-  $handler->display->display_options['relationships']['uid']['field'] = 'uid';
+  /* Relationship: User: Representative node */
+  $handler->display->display_options['relationships']['uid_representative']['id'] = 'uid_representative';
+  $handler->display->display_options['relationships']['uid_representative']['table'] = 'users';
+  $handler->display->display_options['relationships']['uid_representative']['field'] = 'uid_representative';
+  $handler->display->display_options['relationships']['uid_representative']['subquery_sort'] = 'node.created';
+  $handler->display->display_options['relationships']['uid_representative']['subquery_view'] = '';
+  $handler->display->display_options['relationships']['uid_representative']['subquery_namespace'] = '';
   /* Field: User: Name */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'users';
@@ -1218,14 +1337,7 @@ function main_site_feature_views_default_views() {
   $handler->display->display_options['fields']['field_full_name']['element_type'] = 'h3';
   $handler->display->display_options['fields']['field_full_name']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_full_name']['element_default_classes'] = FALSE;
-  /* Field: User: Picture */
-  $handler->display->display_options['fields']['picture']['id'] = 'picture';
-  $handler->display->display_options['fields']['picture']['table'] = 'users';
-  $handler->display->display_options['fields']['picture']['field'] = 'picture';
-  $handler->display->display_options['fields']['picture']['label'] = '';
-  $handler->display->display_options['fields']['picture']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['picture']['link_photo_to_profile'] = FALSE;
-  $handler->display->display_options['fields']['picture']['image_style'] = 'thumbnail';
+  $handler->display->display_options['fields']['field_full_name']['group_column'] = 'entity_id';
   /* Field: User: Title */
   $handler->display->display_options['fields']['field_title']['id'] = 'field_title';
   $handler->display->display_options['fields']['field_title']['table'] = 'field_data_field_title';
@@ -1234,6 +1346,18 @@ function main_site_feature_views_default_views() {
   $handler->display->display_options['fields']['field_title']['alter']['text'] = '[field_full_name], [field_title]';
   $handler->display->display_options['fields']['field_title']['element_class'] = 'team-title';
   $handler->display->display_options['fields']['field_title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_title']['group_column'] = 'entity_id';
+  /* Field: User: Profile Photo */
+  $handler->display->display_options['fields']['field_profile_photo']['id'] = 'field_profile_photo';
+  $handler->display->display_options['fields']['field_profile_photo']['table'] = 'field_data_field_profile_photo';
+  $handler->display->display_options['fields']['field_profile_photo']['field'] = 'field_profile_photo';
+  $handler->display->display_options['fields']['field_profile_photo']['label'] = '';
+  $handler->display->display_options['fields']['field_profile_photo']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_profile_photo']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_profile_photo']['settings'] = array(
+    'image_style' => 'profile_image',
+    'image_link' => '',
+  );
   /* Field: User: Bio */
   $handler->display->display_options['fields']['field_bio']['id'] = 'field_bio';
   $handler->display->display_options['fields']['field_bio']['table'] = 'field_data_field_bio';
@@ -1248,22 +1372,12 @@ function main_site_feature_views_default_views() {
   $handler->display->display_options['fields']['uid']['label'] = '';
   $handler->display->display_options['fields']['uid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['uid']['element_label_colon'] = FALSE;
-  /* Field: MAX(Content: Title) */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['relationship'] = 'uid';
-  $handler->display->display_options['fields']['title']['group_type'] = 'max';
-  $handler->display->display_options['fields']['title']['label'] = 'Latest blog post';
-  /* Field: MAX(Content: Nid) */
-  $handler->display->display_options['fields']['nid']['id'] = 'nid';
-  $handler->display->display_options['fields']['nid']['table'] = 'node';
-  $handler->display->display_options['fields']['nid']['field'] = 'nid';
-  $handler->display->display_options['fields']['nid']['relationship'] = 'uid';
-  $handler->display->display_options['fields']['nid']['group_type'] = 'max';
-  $handler->display->display_options['fields']['nid']['label'] = '';
-  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['relationship'] = 'uid_representative';
+  $handler->display->display_options['fields']['title']['label'] = 'Latest Blog Post';
   /* Sort criterion: User: Order on About Us (field_order_on_about_us) */
   $handler->display->display_options['sorts']['field_order_on_about_us_value']['id'] = 'field_order_on_about_us_value';
   $handler->display->display_options['sorts']['field_order_on_about_us_value']['table'] = 'field_data_field_order_on_about_us';

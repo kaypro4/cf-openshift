@@ -223,8 +223,8 @@ h1 {
 }
 
 .content-panel-wrapper.latest {
-    background-color:#E8E8E8; 
-    padding-bottom: 35px; 
+    background-color:#E8E8E8;
+    padding-bottom: 35px;
     padding-top: 20px;
     margin-top: 30px;
     margin-bottom:20px;
@@ -339,7 +339,7 @@ ul.upcoming-events li {
     font-size:24px;
 }
 
-/* 
+/*
 Left arrow stuff
 Used this to create it: http://cssarrowplease.com/;
 Another concept:  http://designwall.s3.amazonaws.com/images/guide/dw_focus/home_content/slider_in_home_content_frontend.png;
@@ -468,7 +468,7 @@ Another concept:  http://designwall.s3.amazonaws.com/images/guide/dw_focus/home_
 
 section#footer {
 	background-color: #fff;
-	background-color:#8AC54F; 
+	background-color:#8AC54F;
 	margin-top: 40px;
 	padding-top: 20px;
 }
@@ -545,7 +545,7 @@ font-size: 14px;
 display: block;
 margin-top: 8px;
 }
- 
+
 blockquote cite:before {
 content: "\2014 \2009";
 }
@@ -584,30 +584,30 @@ figcaption {display: block; text-align: left; font-size: 0.8em; font-style: ital
 }
 
 .thumbnail-tag {
-    position:absolute; 
-    bottom: 8px; 
-    right:-5px; 
-    padding: 2px; 
-    color:white; 
-    padding-right: 15px; 
+    position:absolute;
+    bottom: 8px;
+    right:-5px;
+    padding: 2px;
+    color:white;
+    padding-right: 15px;
     padding-left: 15px;
     font-size: 90%;
 }
 
 .thumbnail-tag.learn {
-    background-color: #F04124; 
+    background-color: #F04124;
 }
 
 .thumbnail-tag.event {
-    background-color: #008CBA; 
+    background-color: #008CBA;
 }
 
 .thumbnail-tag.blog,.thumbnail-tag.article {
-    background-color: #738A8D; 
+    background-color: #738A8D;
 }
 
 .thumbnail-tag.event-date {
-    background-color: #008CBA; 
+    background-color: #008CBA;
 }
 
 
@@ -634,7 +634,7 @@ figcaption {display: block; text-align: left; font-size: 0.8em; font-style: ital
     white-space: nowrap;
     line-height: 220%;
 }
-   
+
 .thumbnail p.feature-link {
     position:absolute;
     bottom: 12px;
@@ -650,33 +650,18 @@ figcaption {display: block; text-align: left; font-size: 0.8em; font-style: ital
 
 /* Our Team Listing */
 
-#wrapper {
-  margin-left: 125px;
-}
-#bio {
-  float: right;
-  width: 100%;
-}
-
-#bio {
-    padding-bottom: 20px;
-}
-
-#bio .team-title {
+.profile .team-title {
     margin-bottom: 20px;
     border-bottom: solid 0px gray;
 }
 
-#photo {
-  float: left;
-  width: 125px;
-  margin-left: -125px;
-  padding-top: 20px;
-}
-#cleared {
-  clear: both;
+.profile {
+  padding-bottom: 8px;
 }
 
+.profile .col-sm-2 img {
+  padding-top: 23px;
+}
 
 
 /* Blog Node Styles */
@@ -852,7 +837,7 @@ h3.event-date {
     .dropdown:hover .dropdown-menu {
         display: block;
     }
-    
+
     .dropdown:hover > a {
       background-color: #006687;
     }
@@ -861,11 +846,11 @@ h3.event-date {
     #views-bootstrap-carousel-1 {
         padding-right: 25%;
     }
-    
+
     #views-bootstrap-carousel-1 .carousel-controls {
         display: none;
     }
-    
+
 
 }
 
@@ -883,7 +868,7 @@ h3.event-date {
         border-top: solid 1px #ddd;
     }
 
-    
+
     .navbar-nav > li.last {
         border-bottom: solid 1px #ddd;
     }
@@ -929,7 +914,7 @@ h3.event-date {
         padding-top: 5px;
         padding-bottom: 5px;
     }
-    
+
     .navbar-nav>li>a:hover, .navbar-nav .open .dropdown-menu>li>a:hover, .navbar-nav>li>a:active{
         background-color: #8ac54f !important;
     }
@@ -937,7 +922,7 @@ h3.event-date {
     .navbar-nav .open .dropdown-menu>li {
         padding-top: 8px;
         padding-bottom: 8px;
-    } 
+    }
 
     .dropdown .leaf {
 
@@ -958,7 +943,7 @@ h3.event-date {
     .cta-list, .footer {
         padding-top: 20px;
     }
-    
+
     #footer h4 {
         padding-top: 20px;
     }
@@ -996,7 +981,7 @@ h3.event-date {
     .cta-button-mobile {
          width: 75%;
     }
-    
+
     .banner-overlay .first-line {
     color: black;
     font-size: 24px;
@@ -1044,7 +1029,7 @@ h3.event-date {
     #views-bootstrap-carousel-1 .carousel-indicators{
         display: block !important;
     }
-} 
+}
 
 
 /* AddThisEvent (add to your existing CSS) */
