@@ -702,6 +702,14 @@ figcaption {display: block; text-align: left; font-size: 0.8em; font-style: ital
 }
 
 
+.pagination>li>a {
+  font-weight:bold;
+}
+
+.pagination .active a {
+  color: white;
+}
+
 
 #instagrams{
     margin: auto;
