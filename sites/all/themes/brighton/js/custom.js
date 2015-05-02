@@ -13,6 +13,20 @@
 (function ($, Drupal, window, document, undefined) {
 
 
+    //make the top level menu items clickable
+    jQuery(function($) {
+        if($(window).width()>769){
+            $('.navbar .dropdown').hover(function() {
+                $(this).find('.dropdown-menu').first().stop(true, true).delay(250).slideDown();
+            }, function() {
+                $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideUp();
+
+            });
+            $('.navbar .dropdown > a').click(function(){
+                location.href = this.href;
+            });
+        }
+    });
 
     $(window).load(function() {
 
@@ -34,7 +48,7 @@
             }).on('click', '.list-group li', function() {
                     clickEvent = true;
                     $('.list-group li').removeClass('active');
-                    $(this).addClass('active');     
+                    $(this).addClass('active');
             }).on('slid.bs.carousel', function(e) {
                 if(!clickEvent) {
                     var count = $('.list-group').children().length -1;
@@ -42,13 +56,13 @@
                     current.removeClass('active').next().addClass('active');
                     var id = parseInt(current.data('slide-to'));
                     if(count == id) {
-                        $('.list-group li').first().addClass('active'); 
+                        $('.list-group li').first().addClass('active');
                     }
                 }
                 clickEvent = false;
             });
 
-            
+
             $('.list-group-item').each(function (e) {
                 $( this ).attr( "data-slide-to", $(this).index() );
             });
@@ -56,12 +70,12 @@
             $( ".list-group-item" ).attr( "data-target", "#views-bootstrap-carousel-1" );
 
 
-           if ($('.pane-menu-block-1').length == 0) { 
-                 $('.left.content-nav').addClass('hidden'); 
-                 $('.middle.content-col').removeClass('col-md-7'); 
-                 $('.middle.content-col').addClass('col-md-9'); 
-                 $('.col-md-10').removeClass('col-md-push-2');     
-                 
+           if ($('.pane-menu-block-1').length == 0) {
+                 $('.left.content-nav').addClass('hidden');
+                 $('.middle.content-col').removeClass('col-md-7');
+                 $('.middle.content-col').addClass('col-md-9');
+                 $('.col-md-10').removeClass('col-md-push-2');
+
            }
 
 
@@ -88,13 +102,13 @@
             }
            });
 
-           $('.img-overlay').magnificPopup({ 
+           $('.img-overlay').magnificPopup({
             type: 'image'
             // other options
           });
-                    
+
     });
-    
+
     $( window ).resize(function() {
     var boxheight = $('#views-bootstrap-carousel-1 .carousel-inner').innerHeight();
       var itemlength = $('#views-bootstrap-carousel-1 .item').length;
@@ -102,16 +116,13 @@
       $('.list-group-item').outerHeight(triggerheight);
       //$("#newsCarousel").carousel('pause');
     });
-    
-        
 
-       
 
-       
 
-       
+
+
+
+
+
 
 })(jQuery, Drupal, this, this.document);
-
-
-
