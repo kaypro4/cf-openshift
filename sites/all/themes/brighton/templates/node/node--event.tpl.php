@@ -115,7 +115,7 @@ addthisevent.settings({
 
   <?php print render($content['field_banner_image']) ?>
 
-  <?php print render($content['field_page_sections']) ?>
+  <p><?php print render($content['field_page_sections']) ?></p>
 
   <p><?php print render($content['field_event_cost']) ?></p>
 
