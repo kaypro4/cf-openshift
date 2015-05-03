@@ -387,13 +387,16 @@ Another concept:  http://designwall.s3.amazonaws.com/images/guide/dw_focus/home_
 }
 
 .navbar-nav a.active {
-    background-color: #8AC54F !important;
+    background-color: #8AC54F;
 }
 
-.navbar-nav .expanded a.active {
-    background-color: #008CBA !important;
+.navbar-nav .expanded .first a.active {
+    background-color: #008CBA;
 }
 
+.navbar-inverse .navbar-nav>.active>a {
+  background: none;
+}
 
 .navbar {
     min-height: 90px !important;

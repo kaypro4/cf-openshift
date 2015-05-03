@@ -81,6 +81,7 @@
   $raw_title = $object->title->value();
   $raw_summary = $object->field_summary->value();
   $raw_event_address = $object->field_event_address->value();
+  $encoded_event_address = urlencode($object->field_event_address->value());
 ?>
 
 <script type="text/javascript">
@@ -98,17 +99,29 @@ addthisevent.settings({
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
   <div class="content clearfix"<?php print $content_attributes; ?>>
-    <?php
-      // We hide the comments and links now so that we can render them later.
-      hide($content['comments']);
-      hide($content['links']);
-      //print render($content);
-    ?>
+
   <h3 class="event-date"><?php print render($content['field_event_date']) ?></h3>
+
+  <?php if (!empty($content['field_event_address'])) { ?>
+    <p>
+
+      <?php if ($content['field_link_to_google_maps_']['#items'][0]['value'] == 1) { ?>
+        <strong>Location:</strong> <a href="https://maps.google.com?daddr=<?php print $encoded_event_address; ?>" target="_blank"><?php print $raw_event_address; ?></a>
+      <?php }else{ ?>
+        <?php print render($content['field_event_address']) ?>
+      <?php } ?>
+    </p>
+  <?php } ?>
+
   <?php print render($content['field_banner_image']) ?>
-  <p><?php print render($content['body']) ?></p>
 
   <?php print render($content['field_page_sections']) ?>
+
+  <p><?php print render($content['field_event_cost']) ?></p>
+
+  <p><h3><?php print render($content['field_event_registration_link']) ?></h3></p>
+
+  <p><?php print render($content['field_event_files']) ?></p>
 
     <a href="#" title="Add to Calendar" class="addthisevent">
       Add to Your Calendar <i class="fa fa-chevron-down"></i>
@@ -125,31 +138,8 @@ addthisevent.settings({
   </a>
 
 
-  <p><?php print render($content['field_event_registration_link']) ?></p>
-
-
-  <p><?php print render($content['field_event_files']) ?></p> 
+  <p><?php print render($content['field_event_category']) ?></p>
 
   </div>
-
-  <?php
-    // Remove the "Add new comment" link on the teaser page or if the comment
-    // form is being displayed on the same page.
-    if ($teaser || !empty($content['comments']['comment_form'])) {
-      unset($content['links']['comment']['#links']['comment-add']);
-    }
-    // Only display the wrapper div if there are links.
-    $links = render($content['links']);
-    if ($links):
-  ?>
-    <div class="link-wrapper">
-      <?php print $links; ?>
-    </div>
-  <?php endif; ?>
-
-  <?php print render($content['comments']); ?>
-
-
-
 
 </div>

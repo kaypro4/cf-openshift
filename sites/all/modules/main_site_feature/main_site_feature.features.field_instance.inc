@@ -331,7 +331,7 @@ function main_site_feature_field_default_field_instances() {
   $field_instances['node-article-field_banner_image'] = array(
     'bundle' => 'article',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Enter the main image that will display at the top of the blog post.  This will also be the image used when the blog post is shared on social media.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -377,12 +377,16 @@ function main_site_feature_field_default_field_instances() {
         'manualcrop_instant_preview' => 0,
         'manualcrop_require_cropping' => array(
           'banner_image' => 0,
+          'feature_image' => 0,
           'homepage_slide' => 0,
+          'profile_image' => 0,
           'slideshow_4_3' => 0,
         ),
         'manualcrop_styles_list' => array(
           'banner_image' => 'banner_image',
+          'feature_image' => 0,
           'homepage_slide' => 0,
+          'profile_image' => 0,
           'slideshow_4_3' => 0,
         ),
         'manualcrop_styles_mode' => 'include',
@@ -722,62 +726,11 @@ function main_site_feature_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-body'
-  $field_instances['node-event-body'] = array(
-    'bundle' => 'event',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'quickedit' => array(
-            'editor' => 'plain_text',
-          ),
-        ),
-        'type' => 'text_default',
-        'weight' => 2,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'quickedit' => array(
-            'editor' => 'form',
-          ),
-          'trim_length' => 600,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'body',
-    'label' => 'Body',
-    'required' => FALSE,
-    'settings' => array(
-      'display_summary' => TRUE,
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 20,
-        'summary_rows' => 5,
-      ),
-      'type' => 'text_textarea_with_summary',
-      'weight' => 4,
-    ),
-  );
-
   // Exported field_instance: 'node-event-field_banner_image'
   $field_instances['node-event-field_banner_image'] = array(
     'bundle' => 'event',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Enter the main image that will display at the top of the event.  This will also be the image used when the event is shared on social media.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -785,9 +738,6 @@ function main_site_feature_field_default_field_instances() {
         'settings' => array(
           'image_link' => '',
           'image_style' => 'banner_image',
-          'quickedit' => array(
-            'editor' => 'form',
-          ),
         ),
         'type' => 'image',
         'weight' => 1,
@@ -826,12 +776,16 @@ function main_site_feature_field_default_field_instances() {
         'manualcrop_instant_preview' => 0,
         'manualcrop_require_cropping' => array(
           'banner_image' => 0,
+          'feature_image' => 0,
           'homepage_slide' => 0,
+          'profile_image' => 0,
           'slideshow_4_3' => 0,
         ),
         'manualcrop_styles_list' => array(
           'banner_image' => 'banner_image',
+          'feature_image' => 0,
           'homepage_slide' => 0,
+          'profile_image' => 0,
           'slideshow_4_3' => 0,
         ),
         'manualcrop_styles_mode' => 'include',
@@ -852,13 +806,9 @@ function main_site_feature_field_default_field_instances() {
     'description' => 'The full address of the event (e.g. 201 S Jackson St, Seattle WA 98118',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
-        'settings' => array(
-          'quickedit' => array(
-            'editor' => 'plain_text',
-          ),
-        ),
+        'settings' => array(),
         'type' => 'text_default',
         'weight' => 12,
       ),
@@ -871,7 +821,7 @@ function main_site_feature_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_event_address',
-    'label' => 'Event Address',
+    'label' => 'Location',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -884,7 +834,7 @@ function main_site_feature_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 6,
+      'weight' => 5,
     ),
   );
 
@@ -896,14 +846,9 @@ function main_site_feature_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
-        'module' => 'taxonomy',
-        'settings' => array(
-          'quickedit' => array(
-            'editor' => 'form',
-          ),
-        ),
-        'type' => 'taxonomy_term_reference_link',
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 5,
       ),
       'teaser' => array(
@@ -925,7 +870,47 @@ function main_site_feature_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 10,
+      'weight' => 11,
+    ),
+  );
+
+  // Exported field_instance: 'node-event-field_event_cost'
+  $field_instances['node-event-field_event_cost'] = array(
+    'bundle' => 'event',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 14,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_event_cost',
+    'label' => 'Cost',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 8,
     ),
   );
 
@@ -944,9 +929,6 @@ function main_site_feature_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
-          'quickedit' => array(
-            'editor' => 'form',
-          ),
         ),
         'type' => 'date_default',
         'weight' => 0,
@@ -994,11 +976,7 @@ function main_site_feature_field_default_field_instances() {
       'default' => array(
         'label' => 'hidden',
         'module' => 'file',
-        'settings' => array(
-          'quickedit' => array(
-            'editor' => 'form',
-          ),
-        ),
+        'settings' => array(),
         'type' => 'file_default',
         'weight' => 6,
       ),
@@ -1027,48 +1005,7 @@ function main_site_feature_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
-      'weight' => 9,
-    ),
-  );
-
-  // Exported field_instance: 'node-event-field_event_location'
-  $field_instances['node-event-field_event_location'] = array(
-    'bundle' => 'event',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'google_map_field',
-        'settings' => array(
-          'quickedit' => array(
-            'editor' => 'form',
-          ),
-        ),
-        'type' => 'google_map_field_formatter_default',
-        'weight' => 3,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_event_location',
-    'label' => 'Event Location',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'google_map_field',
-      'settings' => array(),
-      'type' => 'google_map_field_widget',
-      'weight' => 5,
+      'weight' => 10,
     ),
   );
 
@@ -1082,11 +1019,7 @@ function main_site_feature_field_default_field_instances() {
       'default' => array(
         'label' => 'hidden',
         'module' => 'link',
-        'settings' => array(
-          'quickedit' => array(
-            'editor' => 'form',
-          ),
-        ),
+        'settings' => array(),
         'type' => 'link_default',
         'weight' => 4,
       ),
@@ -1129,7 +1062,7 @@ function main_site_feature_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -1185,7 +1118,7 @@ function main_site_feature_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 13,
+      'weight' => 14,
     ),
   );
 
@@ -1227,7 +1160,50 @@ function main_site_feature_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 12,
+      'weight' => 13,
+    ),
+  );
+
+  // Exported field_instance: 'node-event-field_link_to_google_maps_'
+  $field_instances['node-event-field_link_to_google_maps_'] = array(
+    'bundle' => 'event',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'This will turn the location entered above into a clickable link.  Please test this after you save to make sure that the location you entered is understood correctly by Google Maps.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 15,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_link_to_google_maps_',
+    'label' => 'Link Location to Google Maps?',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 6,
     ),
   );
 
@@ -1242,9 +1218,6 @@ function main_site_feature_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'paragraphs',
         'settings' => array(
-          'quickedit' => array(
-            'editor' => 'form',
-          ),
           'view_mode' => 'full',
         ),
         'type' => 'paragraphs_view',
@@ -1264,26 +1237,32 @@ function main_site_feature_field_default_field_instances() {
     'settings' => array(
       'add_mode' => 'select',
       'allowed_bundles' => array(
-        'banner_image' => -1,
+        'banner_image' => 'banner_image',
         'block' => -1,
         'call_to_action' => 'call_to_action',
-        'full_width_text' => -1,
+        'counter' => -1,
+        'feature_block' => 'feature_block',
+        'full_width_text' => 'full_width_text',
         'google_map' => 'google_map',
         'quote' => 'quote',
         'slideshow' => 'slideshow',
+        'upcoming_events_listing' => 'upcoming_events_listing',
         'video' => 'video',
         'webform' => -1,
       ),
       'bundle_weights' => array(
-        'banner_image' => 2,
-        'block' => 3,
-        'call_to_action' => 4,
-        'full_width_text' => 5,
-        'google_map' => 6,
-        'quote' => 7,
-        'slideshow' => 8,
-        'video' => 9,
-        'webform' => 10,
+        'banner_image' => -6,
+        'block' => -5,
+        'call_to_action' => -4,
+        'counter' => -7,
+        'feature_block' => -9,
+        'full_width_text' => -10,
+        'google_map' => -3,
+        'quote' => -2,
+        'slideshow' => -1,
+        'upcoming_events_listing' => -8,
+        'video' => 0,
+        'webform' => 1,
       ),
       'default_edit_mode' => 'open',
       'title' => 'Page Section',
@@ -1295,7 +1274,7 @@ function main_site_feature_field_default_field_instances() {
       'module' => 'paragraphs',
       'settings' => array(),
       'type' => 'paragraphs_embed',
-      'weight' => 5,
+      'weight' => 4,
     ),
   );
 
@@ -1337,7 +1316,7 @@ function main_site_feature_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 11,
+      'weight' => 12,
     ),
   );
 
@@ -1351,11 +1330,7 @@ function main_site_feature_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'text',
-        'settings' => array(
-          'quickedit' => array(
-            'editor' => 'plain_text',
-          ),
-        ),
+        'settings' => array(),
         'type' => 'text_default',
         'weight' => 11,
       ),
@@ -3053,20 +3028,20 @@ function main_site_feature_field_default_field_instances() {
   t('Bio');
   t('Block Name');
   t('Blog Sections');
-  t('Body');
   t('Can be any "place name" that Google will recognize.  Addresses work well or even common landmarks.');
   t('Caption');
   t('Check this box if you would like this item to appear on the homepage.');
   t('Comment');
+  t('Cost');
   t('Display Date Range');
   t('Enter a comma-separated list of words to describe your content.');
   t('Enter a date which will trigger the item to be displayed.  You can optionally enter an end date which will auto expire it from the site.');
-  t('Event Address');
+  t('Enter the main image that will display at the top of the blog post.  This will also be the image used when the blog post is shared on social media.');
+  t('Enter the main image that will display at the top of the event.  This will also be the image used when the event is shared on social media.');
   t('Event Categories');
   t('Event Category');
   t('Event Date');
   t('Event Files');
-  t('Event Location');
   t('Event Registration Link');
   t('Feature Image');
   t('Feature Link');
@@ -3079,8 +3054,10 @@ function main_site_feature_field_default_field_instances() {
   t('Google API Key');
   t('Height of the map in pixels or percent.');
   t('Image');
+  t('Link Location to Google Maps?');
   t('List in About Us?');
   t('Listing Title');
+  t('Location');
   t('Map Height');
   t('Map Width');
   t('Maybe something like "Donate Now"');
@@ -3105,6 +3082,7 @@ function main_site_feature_field_default_field_instances() {
   t('The full address of the event (e.g. 201 S Jackson St, Seattle WA 98118');
   t('The relative display order on the about us page.  ');
   t('This is the full URL to the page or a page relative to the root of this site (e.g. /donate)');
+  t('This will turn the location entered above into a clickable link.  Please test this after you save to make sure that the location you entered is understood correctly by Google Maps.');
   t('Title');
   t('Video URL');
   t('Webform');
