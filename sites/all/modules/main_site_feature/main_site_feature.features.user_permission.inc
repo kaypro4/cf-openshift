@@ -722,15 +722,6 @@ function main_site_feature_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: 'create homepage_slide content'.
-  $permissions['create homepage_slide content'] = array(
-    'name' => 'create homepage_slide content',
-    'roles' => array(
-      'Editor' => 'Editor',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: 'create orchard content'.
   $permissions['create orchard content'] = array(
     'name' => 'create orchard content',
@@ -906,15 +897,6 @@ function main_site_feature_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: 'delete any homepage_slide content'.
-  $permissions['delete any homepage_slide content'] = array(
-    'name' => 'delete any homepage_slide content',
-    'roles' => array(
-      'Editor' => 'Editor',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: 'delete any orchard content'.
   $permissions['delete any orchard content'] = array(
     'name' => 'delete any orchard content',
@@ -962,15 +944,6 @@ function main_site_feature_user_default_permissions() {
   // Exported permission: 'delete own event content'.
   $permissions['delete own event content'] = array(
     'name' => 'delete own event content',
-    'roles' => array(
-      'Editor' => 'Editor',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'delete own homepage_slide content'.
-  $permissions['delete own homepage_slide content'] = array(
-    'name' => 'delete own homepage_slide content',
     'roles' => array(
       'Editor' => 'Editor',
     ),
@@ -1179,15 +1152,6 @@ function main_site_feature_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: 'edit any homepage_slide content'.
-  $permissions['edit any homepage_slide content'] = array(
-    'name' => 'edit any homepage_slide content',
-    'roles' => array(
-      'Editor' => 'Editor',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: 'edit any orchard content'.
   $permissions['edit any orchard content'] = array(
     'name' => 'edit any orchard content',
@@ -1267,15 +1231,6 @@ function main_site_feature_user_default_permissions() {
   // Exported permission: 'edit own event content'.
   $permissions['edit own event content'] = array(
     'name' => 'edit own event content',
-    'roles' => array(
-      'Editor' => 'Editor',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'edit own homepage_slide content'.
-  $permissions['edit own homepage_slide content'] = array(
-    'name' => 'edit own homepage_slide content',
     'roles' => array(
       'Editor' => 'Editor',
     ),
