@@ -39,36 +39,6 @@ function main_site_feature_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_action_link'
-  $field_bases['field_action_link'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_action_link',
-    'foreign keys' => array(),
-    'indexes' => array(),
-    'locked' => 0,
-    'module' => 'link',
-    'settings' => array(
-      'attributes' => array(
-        'class' => '',
-        'rel' => '',
-        'target' => 'default',
-      ),
-      'display' => array(
-        'url_cutoff' => 80,
-      ),
-      'enable_tokens' => 1,
-      'title' => 'optional',
-      'title_maxlength' => 128,
-      'title_value' => '',
-      'url' => 0,
-    ),
-    'translatable' => 0,
-    'type' => 'link_field',
-  );
-
   // Exported field_base: 'field_action_link_new'
   $field_bases['field_action_link_new'] = array(
     'active' => 1,
@@ -292,36 +262,6 @@ function main_site_feature_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'field_collection',
-  );
-
-  // Exported field_base: 'field_display_date_range'
-  $field_bases['field_display_date_range'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_display_date_range',
-    'foreign keys' => array(),
-    'indexes' => array(),
-    'locked' => 0,
-    'module' => 'date',
-    'settings' => array(
-      'cache_count' => 4,
-      'cache_enabled' => 0,
-      'granularity' => array(
-        'day' => 'day',
-        'hour' => 'hour',
-        'minute' => 'minute',
-        'month' => 'month',
-        'second' => 0,
-        'year' => 'year',
-      ),
-      'timezone_db' => 'UTC',
-      'todate' => 'optional',
-      'tz_handling' => 'site',
-    ),
-    'translatable' => 0,
-    'type' => 'datetime',
   );
 
   // Exported field_base: 'field_event_address'
@@ -906,6 +846,22 @@ function main_site_feature_field_default_field_bases() {
     'type' => 'text',
   );
 
+  // Exported field_base: 'field_main_page_sections'
+  $field_bases['field_main_page_sections'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_main_page_sections',
+    'foreign keys' => array(),
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'paragraphs',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'paragraphs',
+  );
+
   // Exported field_base: 'field_map_height'
   $field_bases['field_map_height'] = array(
     'active' => 1,
@@ -1109,31 +1065,20 @@ function main_site_feature_field_default_field_bases() {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_short_description'
-  $field_bases['field_short_description'] = array(
+  // Exported field_base: 'field_right_column_sections'
+  $field_bases['field_right_column_sections'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_short_description',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
+    'field_name' => 'field_right_column_sections',
+    'foreign keys' => array(),
+    'indexes' => array(),
     'locked' => 0,
-    'module' => 'text',
+    'module' => 'paragraphs',
     'settings' => array(),
     'translatable' => 0,
-    'type' => 'text_long',
+    'type' => 'paragraphs',
   );
 
   // Exported field_base: 'field_show_right_sidebar'
@@ -1189,36 +1134,6 @@ function main_site_feature_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'text',
-  );
-
-  // Exported field_base: 'field_slide_image'
-  $field_bases['field_slide_image'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_slide_image',
-    'foreign keys' => array(
-      'fid' => array(
-        'columns' => array(
-          'fid' => 'fid',
-        ),
-        'table' => 'file_managed',
-      ),
-    ),
-    'indexes' => array(
-      'fid' => array(
-        0 => 'fid',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'image',
-    'settings' => array(
-      'default_image' => 0,
-      'uri_scheme' => 'public',
-    ),
-    'translatable' => 0,
-    'type' => 'image',
   );
 
   // Exported field_base: 'field_slide_title'

@@ -137,7 +137,9 @@ addthisevent.settings({
       <span class="_date_format">DD/MM/YYYY</span>
   </a>
 
-
+  <?php
+  dpm($content);
+  ?>
   <p><?php print render($content['field_event_category']) ?></p>
 
   </div>

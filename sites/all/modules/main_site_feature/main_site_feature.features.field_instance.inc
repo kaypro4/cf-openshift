@@ -94,11 +94,7 @@ function main_site_feature_field_default_field_instances() {
       'default' => array(
         'label' => 'hidden',
         'module' => 'text',
-        'settings' => array(
-          'quickedit' => array(
-            'editor' => 'plain_text',
-          ),
-        ),
+        'settings' => array(),
         'type' => 'text_default',
         'weight' => 0,
       ),
@@ -1360,139 +1356,20 @@ function main_site_feature_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-homepage_slide-field_action_link'
-  $field_instances['node-homepage_slide-field_action_link'] = array(
-    'bundle' => 'homepage_slide',
+  // Exported field_instance: 'node-orchard-field_main_page_sections'
+  $field_instances['node-orchard-field_main_page_sections'] = array(
+    'bundle' => 'orchard',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'link',
+        'label' => 'hidden',
+        'module' => 'paragraphs',
         'settings' => array(
-          'quickedit' => array(
-            'editor' => 'form',
-          ),
+          'view_mode' => 'full',
         ),
-        'type' => 'link_default',
-        'weight' => 2,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_action_link',
-    'label' => 'Action Link',
-    'required' => 1,
-    'settings' => array(
-      'absolute_url' => 0,
-      'attributes' => array(
-        'class' => '',
-        'configurable_class' => 0,
-        'configurable_title' => 0,
-        'rel' => '',
-        'target' => 'user',
-        'title' => '',
-      ),
-      'display' => array(
-        'url_cutoff' => 80,
-      ),
-      'enable_tokens' => 1,
-      'rel_remove' => 'default',
-      'title' => 'required',
-      'title_label_use_field_label' => 0,
-      'title_maxlength' => 128,
-      'title_value' => '',
-      'url' => 0,
-      'user_register_form' => FALSE,
-      'validate_url' => 0,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'link',
-      'settings' => array(),
-      'type' => 'link_field',
-      'weight' => -2,
-    ),
-  );
-
-  // Exported field_instance: 'node-homepage_slide-field_display_date_range'
-  $field_instances['node-homepage_slide-field_display_date_range'] = array(
-    'bundle' => 'homepage_slide',
-    'deleted' => 0,
-    'description' => 'Enter a date which will trigger the item to be displayed.  You can optionally enter an end date which will auto expire it from the site.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'date',
-        'settings' => array(
-          'format_type' => 'long',
-          'fromto' => 'both',
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
-          'quickedit' => array(
-            'editor' => 'form',
-          ),
-        ),
-        'type' => 'date_default',
-        'weight' => 3,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_display_date_range',
-    'label' => 'Display Date Range',
-    'required' => 0,
-    'settings' => array(
-      'default_value' => 'blank',
-      'default_value2' => 'blank',
-      'default_value_code' => '',
-      'default_value_code2' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'date',
-      'settings' => array(
-        'increment' => 15,
-        'input_format' => 'm/d/Y - H:i:s',
-        'input_format_custom' => '',
-        'label_position' => 'above',
-        'text_parts' => array(),
-        'year_range' => '-3:+3',
-      ),
-      'type' => 'date_popup',
-      'weight' => -1,
-    ),
-  );
-
-  // Exported field_instance: 'node-homepage_slide-field_short_description'
-  $field_instances['node-homepage_slide-field_short_description'] = array(
-    'bundle' => 'homepage_slide',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(
-          'quickedit' => array(
-            'editor' => 'plain_text',
-          ),
-        ),
-        'type' => 'text_default',
+        'type' => 'paragraphs_view',
         'weight' => 1,
       ),
       'teaser' => array(
@@ -1503,42 +1380,68 @@ function main_site_feature_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_short_description',
-    'label' => 'Short Description',
+    'field_name' => 'field_main_page_sections',
+    'label' => 'Main Page Sections',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'add_mode' => 'select',
+      'allowed_bundles' => array(
+        'banner_image' => 'banner_image',
+        'block' => -1,
+        'call_to_action' => 'call_to_action',
+        'counter' => -1,
+        'feature_block' => 'feature_block',
+        'full_width_text' => 'full_width_text',
+        'google_map' => 'google_map',
+        'quote' => 'quote',
+        'slideshow' => 'slideshow',
+        'upcoming_events_listing' => 'upcoming_events_listing',
+        'video' => 'video',
+        'webform' => -1,
+      ),
+      'bundle_weights' => array(
+        'banner_image' => -9,
+        'block' => -8,
+        'call_to_action' => -7,
+        'counter' => -6,
+        'feature_block' => -5,
+        'full_width_text' => -10,
+        'google_map' => -4,
+        'quote' => -3,
+        'slideshow' => -2,
+        'upcoming_events_listing' => -1,
+        'video' => 0,
+        'webform' => 1,
+      ),
+      'default_edit_mode' => 'open',
+      'title' => 'Section',
+      'title_multiple' => 'Sections',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 2,
-      ),
-      'type' => 'text_textarea',
-      'weight' => -3,
+      'active' => 0,
+      'module' => 'paragraphs',
+      'settings' => array(),
+      'type' => 'paragraphs_embed',
+      'weight' => 41,
     ),
   );
 
-  // Exported field_instance: 'node-homepage_slide-field_slide_image'
-  $field_instances['node-homepage_slide-field_slide_image'] = array(
-    'bundle' => 'homepage_slide',
+  // Exported field_instance: 'node-orchard-field_right_column_sections'
+  $field_instances['node-orchard-field_right_column_sections'] = array(
+    'bundle' => 'orchard',
+    'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Content that you would like to appear in the right column of the page.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'image',
+        'label' => 'hidden',
+        'module' => 'paragraphs',
         'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
-          'quickedit' => array(
-            'editor' => 'form',
-          ),
+          'view_mode' => 'full',
         ),
-        'type' => 'image',
-        'weight' => 0,
+        'type' => 'paragraphs_view',
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1548,43 +1451,50 @@ function main_site_feature_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_slide_image',
-    'label' => 'Slide Image',
-    'required' => 1,
+    'field_name' => 'field_right_column_sections',
+    'label' => 'Right Column Sections',
+    'required' => 0,
     'settings' => array(
-      'alt_field' => 0,
-      'default_image' => 0,
-      'file_directory' => 'homepage-slides',
-      'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '',
-      'max_resolution' => '',
-      'min_resolution' => '770x400',
-      'title_field' => 0,
+      'add_mode' => 'select',
+      'allowed_bundles' => array(
+        'banner_image' => -1,
+        'block' => -1,
+        'call_to_action' => 'call_to_action',
+        'counter' => -1,
+        'feature_block' => -1,
+        'full_width_text' => 'full_width_text',
+        'google_map' => 'google_map',
+        'quote' => 'quote',
+        'slideshow' => 'slideshow',
+        'upcoming_events_listing' => 'upcoming_events_listing',
+        'video' => 'video',
+        'webform' => -1,
+      ),
+      'bundle_weights' => array(
+        'banner_image' => -5,
+        'block' => -4,
+        'call_to_action' => -8,
+        'counter' => -3,
+        'feature_block' => -2,
+        'full_width_text' => -10,
+        'google_map' => -1,
+        'quote' => 0,
+        'slideshow' => 1,
+        'upcoming_events_listing' => -6,
+        'video' => -7,
+        'webform' => -9,
+      ),
+      'default_edit_mode' => 'open',
+      'title' => 'Section',
+      'title_multiple' => 'Sections',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 1,
-      'module' => 'image',
-      'settings' => array(
-        'manualcrop_crop_info' => 0,
-        'manualcrop_default_crop_area' => 1,
-        'manualcrop_enable' => 1,
-        'manualcrop_inline_crop' => 0,
-        'manualcrop_instant_crop' => 0,
-        'manualcrop_instant_preview' => 0,
-        'manualcrop_require_cropping' => array(
-          'homepage_slide' => 'homepage_slide',
-        ),
-        'manualcrop_styles_list' => array(
-          'homepage_slide' => 'homepage_slide',
-        ),
-        'manualcrop_styles_mode' => 'include',
-        'manualcrop_thumblist' => 0,
-        'preview_image_style' => 'thumbnail',
-        'progress_indicator' => 'throbber',
-      ),
-      'type' => 'image_image',
-      'weight' => -4,
+      'active' => 0,
+      'module' => 'paragraphs',
+      'settings' => array(),
+      'type' => 'paragraphs_embed',
+      'weight' => 42,
     ),
   );
 
@@ -3032,10 +2942,9 @@ function main_site_feature_field_default_field_instances() {
   t('Caption');
   t('Check this box if you would like this item to appear on the homepage.');
   t('Comment');
+  t('Content that you would like to appear in the right column of the page.');
   t('Cost');
-  t('Display Date Range');
   t('Enter a comma-separated list of words to describe your content.');
-  t('Enter a date which will trigger the item to be displayed.  You can optionally enter an end date which will auto expire it from the site.');
   t('Enter the main image that will display at the top of the blog post.  This will also be the image used when the blog post is shared on social media.');
   t('Enter the main image that will display at the top of the event.  This will also be the image used when the event is shared on social media.');
   t('Event Categories');
@@ -3058,6 +2967,7 @@ function main_site_feature_field_default_field_instances() {
   t('List in About Us?');
   t('Listing Title');
   t('Location');
+  t('Main Page Sections');
   t('Map Height');
   t('Map Width');
   t('Maybe something like "Donate Now"');
@@ -3070,11 +2980,10 @@ function main_site_feature_field_default_field_instances() {
   t('Profile Photo');
   t('Quote Text');
   t('Relationship to City Fruit');
+  t('Right Column Sections');
   t('Select one or more categories to filter on. ');
-  t('Short Description');
   t('Show Right Sidebar');
   t('Slide');
-  t('Slide Image');
   t('Summary');
   t('Summary text that will appear on the blog listing page.');
   t('Tags');

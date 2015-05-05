@@ -40,7 +40,7 @@ function main_site_feature_image_default_styles() {
     'name' => 'banner_image',
     'label' => 'Banner Image',
     'effects' => array(
-      3 => array(
+      5 => array(
         'label' => 'Crop and scale manually',
         'help' => 'Crop and scale a user-selected area, respecting the ratio of the destination width and height.',
         'effect callback' => 'manualcrop_crop_and_scale_effect',
@@ -59,7 +59,7 @@ function main_site_feature_image_default_styles() {
         ),
         'weight' => 0,
       ),
-      4 => array(
+      6 => array(
         'label' => 'Scale and crop',
         'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
         'effect callback' => 'image_scale_and_crop_effect',
@@ -263,6 +263,14 @@ function main_site_feature_node_info() {
     ),
     'homepage_slide' => array(
       'name' => t('Homepage slide'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
+    'orchard' => array(
+      'name' => t('Orchard'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
