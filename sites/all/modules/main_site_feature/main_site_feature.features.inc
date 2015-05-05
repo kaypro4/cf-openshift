@@ -261,14 +261,6 @@ function main_site_feature_node_info() {
       'title_label' => t('Title'),
       'help' => '',
     ),
-    'homepage_slide' => array(
-      'name' => t('Homepage slide'),
-      'base' => 'node_content',
-      'description' => '',
-      'has_title' => '1',
-      'title_label' => t('Title'),
-      'help' => '',
-    ),
     'orchard' => array(
       'name' => t('Orchard'),
       'base' => 'node_content',

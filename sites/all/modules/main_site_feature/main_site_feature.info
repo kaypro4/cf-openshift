@@ -189,7 +189,6 @@ features[image][] = profile_image
 features[image][] = slideshow_4_3
 features[node][] = article
 features[node][] = event
-features[node][] = homepage_slide
 features[node][] = orchard
 features[node][] = page
 features[node][] = webform
