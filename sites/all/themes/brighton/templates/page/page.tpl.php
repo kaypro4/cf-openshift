@@ -77,7 +77,7 @@
 
 <div class="navbar navbar-inverse" >
     <div class="container">
-    
+
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="icon-bar"></span>
@@ -102,7 +102,7 @@
           </nav>
         </div>
       <?php endif; ?>
-  
+
     </div>
 </div>
 <!--/.NAVBAR END-->
@@ -110,8 +110,6 @@
 <div class="main-container container">
 
   <div class="row">
-
-
 
       <?php print $messages; ?>
       <?php if (!empty($tabs)): ?>
@@ -126,8 +124,8 @@
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
 
-      
       <?php print render($page['content']); ?>
+
 
 
   </div>
@@ -139,7 +137,7 @@
 
 
 
-<section id="footer">  
+<section id="footer">
         <div class="container">
        <div class="row  pad-bottom" >
           <div class="col-md-2">
@@ -151,7 +149,7 @@
                         </p>
                 <a href="#" class="btn btn-primary btn-sm" >Send us a message</a>
             </div>
-            
+
            <div class="col-md-7">
             <h4> <strong>ABOUT</strong> </h4>
                         <p>
@@ -159,19 +157,19 @@
                         </p>
             <a href="#" >More about us</a>
             </div>
-            
+
            <div class="col-md-3">
                 <h4> <strong>CONNECT WITH US</strong> </h4>
                <p>
-                 <a href="https://www.facebook.com/cityfruit" target="_blank"><i class="fa fa-facebook-square fa-3x"  ></i></a>  
-                    <a href="https://twitter.com/cityfruit" target="_blank"><i class="fa fa-twitter-square fa-3x"  ></i></a>  
+                 <a href="https://www.facebook.com/cityfruit" target="_blank"><i class="fa fa-facebook-square fa-3x"  ></i></a>
+                    <a href="https://twitter.com/cityfruit" target="_blank"><i class="fa fa-twitter-square fa-3x"  ></i></a>
                </p>
             </div>
-            
-          
+
+
            </div>
         </div>
-</section>     
+</section>
 
 
 <?php if (!empty($secondary_nav)): ?>
@@ -181,4 +179,3 @@
 <?php if (!empty($page['navigation'])): ?>
   <?php print render($page['navigation']); ?>
 <?php endif; ?>
-

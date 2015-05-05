@@ -30,6 +30,7 @@
 
     $(window).load(function() {
 
+
       $('.field-name-field-full-text img').captionate();
 
       var boxheight = $('#views-bootstrap-carousel-1 .carousel-inner').innerHeight();
