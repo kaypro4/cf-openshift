@@ -17,6 +17,14 @@ function main_site_feature_taxonomy_default_vocabularies() {
       'module' => 'taxonomy',
       'weight' => 0,
     ),
+    'faq_category' => array(
+      'name' => 'FAQ Category',
+      'machine_name' => 'faq_category',
+      'description' => '',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+    ),
     'tags' => array(
       'name' => 'Tags',
       'machine_name' => 'tags',

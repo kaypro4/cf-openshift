@@ -460,45 +460,6 @@ function main_site_feature_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-article-field_feature_summary'
-  $field_instances['node-article-field_feature_summary'] = array(
-    'bundle' => 'article',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'A short summary that will be displayed on the homepage.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 4,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_feature_summary',
-    'label' => 'Feature Summary',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 2,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 8,
-    ),
-  );
-
   // Exported field_instance: 'node-article-field_page_sections'
   $field_instances['node-article-field_page_sections'] = array(
     'bundle' => 'article',
@@ -532,10 +493,14 @@ function main_site_feature_field_default_field_instances() {
         'banner_image' => -1,
         'block' => -1,
         'call_to_action' => 'call_to_action',
+        'counter' => -1,
+        'faq_listing' => 'faq_listing',
+        'feature_block' => -1,
         'full_width_text' => 'full_width_text',
         'google_map' => 'google_map',
         'quote' => 'quote',
         'slideshow' => 'slideshow',
+        'upcoming_events_listing' => -1,
         'video' => 'video',
         'webform' => -1,
       ),
@@ -543,10 +508,14 @@ function main_site_feature_field_default_field_instances() {
         'banner_image' => -8,
         'block' => 3,
         'call_to_action' => -7,
+        'counter' => -10,
+        'faq_listing' => -10,
+        'feature_block' => -10,
         'full_width_text' => -10,
         'google_map' => 6,
         'quote' => -5,
         'slideshow' => -9,
+        'upcoming_events_listing' => -10,
         'video' => -4,
         'webform' => 10,
       ),
@@ -1323,6 +1292,82 @@ function main_site_feature_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-faq_item-field_answer'
+  $field_instances['node-faq_item-field_answer'] = array(
+    'bundle' => 'faq_item',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_answer',
+    'label' => 'Answer',
+    'required' => 1,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 4,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 42,
+    ),
+  );
+
+  // Exported field_instance: 'node-faq_item-field_faq_category'
+  $field_instances['node-faq_item-field_faq_category'] = array(
+    'bundle' => 'faq_item',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_faq_category',
+    'label' => 'FAQ Category',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 43,
+    ),
+  );
+
   // Exported field_instance: 'node-orchard-field_main_page_sections'
   $field_instances['node-orchard-field_main_page_sections'] = array(
     'bundle' => 'orchard',
@@ -1357,6 +1402,7 @@ function main_site_feature_field_default_field_instances() {
         'block' => -1,
         'call_to_action' => 'call_to_action',
         'counter' => -1,
+        'faq_listing' => 'faq_listing',
         'feature_block' => 'feature_block',
         'full_width_text' => 'full_width_text',
         'google_map' => 'google_map',
@@ -1371,6 +1417,7 @@ function main_site_feature_field_default_field_instances() {
         'block' => -8,
         'call_to_action' => -7,
         'counter' => -6,
+        'faq_listing' => 7,
         'feature_block' => -5,
         'full_width_text' => -10,
         'google_map' => -4,
@@ -1502,6 +1549,7 @@ function main_site_feature_field_default_field_instances() {
         'block' => 'block',
         'call_to_action' => 'call_to_action',
         'counter' => -1,
+        'faq_listing' => 'faq_listing',
         'feature_block' => 'feature_block',
         'full_width_text' => 'full_width_text',
         'google_map' => 'google_map',
@@ -1516,6 +1564,7 @@ function main_site_feature_field_default_field_instances() {
         'block' => -1,
         'call_to_action' => -8,
         'counter' => 5,
+        'faq_listing' => -10,
         'feature_block' => -5,
         'full_width_text' => -9,
         'google_map' => -4,
@@ -1820,6 +1869,83 @@ function main_site_feature_field_default_field_instances() {
       ),
       'type' => 'text_textfield',
       'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'paragraphs_item-faq_listing-field_faq_categories'
+  $field_instances['paragraphs_item-faq_listing-field_faq_categories'] = array(
+    'bundle' => 'faq_listing',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'One or more FAQ categories to show items from.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_plain',
+        'weight' => 1,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_faq_categories',
+    'label' => 'FAQ Categories',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'paragraphs_item-faq_listing-field_faq_title'
+  $field_instances['paragraphs_item-faq_listing-field_faq_title'] = array(
+    'bundle' => 'faq_listing',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Text that will appear as a heading for this FAQ listing.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_faq_title',
+    'label' => 'FAQ Title',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 1,
     ),
   );
 
@@ -2895,11 +3021,11 @@ function main_site_feature_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('A short summary that will be displayed on the homepage.');
   t('Action Link');
   t('Action Link Text');
   t('Action Text');
   t('An optional title to include above the listing of events.');
+  t('Answer');
   t('Attribution');
   t('Banner Image');
   t('Bio');
@@ -2919,9 +3045,11 @@ function main_site_feature_field_default_field_instances() {
   t('Event Date');
   t('Event Files');
   t('Event Registration Link');
+  t('FAQ Categories');
+  t('FAQ Category');
+  t('FAQ Title');
   t('Feature Image');
   t('Feature Link');
-  t('Feature Summary');
   t('Feature Text');
   t('Feature Title');
   t('Feature on Homepage');
@@ -2939,6 +3067,7 @@ function main_site_feature_field_default_field_instances() {
   t('Map Width');
   t('Maybe something like "Donate Now"');
   t('Maybe something like "Help City Fruit harvest more fruit next year"');
+  t('One or more FAQ categories to show items from.');
   t('Optional, leave blank to link directly to the blog post.  ');
   t('Optional, leave blank to link directly to the calendar event.  ');
   t('Order on About Us');
@@ -2954,6 +3083,7 @@ function main_site_feature_field_default_field_instances() {
   t('Summary');
   t('Summary text that will appear on the blog listing page.');
   t('Tags');
+  t('Text that will appear as a heading for this FAQ listing.');
   t('Text that will appear at the top of the feature.');
   t('The full address of the event (e.g. 201 S Jackson St, Seattle WA 98118');
   t('The relative display order on the about us page.  ');

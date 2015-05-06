@@ -722,6 +722,13 @@ function main_site_feature_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'create faq_item content'.
+  $permissions['create faq_item content'] = array(
+    'name' => 'create faq_item content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
   // Exported permission: 'create orchard content'.
   $permissions['create orchard content'] = array(
     'name' => 'create orchard content',
@@ -759,6 +766,15 @@ function main_site_feature_user_default_permissions() {
   // Exported permission: 'create paragraph content call_to_action'.
   $permissions['create paragraph content call_to_action'] = array(
     'name' => 'create paragraph content call_to_action',
+    'roles' => array(
+      'Blogger' => 'Blogger',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'create paragraph content faq_listing'.
+  $permissions['create paragraph content faq_listing'] = array(
+    'name' => 'create paragraph content faq_listing',
     'roles' => array(
       'Blogger' => 'Blogger',
     ),
@@ -897,6 +913,13 @@ function main_site_feature_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'delete any faq_item content'.
+  $permissions['delete any faq_item content'] = array(
+    'name' => 'delete any faq_item content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
   // Exported permission: 'delete any orchard content'.
   $permissions['delete any orchard content'] = array(
     'name' => 'delete any orchard content',
@@ -947,6 +970,13 @@ function main_site_feature_user_default_permissions() {
     'roles' => array(
       'Editor' => 'Editor',
     ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete own faq_item content'.
+  $permissions['delete own faq_item content'] = array(
+    'name' => 'delete own faq_item content',
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -1005,6 +1035,15 @@ function main_site_feature_user_default_permissions() {
   // Exported permission: 'delete paragraph content call_to_action'.
   $permissions['delete paragraph content call_to_action'] = array(
     'name' => 'delete paragraph content call_to_action',
+    'roles' => array(
+      'Blogger' => 'Blogger',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'delete paragraph content faq_listing'.
+  $permissions['delete paragraph content faq_listing'] = array(
+    'name' => 'delete paragraph content faq_listing',
     'roles' => array(
       'Blogger' => 'Blogger',
     ),
@@ -1097,6 +1136,13 @@ function main_site_feature_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
+  // Exported permission: 'delete terms in faq_category'.
+  $permissions['delete terms in faq_category'] = array(
+    'name' => 'delete terms in faq_category',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
   // Exported permission: 'delete terms in tags'.
   $permissions['delete terms in tags'] = array(
     'name' => 'delete terms in tags',
@@ -1149,6 +1195,13 @@ function main_site_feature_user_default_permissions() {
     'roles' => array(
       'Editor' => 'Editor',
     ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit any faq_item content'.
+  $permissions['edit any faq_item content'] = array(
+    'name' => 'edit any faq_item content',
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -1237,6 +1290,13 @@ function main_site_feature_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'edit own faq_item content'.
+  $permissions['edit own faq_item content'] = array(
+    'name' => 'edit own faq_item content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
   // Exported permission: 'edit own orchard content'.
   $permissions['edit own orchard content'] = array(
     'name' => 'edit own orchard content',
@@ -1279,6 +1339,13 @@ function main_site_feature_user_default_permissions() {
     'roles' => array(
       'Editor' => 'Editor',
     ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'edit terms in faq_category'.
+  $permissions['edit terms in faq_category'] = array(
+    'name' => 'edit terms in faq_category',
+    'roles' => array(),
     'module' => 'taxonomy',
   );
 
@@ -1540,6 +1607,15 @@ function main_site_feature_user_default_permissions() {
     'module' => 'paragraphs_bundle_permissions',
   );
 
+  // Exported permission: 'update paragraph content faq_listing'.
+  $permissions['update paragraph content faq_listing'] = array(
+    'name' => 'update paragraph content faq_listing',
+    'roles' => array(
+      'Blogger' => 'Blogger',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
   // Exported permission: 'update paragraph content feature_block'.
   $permissions['update paragraph content feature_block'] = array(
     'name' => 'update paragraph content feature_block',
@@ -1764,6 +1840,16 @@ function main_site_feature_user_default_permissions() {
   // Exported permission: 'view paragraph content call_to_action'.
   $permissions['view paragraph content call_to_action'] = array(
     'name' => 'view paragraph content call_to_action',
+    'roles' => array(
+      'Blogger' => 'Blogger',
+      'anonymous user' => 'anonymous user',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'view paragraph content faq_listing'.
+  $permissions['view paragraph content faq_listing'] = array(
+    'name' => 'view paragraph content faq_listing',
     'roles' => array(
       'Blogger' => 'Blogger',
       'anonymous user' => 'anonymous user',

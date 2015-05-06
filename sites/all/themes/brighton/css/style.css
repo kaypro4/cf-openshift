@@ -811,6 +811,12 @@ h3.event-date {
 }
 
 
+/*FAQ listing */
+
+.not-logged-in .logged-in-only {
+    display:none;
+}
+
 
 
 

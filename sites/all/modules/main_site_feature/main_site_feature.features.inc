@@ -221,6 +221,14 @@ function main_site_feature_node_info() {
       'title_label' => t('Title'),
       'help' => '',
     ),
+    'faq_item' => array(
+      'name' => t('FAQ Item'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Question'),
+      'help' => '',
+    ),
     'orchard' => array(
       'name' => t('Orchard'),
       'base' => 'node_content',
@@ -268,6 +276,11 @@ function main_site_feature_paragraphs_info() {
     'call_to_action' => array(
       'name' => 'Call To Action',
       'bundle' => 'call_to_action',
+      'locked' => '1',
+    ),
+    'faq_listing' => array(
+      'name' => 'FAQ Listing',
+      'bundle' => 'faq_listing',
       'locked' => '1',
     ),
     'feature_block' => array(

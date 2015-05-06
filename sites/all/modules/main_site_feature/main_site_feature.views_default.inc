@@ -772,6 +772,99 @@ function main_site_feature_views_default_views() {
   $export['class_calendar'] = $view;
 
   $view = new view();
+  $view->name = 'faq_listing';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'FAQ Listing';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Frequently Asked Questions';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['style_plugin'] = 'views_bootstrap_accordion_plugin_style';
+  $handler->display->display_options['style_options']['title_field'] = 'title';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Footer: Global: Unfiltered text */
+  $handler->display->display_options['footer']['area_text_custom']['id'] = 'area_text_custom';
+  $handler->display->display_options['footer']['area_text_custom']['table'] = 'views';
+  $handler->display->display_options['footer']['area_text_custom']['field'] = 'area_text_custom';
+  $handler->display->display_options['footer']['area_text_custom']['content'] = '<em><a href="/node/add/faq-item" class="logged-in-only">Add FAQ</a></em>';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Content: Answer */
+  $handler->display->display_options['fields']['field_answer']['id'] = 'field_answer';
+  $handler->display->display_options['fields']['field_answer']['table'] = 'field_data_field_answer';
+  $handler->display->display_options['fields']['field_answer']['field'] = 'field_answer';
+  $handler->display->display_options['fields']['field_answer']['label'] = '';
+  $handler->display->display_options['fields']['field_answer']['element_label_colon'] = FALSE;
+  /* Field: Content: Edit link */
+  $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['label'] = '';
+  $handler->display->display_options['fields']['edit_node']['alter']['text'] = '<ul class="contextual-links"><li>[edit_node]</li></ul>';
+  $handler->display->display_options['fields']['edit_node']['element_type'] = 'em';
+  $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['edit_node']['hide_empty'] = TRUE;
+  /* Sort criterion: Content: Title */
+  $handler->display->display_options['sorts']['title']['id'] = 'title';
+  $handler->display->display_options['sorts']['title']['table'] = 'node';
+  $handler->display->display_options['sorts']['title']['field'] = 'title';
+  /* Contextual filter: Content: FAQ Category (field_faq_category) */
+  $handler->display->display_options['arguments']['field_faq_category_tid']['id'] = 'field_faq_category_tid';
+  $handler->display->display_options['arguments']['field_faq_category_tid']['table'] = 'field_data_field_faq_category';
+  $handler->display->display_options['arguments']['field_faq_category_tid']['field'] = 'field_faq_category_tid';
+  $handler->display->display_options['arguments']['field_faq_category_tid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_faq_category_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_faq_category_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_faq_category_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_faq_category_tid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['field_faq_category_tid']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['field_faq_category_tid']['validate_options']['vocabularies'] = array(
+    'faq_category' => 'faq_category',
+  );
+  $handler->display->display_options['arguments']['field_faq_category_tid']['validate_options']['type'] = 'tids';
+  $handler->display->display_options['arguments']['field_faq_category_tid']['validate']['fail'] = 'empty';
+  $handler->display->display_options['arguments']['field_faq_category_tid']['break_phrase'] = TRUE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'faq_item' => 'faq_item',
+  );
+
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'faq_listing');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Frequently Asked Questions';
+  $export['faq_listing'] = $view;
+
+  $view = new view();
   $view->name = 'features';
   $view->description = '';
   $view->tag = 'default';
