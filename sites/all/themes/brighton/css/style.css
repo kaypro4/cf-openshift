@@ -522,7 +522,7 @@ section#footer {
 }
 
 .paragraphs-items .field-item {
-	padding-bottom: 15px;
+	padding-bottom: 11px;
 }
 
 blockquote {
@@ -640,7 +640,7 @@ figcaption {display: block; text-align: left; font-size: 0.8em; font-style: ital
 
 .thumbnail p.feature-link {
     position:absolute;
-    bottom: 12px;
+    bottom: 7px;
     margin-top: 10px;
 }
 
