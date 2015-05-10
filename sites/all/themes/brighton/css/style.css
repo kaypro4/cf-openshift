@@ -983,6 +983,10 @@ h3.event-date {
         padding-bottom: 20px;
     }
 
+    .paragraphs-items .field-item {
+    	padding-bottom: 3px;
+    }
+
 
 }
 
