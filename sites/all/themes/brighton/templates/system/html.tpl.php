@@ -48,7 +48,7 @@
 <head profile="<?php print $grddl_profile; ?>">
   <meta charset="utf-8">
   <meta name="theme-color" content="#8AC54F">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
 

@@ -82,6 +82,13 @@
   $raw_summary = $object->field_summary->value();
   $raw_event_address = $object->field_event_address->value();
   $encoded_event_address = urlencode($object->field_event_address->value());
+  $adjusted_start = strtotime($content['field_event_date']['#items'][0]['value']) + date('Z');
+  $adjusted_end = strtotime($content['field_event_date']['#items'][0]['value2']) + date('Z');
+
+  $adjusted_start = date('Y-m-d H:i:s', $adjusted_start);
+  $adjusted_end = date('Y-m-d H:i:s', $adjusted_end);
+
+
 ?>
 
 <script type="text/javascript">
@@ -125,10 +132,10 @@ addthisevent.settings({
 
     <a href="#" title="Add to Calendar" class="addthisevent">
       Add to Your Calendar <i class="fa fa-chevron-down"></i>
-      <span class="_start"><?php print render($content['field_event_date']['#items'][0]['value']) ?></span>
-      <span class="_end"><?php print render($content['field_event_date']['#items'][0]['value2']) ?></span>
+      <span class="_start"><?php print $adjusted_start ?></span>
+      <span class="_end"><?php print $adjusted_end ?></span>
       <span class="_zonecode">6</span>
-      <span class="_summary"><?php print $raw_title ?></span>
+      <span class="_summary">City Fruit: <?php print $raw_title ?></span>
       <span class="_description"><?php print $raw_summary ?></span>
       <span class="_location"><?php print $raw_event_address ?></span>
       <span class="_organizer">City Fruit</span>
@@ -138,7 +145,7 @@ addthisevent.settings({
   </a>
 
   <?php
-  dpm($content);
+  //dpm($content);
   ?>
   <p><?php print render($content['field_event_category']) ?></p>
 
