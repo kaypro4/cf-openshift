@@ -137,7 +137,7 @@
                         <p>
                            City Fruit is a non-profit corporation with a tax exempt status (501c[3]), supported by donations, memberships, class fees, sales and grants. Show your support by <a href="/donate">joining today</a>.
                         </p>
-            <a href="#" >More about us</a>
+            <a href="/about-us" >More about us</a>
             </div>
             
            <div class="col-md-3">
