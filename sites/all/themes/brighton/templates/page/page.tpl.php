@@ -159,7 +159,7 @@
             </div>
 
            <div class="col-md-3">
-                <h4> <strong>CONNECT WITH US</strong> </h4>
+                <h4> <strong>CONNECT WITH US</strong></h4>
                <p>
                  <a href="https://www.facebook.com/cityfruit" target="_blank"><i class="fa fa-facebook-square fa-3x"  ></i></a>
                     <a href="https://twitter.com/cityfruit" target="_blank"><i class="fa fa-twitter-square fa-3x"  ></i></a>
