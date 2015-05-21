@@ -147,13 +147,13 @@
                            (360) 602-1778 <br />
                            2524 16th Ave S #301 <br />Seattle, WA 98144  <br />
                         </p>
-                <a href="#" class="btn btn-primary btn-sm" >Send us a message</a>
+                <a href="mailto:info@cityfruit.org" class="btn btn-primary btn-sm" >Send us a message</a>
             </div>
 
            <div class="col-md-7">
             <h4> <strong>ABOUT</strong> </h4>
                         <p>
-                           City Fruit is a non-profit corporation with a tax exempt status (501c[3]), supported by donations, memberships, class fees, sales and grants. Show your support by <a href="#">joining today</a>.
+                           City Fruit is a non-profit corporation with a tax exempt status (501c[3]), supported by donations, memberships, class fees, sales and grants. Show your support by <a href="/donate">joining today</a>.
                         </p>
             <a href="#" >More about us</a>
             </div>
