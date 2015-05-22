@@ -261,7 +261,6 @@ function main_site_feature_user_default_permissions() {
   $permissions['administer blocks'] = array(
     'name' => 'administer blocks',
     'roles' => array(
-      'Editor' => 'Editor',
       'administrator' => 'administrator',
     ),
     'module' => 'block',
@@ -725,7 +724,9 @@ function main_site_feature_user_default_permissions() {
   // Exported permission: 'create faq_item content'.
   $permissions['create faq_item content'] = array(
     'name' => 'create faq_item content',
-    'roles' => array(),
+    'roles' => array(
+      'Editor' => 'Editor',
+    ),
     'module' => 'node',
   );
 
@@ -916,7 +917,9 @@ function main_site_feature_user_default_permissions() {
   // Exported permission: 'delete any faq_item content'.
   $permissions['delete any faq_item content'] = array(
     'name' => 'delete any faq_item content',
-    'roles' => array(),
+    'roles' => array(
+      'Editor' => 'Editor',
+    ),
     'module' => 'node',
   );
 
@@ -976,7 +979,9 @@ function main_site_feature_user_default_permissions() {
   // Exported permission: 'delete own faq_item content'.
   $permissions['delete own faq_item content'] = array(
     'name' => 'delete own faq_item content',
-    'roles' => array(),
+    'roles' => array(
+      'Editor' => 'Editor',
+    ),
     'module' => 'node',
   );
 
@@ -1201,7 +1206,9 @@ function main_site_feature_user_default_permissions() {
   // Exported permission: 'edit any faq_item content'.
   $permissions['edit any faq_item content'] = array(
     'name' => 'edit any faq_item content',
-    'roles' => array(),
+    'roles' => array(
+      'Editor' => 'Editor',
+    ),
     'module' => 'node',
   );
 
@@ -1293,7 +1300,9 @@ function main_site_feature_user_default_permissions() {
   // Exported permission: 'edit own faq_item content'.
   $permissions['edit own faq_item content'] = array(
     'name' => 'edit own faq_item content',
-    'roles' => array(),
+    'roles' => array(
+      'Editor' => 'Editor',
+    ),
     'module' => 'node',
   );
 

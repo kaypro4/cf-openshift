@@ -22,12 +22,12 @@ function main_site_feature_ckeditor_profile_defaults() {
         'ss' => 2,
         'toolbar' => '[
     [\'Source\'],
-    [\'Cut\',\'Copy\',\'Paste\',\'PasteText\',\'PasteFromWord\',\'-\',\'SpellChecker\',\'Scayt\'],
-    [\'Undo\',\'Redo\',\'Find\',\'Replace\',\'-\',\'SelectAll\'],
+    [\'Cut\',\'Copy\',\'PasteText\',\'-\',\'SpellChecker\',\'Scayt\'],
+    [\'Undo\',\'Redo\',\'Find\',\'-\',\'SelectAll\'],
     [\'IMCE\',\'Table\',\'SpecialChar\',\'Iframe\',\'Maximize\'],
     [\'Link\',\'Unlink\'],
     \'/\',
-    [\'Format\',\'Font\',\'FontSize\',\'Bold\',\'Italic\',\'Underline\',\'BGColor\',\'Strike\',\'-\',\'RemoveFormat\'],
+    [\'Format\',\'Bold\',\'Italic\',\'Underline\',\'BGColor\',\'Strike\',\'-\',\'RemoveFormat\'],
     [\'NumberedList\',\'BulletedList\',\'-\',\'Outdent\',\'Indent\'],
     [\'JustifyLeft\',\'JustifyCenter\',\'JustifyRight\',\'JustifyBlock\']
 ]',
