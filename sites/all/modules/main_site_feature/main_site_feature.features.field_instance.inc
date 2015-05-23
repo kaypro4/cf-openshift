@@ -1701,7 +1701,7 @@ function main_site_feature_field_default_field_instances() {
     'bundle' => 'block',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'The machine name of the block within the view.  Hint: You can find it under the "Advanced" settings on the view edit screen.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -1724,6 +1724,86 @@ function main_site_feature_field_default_field_instances() {
     'entity_type' => 'paragraphs_item',
     'field_name' => 'field_block_name',
     'label' => 'Block Name',
+    'required' => 1,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'paragraphs_item-block-field_title'
+  $field_instances['paragraphs_item-block-field_title'] = array(
+    'bundle' => 'block',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Title text to display above the view block as an H2.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_title',
+    'label' => 'Title',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance: 'paragraphs_item-block-field_view_name'
+  $field_instances['paragraphs_item-block-field_view_name'] = array(
+    'bundle' => 'block',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'The name of the view.  Hint: You can find it in the URL when editing the view.  It will have an underscore separating multiple values.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_view_name',
+    'label' => 'View Name',
     'required' => 1,
     'settings' => array(
       'text_processing' => 0,
@@ -3086,11 +3166,15 @@ function main_site_feature_field_default_field_instances() {
   t('Text that will appear as a heading for this FAQ listing.');
   t('Text that will appear at the top of the feature.');
   t('The full address of the event (e.g. 201 S Jackson St, Seattle WA 98118');
+  t('The machine name of the block within the view.  Hint: You can find it under the "Advanced" settings on the view edit screen.');
+  t('The name of the view.  Hint: You can find it in the URL when editing the view.  It will have an underscore separating multiple values.');
   t('The relative display order on the about us page.  ');
   t('This is the full URL to the page or a page relative to the root of this site (e.g. /donate)');
   t('This will turn the location entered above into a clickable link.  Please test this after you save to make sure that the location you entered is understood correctly by Google Maps.');
   t('Title');
+  t('Title text to display above the view block as an H2.');
   t('Video URL');
+  t('View Name');
   t('Webform');
   t('Width of the map in pixels or percent.');
   t('Will show on the homepage if selected below and on the Calendar listing page.');

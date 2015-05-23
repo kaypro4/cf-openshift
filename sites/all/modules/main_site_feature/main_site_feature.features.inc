@@ -269,7 +269,7 @@ function main_site_feature_paragraphs_info() {
       'locked' => '1',
     ),
     'block' => array(
-      'name' => 'Block (Experts Only)',
+      'name' => 'View Block (Experts Only)',
       'bundle' => 'block',
       'locked' => '1',
     ),

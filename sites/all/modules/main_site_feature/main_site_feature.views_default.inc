@@ -262,7 +262,7 @@ function main_site_feature_views_default_views() {
   $handler->display->display_options['fields']['field_full_name']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_full_name']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_full_name']['group_column'] = 'entity_id';
-  /* Field: User: Title */
+  /* Field: Field: Title */
   $handler->display->display_options['fields']['field_title']['id'] = 'field_title';
   $handler->display->display_options['fields']['field_title']['table'] = 'field_data_field_title';
   $handler->display->display_options['fields']['field_title']['field'] = 'field_title';
@@ -320,7 +320,7 @@ function main_site_feature_views_default_views() {
   );
 
   /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'block');
+  $handler = $view->new_display('block', 'Block', 'board_listing');
   $export['board_listing'] = $view;
 
   $view = new view();
@@ -1251,7 +1251,6 @@ function main_site_feature_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Staff Listing';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -1302,7 +1301,7 @@ function main_site_feature_views_default_views() {
   $handler->display->display_options['fields']['field_full_name']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_full_name']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_full_name']['group_column'] = 'entity_id';
-  /* Field: User: Title */
+  /* Field: Field: Title */
   $handler->display->display_options['fields']['field_title']['id'] = 'field_title';
   $handler->display->display_options['fields']['field_title']['table'] = 'field_data_field_title';
   $handler->display->display_options['fields']['field_title']['field'] = 'field_title';
@@ -1366,7 +1365,7 @@ function main_site_feature_views_default_views() {
   );
 
   /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'block');
+  $handler = $view->new_display('block', 'Block', 'staff_listing');
   $export['staff_listing'] = $view;
 
   $view = new view();

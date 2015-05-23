@@ -29,10 +29,11 @@
 
 <?php 
 
+$viewname = $content['field_view_name']['#items'][0]['value'];
 $blockname = $content['field_block_name']['#items'][0]['value']; 
 
-$block = module_invoke('webform', 'block_view', $blockname);
-print render($block['content']);
+print "<H2>" . render($content['field_title'][0]['#markup']) . "</h2>";
+echo views_embed_view($viewname, $blockname);
 
 ?>
 
