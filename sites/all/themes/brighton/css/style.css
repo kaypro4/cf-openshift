@@ -704,6 +704,26 @@ figcaption {display: block; text-align: left; font-size: 0.8em; font-style: ital
     width: 98%;
 }
 
+.field-name-field-banner-image .field-item {
+    padding-bottom: 3px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.paragraphs-item-banner-image .field-name-field-caption {
+    font-size: 85%;
+    float:left;
+    color: #222;
+}
+
+.paragraphs-item-banner-image .field-name-field-attribution {
+    font-size: 75%;
+    float:right;
+    color: gray;
+}
+
+.paragraphs-item-banner-image .field-name-field-attribution .field-item {
+    padding-bottom: 3px;
+}
 
 .pagination>li>a {
   font-weight:bold;

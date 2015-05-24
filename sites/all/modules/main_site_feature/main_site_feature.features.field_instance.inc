@@ -1630,6 +1630,46 @@ function main_site_feature_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'paragraphs_item-banner_image-field_attribution'
+  $field_instances['paragraphs_item-banner_image-field_attribution'] = array(
+    'bundle' => 'banner_image',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Optional photo attribution text (e.g. Photo courtesy of: Sandra Bullock)',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_attribution',
+    'label' => 'Attribution',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 4,
+    ),
+  );
+
   // Exported field_instance: 'paragraphs_item-banner_image-field_banner_image'
   $field_instances['paragraphs_item-banner_image-field_banner_image'] = array(
     'bundle' => 'banner_image',
@@ -1693,6 +1733,46 @@ function main_site_feature_field_default_field_instances() {
       ),
       'type' => 'image_image',
       'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'paragraphs_item-banner_image-field_caption'
+  $field_instances['paragraphs_item-banner_image-field_caption'] = array(
+    'bundle' => 'banner_image',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Optional caption text to display under the image.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_caption',
+    'label' => 'Caption',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 2,
     ),
   );
 
@@ -3148,6 +3228,8 @@ function main_site_feature_field_default_field_instances() {
   t('Maybe something like "Donate Now"');
   t('Maybe something like "Help City Fruit harvest more fruit next year"');
   t('One or more FAQ categories to show items from.');
+  t('Optional caption text to display under the image.');
+  t('Optional photo attribution text (e.g. Photo courtesy of: Sandra Bullock)');
   t('Optional, leave blank to link directly to the blog post.  ');
   t('Optional, leave blank to link directly to the calendar event.  ');
   t('Order on About Us');
