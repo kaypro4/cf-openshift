@@ -1011,7 +1011,7 @@ function main_site_feature_views_default_views() {
   /* Display: Attachment */
   $handler = $view->new_display('attachment', 'Attachment', 'attachment_1');
   $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'col-sm-4 col-xs-6 col-md-3';
+  $handler->display->display_options['css_class'] = 'col-sm-6 col-xs-12 col-md-3';
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['pager']['options']['offset'] = '0';
@@ -1021,7 +1021,11 @@ function main_site_feature_views_default_views() {
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<p><img class="img-responsive" alt="info_stats.png" src="/sites/default/files/image-uploads/infographic_home.png" /></p>';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div id="infographic-container">
+<span id="harvest-num">27,948 lbs of<br />fruit harvested<br />last year</span>
+<span id="volunteer-num">Over 2,400 volunteer hours</span>
+<img class="img-responsive" alt="info_stats.png" src="/sites/default/files/image-uploads/infographic_home.png" />
+</div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Content: Published */

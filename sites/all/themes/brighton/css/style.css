@@ -235,6 +235,32 @@ h1 {
 }
 
 
+#infographic-container {
+    position:relative;
+}
+
+#infographic-container span{
+    position:absolute;
+    display:block;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#infographic-container #harvest-num{
+    top: 50px;
+    left: 7px;
+    width: 180px;
+    font-weight: 700;
+    font-size: 18px;
+    color: black; 
+}
+
+#infographic-container #volunteer-num{
+    top: 220px;
+    left: 7px;
+    width: 100%;
+    font-weight: 700;
+    font-size: 18px;
+}
 
 ul.upcoming-events {
     list-style-type: none;
@@ -1076,8 +1102,9 @@ h3.event-date {
         display: block;
     }
     .view-display-id-attachment_1 {
-        display:none;
+        display:block;
     }
+
     #views-bootstrap-carousel-1 {
         padding-top: 0px;
         margin-top: 25px;
@@ -1086,6 +1113,9 @@ h3.event-date {
         display: block !important;
     }
 }
+
+
+
 
 
 /* AddThisEvent (add to your existing CSS) */
