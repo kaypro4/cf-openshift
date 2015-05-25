@@ -522,16 +522,17 @@ section#footer {
 }
 
 .paragraphs-items .field-item {
-	padding-bottom: 11px;
+	padding-bottom: 15px;
 }
 
 blockquote {
   border-left:5px solid #E8E8E8;
-  margin:1.5em 10px;
-  padding:.5em 10px;
+  margin: 10px 5px;
+  padding:10px 5px;
   quotes:"\201C""\201D""\2018""\2019";
   font-size: 120%;
   font-style: italic;
+  display:block;
 }
 blockquote:before {
   color:#ccc;
@@ -551,6 +552,10 @@ margin-top: 8px;
 
 blockquote cite:before {
 content: "\2014 \2009";
+}
+
+.row.quote {
+    clear:both;
 }
 
 .mfp-iframe-holder .mfp-content{
@@ -697,7 +702,7 @@ figcaption {display: block; text-align: left; font-size: 0.8em; font-style: ital
 }
 
 .node-type-article .field-name-field-banner-image {
-    padding-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .node-type-article .field-name-field-banner-image img {
@@ -713,6 +718,7 @@ figcaption {display: block; text-align: left; font-size: 0.8em; font-style: ital
     font-size: 85%;
     float:left;
     color: #222;
+    display:block;
 }
 
 .paragraphs-item-banner-image .field-name-field-attribution {
@@ -893,8 +899,9 @@ h3.event-date {
 
 @media (max-width: 768px) {
   .pane-node-field-banner-image, .field-name-field-banner-image {
-    margin-left: -45px;
-    margin-right: -45px;
+    margin-left: -10px;
+    margin-right: -10px;
+    overflow: hidden;
   }
 }
 
