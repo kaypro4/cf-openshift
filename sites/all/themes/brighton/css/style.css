@@ -161,10 +161,12 @@ p,li,ul {
     text-align:center;
     border: solid 1px #5BC0DE;
     vertical-align: middle;
-    padding-top: 8px;
-    height:55px;
+    height:70px;
     font-weight:700;
     border-collapse: collapse;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .mobile-cta-col.first {
