@@ -1368,6 +1368,101 @@ function main_site_feature_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-fresh_sheet-field_expires'
+  $field_instances['node-fresh_sheet-field_expires'] = array(
+    'bundle' => 'fresh_sheet',
+    'deleted' => 0,
+    'description' => 'Optional: Enter a date that you would like the sheet to be removed from the website.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'long',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+        ),
+        'type' => 'date_default',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_expires',
+    'label' => 'Expires',
+    'required' => 0,
+    'settings' => array(
+      'default_value' => 'blank',
+      'default_value2' => 'same',
+      'default_value_code' => '',
+      'default_value_code2' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'date',
+      'settings' => array(
+        'increment' => 30,
+        'input_format' => 'm/d/Y - g:i:sa',
+        'input_format_custom' => '',
+        'label_position' => 'above',
+        'text_parts' => array(),
+        'year_range' => '-1:+5',
+      ),
+      'type' => 'date_popup',
+      'weight' => 42,
+    ),
+  );
+
+  // Exported field_instance: 'node-fresh_sheet-field_file'
+  $field_instances['node-fresh_sheet-field_file'] = array(
+    'bundle' => 'fresh_sheet',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_file',
+    'label' => 'File',
+    'required' => 1,
+    'settings' => array(
+      'description_field' => 0,
+      'file_directory' => 'fresh-sheets',
+      'file_extensions' => 'pdf doc docx xls xlsx',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'file',
+      'settings' => array(
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'file_generic',
+      'weight' => 41,
+    ),
+  );
+
   // Exported field_instance: 'node-orchard-field_main_page_sections'
   $field_instances['node-orchard-field_main_page_sections'] = array(
     'bundle' => 'orchard',
@@ -3205,6 +3300,7 @@ function main_site_feature_field_default_field_instances() {
   t('Event Date');
   t('Event Files');
   t('Event Registration Link');
+  t('Expires');
   t('FAQ Categories');
   t('FAQ Category');
   t('FAQ Title');
@@ -3213,6 +3309,7 @@ function main_site_feature_field_default_field_instances() {
   t('Feature Text');
   t('Feature Title');
   t('Feature on Homepage');
+  t('File');
   t('Full Name');
   t('Full Text');
   t('Google API Key');
@@ -3232,6 +3329,7 @@ function main_site_feature_field_default_field_instances() {
   t('Optional photo attribution text (e.g. Photo courtesy of: Sandra Bullock)');
   t('Optional, leave blank to link directly to the blog post.  ');
   t('Optional, leave blank to link directly to the calendar event.  ');
+  t('Optional: Enter a date that you would like the sheet to be removed from the website.');
   t('Order on About Us');
   t('Page Sections');
   t('Place Name');
