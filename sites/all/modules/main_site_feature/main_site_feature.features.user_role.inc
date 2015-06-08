@@ -22,6 +22,12 @@ function main_site_feature_user_default_roles() {
     'weight' => 3,
   );
 
+  // Exported role: Super User.
+  $roles['Super User'] = array(
+    'name' => 'Super User',
+    'weight' => 5,
+  );
+
   // Exported role: administrator.
   $roles['administrator'] = array(
     'name' => 'administrator',

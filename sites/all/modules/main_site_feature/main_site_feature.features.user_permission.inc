@@ -16,6 +16,7 @@ function main_site_feature_user_default_permissions() {
     'roles' => array(
       'Blogger' => 'Blogger',
       'Editor' => 'Editor',
+      'Super User' => 'Super User',
       'administrator' => 'administrator',
     ),
     'module' => 'admin_menu',
@@ -27,6 +28,7 @@ function main_site_feature_user_default_permissions() {
     'roles' => array(
       'Blogger' => 'Blogger',
       'Editor' => 'Editor',
+      'Super User' => 'Super User',
       'administrator' => 'administrator',
     ),
     'module' => 'system',
@@ -55,6 +57,7 @@ function main_site_feature_user_default_permissions() {
   $permissions['access backup and migrate'] = array(
     'name' => 'access backup and migrate',
     'roles' => array(
+      'Super User' => 'Super User',
       'administrator' => 'administrator',
     ),
     'module' => 'backup_migrate',
@@ -64,6 +67,7 @@ function main_site_feature_user_default_permissions() {
   $permissions['access backup files'] = array(
     'name' => 'access backup files',
     'roles' => array(
+      'Super User' => 'Super User',
       'administrator' => 'administrator',
     ),
     'module' => 'backup_migrate',
@@ -73,6 +77,7 @@ function main_site_feature_user_default_permissions() {
   $permissions['access broken links report'] = array(
     'name' => 'access broken links report',
     'roles' => array(
+      'Super User' => 'Super User',
       'administrator' => 'administrator',
     ),
     'module' => 'linkchecker',
@@ -116,6 +121,7 @@ function main_site_feature_user_default_permissions() {
     'name' => 'access contextual links',
     'roles' => array(
       'Editor' => 'Editor',
+      'Super User' => 'Super User',
       'administrator' => 'administrator',
     ),
     'module' => 'contextual',
@@ -126,6 +132,7 @@ function main_site_feature_user_default_permissions() {
     'name' => 'access dashboard',
     'roles' => array(
       'Editor' => 'Editor',
+      'Super User' => 'Super User',
       'administrator' => 'administrator',
     ),
     'module' => 'dashboard',
@@ -216,6 +223,7 @@ function main_site_feature_user_default_permissions() {
   $permissions['access user profiles'] = array(
     'name' => 'access user profiles',
     'roles' => array(
+      'Super User' => 'Super User',
       'administrator' => 'administrator',
     ),
     'module' => 'user',
@@ -516,6 +524,7 @@ function main_site_feature_user_default_permissions() {
   $permissions['administer permissions'] = array(
     'name' => 'administer permissions',
     'roles' => array(
+      'Super User' => 'Super User',
       'administrator' => 'administrator',
     ),
     'module' => 'user',
@@ -615,6 +624,7 @@ function main_site_feature_user_default_permissions() {
   $permissions['administer users'] = array(
     'name' => 'administer users',
     'roles' => array(
+      'Super User' => 'Super User',
       'administrator' => 'administrator',
     ),
     'module' => 'user',
@@ -724,6 +734,15 @@ function main_site_feature_user_default_permissions() {
   // Exported permission: 'create faq_item content'.
   $permissions['create faq_item content'] = array(
     'name' => 'create faq_item content',
+    'roles' => array(
+      'Editor' => 'Editor',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'create fresh_sheet content'.
+  $permissions['create fresh_sheet content'] = array(
+    'name' => 'create fresh_sheet content',
     'roles' => array(
       'Editor' => 'Editor',
     ),
@@ -923,6 +942,15 @@ function main_site_feature_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'delete any fresh_sheet content'.
+  $permissions['delete any fresh_sheet content'] = array(
+    'name' => 'delete any fresh_sheet content',
+    'roles' => array(
+      'Editor' => 'Editor',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'delete any orchard content'.
   $permissions['delete any orchard content'] = array(
     'name' => 'delete any orchard content',
@@ -979,6 +1007,15 @@ function main_site_feature_user_default_permissions() {
   // Exported permission: 'delete own faq_item content'.
   $permissions['delete own faq_item content'] = array(
     'name' => 'delete own faq_item content',
+    'roles' => array(
+      'Editor' => 'Editor',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete own fresh_sheet content'.
+  $permissions['delete own fresh_sheet content'] = array(
+    'name' => 'delete own fresh_sheet content',
     'roles' => array(
       'Editor' => 'Editor',
     ),
@@ -1144,7 +1181,9 @@ function main_site_feature_user_default_permissions() {
   // Exported permission: 'delete terms in faq_category'.
   $permissions['delete terms in faq_category'] = array(
     'name' => 'delete terms in faq_category',
-    'roles' => array(),
+    'roles' => array(
+      'Super User' => 'Super User',
+    ),
     'module' => 'taxonomy',
   );
 
@@ -1206,6 +1245,15 @@ function main_site_feature_user_default_permissions() {
   // Exported permission: 'edit any faq_item content'.
   $permissions['edit any faq_item content'] = array(
     'name' => 'edit any faq_item content',
+    'roles' => array(
+      'Editor' => 'Editor',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit any fresh_sheet content'.
+  $permissions['edit any fresh_sheet content'] = array(
+    'name' => 'edit any fresh_sheet content',
     'roles' => array(
       'Editor' => 'Editor',
     ),
@@ -1283,6 +1331,7 @@ function main_site_feature_user_default_permissions() {
     'roles' => array(
       'Blogger' => 'Blogger',
       'Editor' => 'Editor',
+      'Super User' => 'Super User',
       'administrator' => 'administrator',
     ),
     'module' => 'comment',
@@ -1300,6 +1349,15 @@ function main_site_feature_user_default_permissions() {
   // Exported permission: 'edit own faq_item content'.
   $permissions['edit own faq_item content'] = array(
     'name' => 'edit own faq_item content',
+    'roles' => array(
+      'Editor' => 'Editor',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit own fresh_sheet content'.
+  $permissions['edit own fresh_sheet content'] = array(
+    'name' => 'edit own fresh_sheet content',
     'roles' => array(
       'Editor' => 'Editor',
     ),
@@ -1354,7 +1412,9 @@ function main_site_feature_user_default_permissions() {
   // Exported permission: 'edit terms in faq_category'.
   $permissions['edit terms in faq_category'] = array(
     'name' => 'edit terms in faq_category',
-    'roles' => array(),
+    'roles' => array(
+      'Super User' => 'Super User',
+    ),
     'module' => 'taxonomy',
   );
 
@@ -1390,6 +1450,7 @@ function main_site_feature_user_default_permissions() {
     'name' => 'flush caches',
     'roles' => array(
       'Editor' => 'Editor',
+      'Super User' => 'Super User',
       'administrator' => 'administrator',
     ),
     'module' => 'admin_menu',
@@ -1481,6 +1542,7 @@ function main_site_feature_user_default_permissions() {
     'name' => 'perform backup',
     'roles' => array(
       'Editor' => 'Editor',
+      'Super User' => 'Super User',
       'administrator' => 'administrator',
     ),
     'module' => 'backup_migrate',
