@@ -442,7 +442,7 @@ function main_site_feature_user_default_permissions() {
   $permissions['administer nodes'] = array(
     'name' => 'administer nodes',
     'roles' => array(
-      'Editor' => 'Editor',
+      'Super User' => 'Super User',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -954,18 +954,14 @@ function main_site_feature_user_default_permissions() {
   // Exported permission: 'delete any orchard content'.
   $permissions['delete any orchard content'] = array(
     'name' => 'delete any orchard content',
-    'roles' => array(
-      'Editor' => 'Editor',
-    ),
+    'roles' => array(),
     'module' => 'node',
   );
 
   // Exported permission: 'delete any page content'.
   $permissions['delete any page content'] = array(
     'name' => 'delete any page content',
-    'roles' => array(
-      'Editor' => 'Editor',
-    ),
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -1025,27 +1021,21 @@ function main_site_feature_user_default_permissions() {
   // Exported permission: 'delete own orchard content'.
   $permissions['delete own orchard content'] = array(
     'name' => 'delete own orchard content',
-    'roles' => array(
-      'Editor' => 'Editor',
-    ),
+    'roles' => array(),
     'module' => 'node',
   );
 
   // Exported permission: 'delete own page content'.
   $permissions['delete own page content'] = array(
     'name' => 'delete own page content',
-    'roles' => array(
-      'Editor' => 'Editor',
-    ),
+    'roles' => array(),
     'module' => 'node',
   );
 
   // Exported permission: 'delete own webform content'.
   $permissions['delete own webform content'] = array(
     'name' => 'delete own webform content',
-    'roles' => array(
-      'Editor' => 'Editor',
-    ),
+    'roles' => array(),
     'module' => 'node',
   );
 
