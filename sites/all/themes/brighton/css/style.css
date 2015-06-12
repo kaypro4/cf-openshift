@@ -20,6 +20,7 @@ body {
     max-width:100% !important;
     height:auto;
     display:block;
+    width: 100%;
 }
 
 img{
@@ -630,6 +631,18 @@ figcaption {display: block; text-align: left; font-size: 0.8em; font-style: ital
     font-size: 90%;
 }
 
+.thumbnail-tag.no-image {
+    position:relative;
+    float:right;
+    padding: 2px;
+    color:white;
+    padding-right: 15px;
+    padding-left: 15px;
+    font-size: 90%;
+    margin-top:20px;
+    margin-bottom: 5px;
+}
+
 .thumbnail-tag.learn {
     background-color: #F04124;
 }
@@ -682,7 +695,9 @@ figcaption {display: block; text-align: left; font-size: 0.8em; font-style: ital
     width: 100%;
 }
 
-
+.thumbnail .caption.no-image {
+    clear:both;
+}
 
 /* Our Team Listing */
 
@@ -729,12 +744,12 @@ figcaption {display: block; text-align: left; font-size: 0.8em; font-style: ital
     padding-bottom: 10px;
 }
 
-.node-type-article .field-name-field-banner-image {
-    margin-bottom: 30px;
+.node-type-article .pane-node-field-page-sections{
+    margin-top: 35px;
 }
 
 .node-type-article .field-name-field-banner-image img {
-    width: 98%;
+    width: 100%;
 }
 
 .field-name-field-banner-image .field-item {
@@ -742,20 +757,26 @@ figcaption {display: block; text-align: left; font-size: 0.8em; font-style: ital
     font-family: 'Open Sans', sans-serif;
 }
 
-.paragraphs-item-banner-image .field-name-field-caption {
+.paragraphs-item-banner-image .field-name-field-caption,
+.node-event .field-name-field-caption,
+.node-type-article .field-name-field-caption {
     font-size: 85%;
     float:left;
     color: #222;
     display:block;
 }
 
-.paragraphs-item-banner-image .field-name-field-attribution {
+.paragraphs-item-banner-image .field-name-field-attribution,
+.node-event .field-name-field-attribution,
+.node-type-article .field-name-field-attribution {
     font-size: 75%;
     float:right;
     color: gray;
 }
 
-.paragraphs-item-banner-image .field-name-field-attribution .field-item {
+.paragraphs-item-banner-image .field-name-field-attribution .field-item,
+.node-event .field-name-field-attribution .field-item,
+.node-type-article .field-name-field-attribution .field-item {
     padding-bottom: 3px;
 }
 

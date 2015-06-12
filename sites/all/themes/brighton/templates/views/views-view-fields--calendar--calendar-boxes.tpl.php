@@ -26,13 +26,14 @@
 ?>
 
 
+
 <div class="thumbnail">
   <div class="thumbnail-wrapper">
     <?php print $fields['field_banner_image']->content; ?>
-    <span class='thumbnail-tag event-date'><?php print $fields['field_event_date']->content; ?></span>
+    <span class='thumbnail-tag event-date <?php if (empty($fields['field_banner_image']->content)) { echo "no-image"; }?>'><?php print $fields['field_event_date']->content; ?></span>
   </div>
 
-  <div class="caption">
+  <div class="caption <?php if (empty($fields['field_banner_image']->content)) { echo "no-image"; }?>">
     <?php print $fields['title']->content; ?>
     <p><?php print $fields['field_summary']->content; ?></p>
 

@@ -566,6 +566,15 @@ function main_site_feature_user_default_permissions() {
     'module' => 'shortcut',
   );
 
+  // Exported permission: 'administer simplify'.
+  $permissions['administer simplify'] = array(
+    'name' => 'administer simplify',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'simplify',
+  );
+
   // Exported permission: 'administer site configuration'.
   $permissions['administer site configuration'] = array(
     'name' => 'administer site configuration',
@@ -1846,6 +1855,15 @@ function main_site_feature_user_default_permissions() {
       'anonymous user' => 'anonymous user',
     ),
     'module' => 'disqus',
+  );
+
+  // Exported permission: 'view hidden fields'.
+  $permissions['view hidden fields'] = array(
+    'name' => 'view hidden fields',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'simplify',
   );
 
   // Exported permission: 'view media'.

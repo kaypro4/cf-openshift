@@ -290,6 +290,46 @@ function main_site_feature_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-article-field_attribution'
+  $field_instances['node-article-field_attribution'] = array(
+    'bundle' => 'article',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Optional attribution for the banner image.  Please give photo credit if it is known.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_attribution',
+    'label' => 'Banner Attribution',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 3,
+    ),
+  );
+
   // Exported field_instance: 'node-article-field_banner_image'
   $field_instances['node-article-field_banner_image'] = array(
     'bundle' => 'article',
@@ -362,6 +402,46 @@ function main_site_feature_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-article-field_caption'
+  $field_instances['node-article-field_caption'] = array(
+    'bundle' => 'article',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Optional caption for the banner image.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_caption',
+    'label' => 'Banner Caption',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 2,
+    ),
+  );
+
   // Exported field_instance: 'node-article-field_feature_link'
   $field_instances['node-article-field_feature_link'] = array(
     'bundle' => 'article',
@@ -373,7 +453,7 @@ function main_site_feature_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -414,7 +494,7 @@ function main_site_feature_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
@@ -433,7 +513,7 @@ function main_site_feature_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -456,7 +536,7 @@ function main_site_feature_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 7,
+      'weight' => 9,
     ),
   );
 
@@ -474,7 +554,7 @@ function main_site_feature_field_default_field_instances() {
           'view_mode' => 'full',
         ),
         'type' => 'paragraphs_view',
-        'weight' => 1,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -529,7 +609,7 @@ function main_site_feature_field_default_field_instances() {
       'module' => 'paragraphs',
       'settings' => array(),
       'type' => 'paragraphs_embed',
-      'weight' => 3,
+      'weight' => 5,
     ),
   );
 
@@ -548,7 +628,7 @@ function main_site_feature_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -571,7 +651,7 @@ function main_site_feature_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 6,
+      'weight' => 8,
     ),
   );
 
@@ -586,7 +666,7 @@ function main_site_feature_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -610,7 +690,7 @@ function main_site_feature_field_default_field_instances() {
         'rows' => 2,
       ),
       'type' => 'text_textarea',
-      'weight' => 2,
+      'weight' => 4,
     ),
   );
 
@@ -626,7 +706,7 @@ function main_site_feature_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 2,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -654,6 +734,46 @@ function main_site_feature_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
+      'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance: 'node-event-field_attribution'
+  $field_instances['node-event-field_attribution'] = array(
+    'bundle' => 'event',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Optional attribution field for the banner image.  Please give credit if the photographer is known.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 17,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_attribution',
+    'label' => 'Banner Attribution',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
       'weight' => 4,
     ),
   );
@@ -730,6 +850,46 @@ function main_site_feature_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-event-field_caption'
+  $field_instances['node-event-field_caption'] = array(
+    'bundle' => 'event',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'An optional caption for the banner image.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 16,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_caption',
+    'label' => 'Banner Caption',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 3,
+    ),
+  );
+
   // Exported field_instance: 'node-event-field_event_address'
   $field_instances['node-event-field_event_address'] = array(
     'bundle' => 'event',
@@ -766,7 +926,7 @@ function main_site_feature_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 5,
+      'weight' => 7,
     ),
   );
 
@@ -802,7 +962,7 @@ function main_site_feature_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 11,
+      'weight' => 13,
     ),
   );
 
@@ -842,7 +1002,7 @@ function main_site_feature_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 8,
+      'weight' => 10,
     ),
   );
 
@@ -895,7 +1055,7 @@ function main_site_feature_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 7,
+      'weight' => 9,
     ),
   );
 
@@ -937,7 +1097,7 @@ function main_site_feature_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
-      'weight' => 10,
+      'weight' => 12,
     ),
   );
 
@@ -994,7 +1154,7 @@ function main_site_feature_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 9,
+      'weight' => 11,
     ),
   );
 
@@ -1050,7 +1210,7 @@ function main_site_feature_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 14,
+      'weight' => 16,
     ),
   );
 
@@ -1092,7 +1252,7 @@ function main_site_feature_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 13,
+      'weight' => 15,
     ),
   );
 
@@ -1135,7 +1295,7 @@ function main_site_feature_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 6,
+      'weight' => 8,
     ),
   );
 
@@ -1206,7 +1366,7 @@ function main_site_feature_field_default_field_instances() {
       'module' => 'paragraphs',
       'settings' => array(),
       'type' => 'paragraphs_embed',
-      'weight' => 4,
+      'weight' => 6,
     ),
   );
 
@@ -1248,7 +1408,7 @@ function main_site_feature_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 12,
+      'weight' => 14,
     ),
   );
 
@@ -1288,7 +1448,7 @@ function main_site_feature_field_default_field_instances() {
         'rows' => 2,
       ),
       'type' => 'text_textarea',
-      'weight' => 3,
+      'weight' => 5,
     ),
   );
 
@@ -1372,7 +1532,7 @@ function main_site_feature_field_default_field_instances() {
   $field_instances['node-fresh_sheet-field_expires'] = array(
     'bundle' => 'fresh_sheet',
     'deleted' => 0,
-    'description' => 'Optional: Enter a date that you would like the sheet to be removed from the website.',
+    'description' => 'Enter the date that the fresh sheet should be removed from the website. This ensures that we don\'t have old information still posted to the website.  The default is 1 week but you can extend it here.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1397,11 +1557,11 @@ function main_site_feature_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_expires',
     'label' => 'Expires',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
-      'default_value' => 'blank',
+      'default_value' => 'strtotime',
       'default_value2' => 'same',
-      'default_value_code' => '',
+      'default_value_code' => '+7 days',
       'default_value_code2' => '',
       'user_register_form' => FALSE,
     ),
@@ -3279,9 +3439,12 @@ function main_site_feature_field_default_field_instances() {
   t('Action Link');
   t('Action Link Text');
   t('Action Text');
+  t('An optional caption for the banner image.');
   t('An optional title to include above the listing of events.');
   t('Answer');
   t('Attribution');
+  t('Banner Attribution');
+  t('Banner Caption');
   t('Banner Image');
   t('Bio');
   t('Block Name');
@@ -3293,6 +3456,7 @@ function main_site_feature_field_default_field_instances() {
   t('Content that you would like to appear in the right column of the page.');
   t('Cost');
   t('Enter a comma-separated list of words to describe your content.');
+  t('Enter the date that the fresh sheet should be removed from the website. This ensures that we don\'t have old information still posted to the website.  The default is 1 week but you can extend it here.');
   t('Enter the main image that will display at the top of the blog post.  This will also be the image used when the blog post is shared on social media.');
   t('Enter the main image that will display at the top of the event.  This will also be the image used when the event is shared on social media.');
   t('Event Categories');
@@ -3325,11 +3489,13 @@ function main_site_feature_field_default_field_instances() {
   t('Maybe something like "Donate Now"');
   t('Maybe something like "Help City Fruit harvest more fruit next year"');
   t('One or more FAQ categories to show items from.');
+  t('Optional attribution field for the banner image.  Please give credit if the photographer is known.');
+  t('Optional attribution for the banner image.  Please give photo credit if it is known.');
+  t('Optional caption for the banner image.');
   t('Optional caption text to display under the image.');
   t('Optional photo attribution text (e.g. Photo courtesy of: Sandra Bullock)');
   t('Optional, leave blank to link directly to the blog post.  ');
   t('Optional, leave blank to link directly to the calendar event.  ');
-  t('Optional: Enter a date that you would like the sheet to be removed from the website.');
   t('Order on About Us');
   t('Page Sections');
   t('Place Name');

@@ -1064,6 +1064,13 @@ function main_site_feature_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
   $handler->display->display_options['style_plugin'] = 'list';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'No fresh sheets at this time. Check back during harvest or <a href="mailto:info@cityfruit.org">e-mail us</a> and we\'ll deliver fresh sheets to your inbox.';
+  $handler->display->display_options['empty']['area']['format'] = 'full_html';
   /* Field: Content: File */
   $handler->display->display_options['fields']['field_file']['id'] = 'field_file';
   $handler->display->display_options['fields']['field_file']['table'] = 'field_data_field_file';

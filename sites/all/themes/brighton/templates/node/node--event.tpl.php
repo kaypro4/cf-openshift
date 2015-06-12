@@ -121,6 +121,11 @@ addthisevent.settings({
   <?php } ?>
 
   <?php print render($content['field_banner_image']) ?>
+  
+  <?php if (!empty($content['field_banner_image'])) { ?>
+    <?php print render($content['field_attribution']) ?>
+    <?php print render($content['field_caption']) ?>
+  <?php } ?>
 
   <p><?php print render($content['field_page_sections']) ?></p>
 
