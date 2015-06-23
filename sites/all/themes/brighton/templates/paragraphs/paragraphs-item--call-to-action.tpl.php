@@ -35,11 +35,11 @@
 		<div class="row call-to-action">
 		
 		
-		  <div class="col-sm-9 col-md-12 col-xs-12">
+		  <div class="col-sm-9 col-md-9 col-xs-12">
 		    <span class="vert-mid"><p><?php print render($content['field_action_text'][0]['#markup']); ?></p></span>
 		  </div>
 
-		  <div class="col-sm-3 col-md-12 col-xs-12">
+		  <div class="col-sm-3 col-md-3 col-xs-12">
 		     <a class="btn btn-sm btn-danger inline-cta" href="<?php print render($content['field_action_link_new'][0]['#markup']); ?>"><?php print render($content['field_action_link_text'][0]['#markup']); ?> <i class="fa fa-share"></i></a>
 		  </div>
 		  
