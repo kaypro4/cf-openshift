@@ -13,9 +13,12 @@
 (function ($, Drupal, window, document, undefined) {
 
 
+
+
+
     //make the top level menu items clickable
     jQuery(function($) {
-        if($(window).width()>769){
+        //if($(window).width()>992){
             $('.navbar .dropdown').hover(function() {
                 $(this).find('.dropdown-menu').first().stop(true, true).delay(250).slideDown();
             }, function() {
@@ -25,7 +28,7 @@
             $('.navbar .dropdown > a').click(function(){
                 location.href = this.href;
             });
-        }
+       // }  Add this back in if you want the top level click to be disabled on mobile view
     });
 
     $(window).load(function() {
