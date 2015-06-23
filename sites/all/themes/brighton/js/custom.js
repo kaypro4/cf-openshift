@@ -18,17 +18,21 @@
 
     //make the top level menu items clickable
     jQuery(function($) {
-        //if($(window).width()>992){
-            $('.navbar .dropdown').hover(function() {
-                $(this).find('.dropdown-menu').first().stop(true, true).delay(250).slideDown();
-            }, function() {
-                $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideUp();
+        //disable the dropdown for the mobile menu
+        if($(window).width()<992){
+          $('.navbar .dropdown > a').addClass('disabled');
+        }  
 
-            });
-            $('.navbar .dropdown > a').click(function(){
-                location.href = this.href;
-            });
-       // }  Add this back in if you want the top level click to be disabled on mobile view
+        $('.navbar .dropdown').hover(function() {
+            $(this).find('.dropdown-menu').first().stop(true, true).delay(250).slideDown();
+        }, function() {
+            $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideUp();
+
+        });
+        $('.navbar .dropdown > a').click(function(){
+            location.href = this.href;
+        });
+       
     });
 
     $(window).load(function() {
