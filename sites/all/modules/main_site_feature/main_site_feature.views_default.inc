@@ -941,7 +941,7 @@ function main_site_feature_views_default_views() {
   $handler->display->display_options['fields']['field_summary']['table'] = 'field_data_field_summary';
   $handler->display->display_options['fields']['field_summary']['field'] = 'field_summary';
   $handler->display->display_options['fields']['field_summary']['label'] = '';
-  $handler->display->display_options['fields']['field_summary']['alter']['max_length'] = '600';
+  $handler->display->display_options['fields']['field_summary']['alter']['max_length'] = '150';
   $handler->display->display_options['fields']['field_summary']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['field_summary']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Event Date -  start date (field_event_date) */
