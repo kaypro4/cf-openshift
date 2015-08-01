@@ -106,11 +106,17 @@ addthisevent.settings({
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
   <div class="content clearfix"<?php print $content_attributes; ?>>
+  
 
-  <h3 class="event-date"><?php print render($content['field_event_date']) ?></h3>
+  <h3 class="event-date" style="float:left;"><?php print render($content['field_event_date']) ?></h3>
+
+  <?php if (!empty($content['field_event_registration_link'])) { ?>
+      <a href="#register" style="float:right;">Register <i class="fa fa-arrow-circle-down"></i></a>
+  <?php } ?>
+  
 
   <?php if (!empty($content['field_event_address'])) { ?>
-    <p>
+    <p style="clear:both;">
 
       <?php if ($content['field_link_to_google_maps_']['#items'][0]['value'] == 1) { ?>
         <strong>Location:</strong> <a href="https://maps.google.com?daddr=<?php print $encoded_event_address; ?>" target="_blank"><?php print $raw_event_address; ?></a>
@@ -130,11 +136,11 @@ addthisevent.settings({
   <p><?php print render($content['field_page_sections']) ?></p>
 
   <p><?php print render($content['field_event_cost']) ?></p>
+  
+  <p><h3 id="register"><?php print render($content['field_event_registration_link']) ?></h3><br /></p>
 
-  <p><h3><?php print render($content['field_event_registration_link']) ?></h3></p>
-  <p></p>
   <p><?php print render($content['field_event_files']) ?></p>
-
+  <p>
     <a href="#" title="Add to Calendar" class="addthisevent">
       Add to Your Calendar <i class="fa fa-chevron-down"></i>
       <span class="_start"><?php print $adjusted_start ?></span>
@@ -148,7 +154,7 @@ addthisevent.settings({
       <span class="_all_day_event">false</span>
       <span class="_date_format">DD/MM/YYYY</span>
   </a>
-
+  </p>
   <?php
   //dpm($content);
   ?>

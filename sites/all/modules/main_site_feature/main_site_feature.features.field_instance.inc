@@ -1106,7 +1106,7 @@ function main_site_feature_field_default_field_instances() {
     'bundle' => 'event',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Tip: If you would like to create a link to a Salesforce registration link in a pop-up, use this URL structure with the <strong>jobId</strong> and <strong>volunteerShiftId</strong> values updated: <a href="https://cityfruit.secure.force.com/GW_Volunteers__VolunteersJobListingFS?nMonthsToShow=0&ShowJobName=0&jobId=a0eG000000C9ZhW&volunteerShiftId=a0gG0000007osNk" target="_blank">https://cityfruit.secure.force.com/GW_Volunteers__VolunteersJobListingFS?nMonthsToShow=0&ShowJobName=0&jobId=a0eG000000C9ZhW&volunteerShiftId=a0gG0000007osNk</a> and put <strong>overlay</strong> in the custom link class field.  ',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -3558,6 +3558,7 @@ function main_site_feature_field_default_field_instances() {
   t('The relative display order on the about us page.  ');
   t('This is the full URL to the page or a page relative to the root of this site (e.g. /donate)');
   t('This will turn the location entered above into a clickable link.  Please test this after you save to make sure that the location you entered is understood correctly by Google Maps.');
+  t('Tip: If you would like to create a link to a Salesforce registration link in a pop-up, use this URL structure with the <strong>jobId</strong> and <strong>volunteerShiftId</strong> values updated: <a href="https://cityfruit.secure.force.com/GW_Volunteers__VolunteersJobListingFS?nMonthsToShow=0&ShowJobName=0&jobId=a0eG000000C9ZhW&volunteerShiftId=a0gG0000007osNk" target="_blank">https://cityfruit.secure.force.com/GW_Volunteers__VolunteersJobListingFS?nMonthsToShow=0&ShowJobName=0&jobId=a0eG000000C9ZhW&volunteerShiftId=a0gG0000007osNk</a> and put <strong>overlay</strong> in the custom link class field.  ');
   t('Title');
   t('Title text to display above the view block as an H2.');
   t('Video URL');
