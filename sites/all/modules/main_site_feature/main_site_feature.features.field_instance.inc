@@ -2992,7 +2992,7 @@ function main_site_feature_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 1,
+      'weight' => 0,
     ),
   );
 
@@ -3032,7 +3032,47 @@ function main_site_feature_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 0,
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'paragraphs_item-upcoming_events_listing-field_summary'
+  $field_instances['paragraphs_item-upcoming_events_listing-field_summary'] = array(
+    'bundle' => 'upcoming_events_listing',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Optional text to go between the heading and the list of events',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_summary',
+    'label' => 'Summary',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 3,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 2,
     ),
   );
 
@@ -3494,6 +3534,7 @@ function main_site_feature_field_default_field_instances() {
   t('Optional caption for the banner image.');
   t('Optional caption text to display under the image.');
   t('Optional photo attribution text (e.g. Photo courtesy of: Sandra Bullock)');
+  t('Optional text to go between the heading and the list of events');
   t('Optional, leave blank to link directly to the blog post.  ');
   t('Optional, leave blank to link directly to the calendar event.  ');
   t('Order on About Us');

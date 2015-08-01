@@ -27,7 +27,8 @@
  */
 ?>
 
-<h2><?php print $content['field_listing_title'][0]['#markup'] ?></h2>
+<h3><?php print $content['field_listing_title'][0]['#markup'] ?></h3>
+<?php print $content['field_summary'][0]['#markup'] ?>
 <?php
   $my_arg = '';
   $count = count($content['field_event_categories']['#items']);
@@ -38,6 +39,7 @@
   //print $my_arg;
   print views_embed_view('upcoming_events', 'upcoming_events', $my_arg);
 ?>
+
 
 
 <?php
