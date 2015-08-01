@@ -551,7 +551,8 @@ section#footer {
 }
 
 .paragraphs-items .field-item {
-	padding-bottom: 15px;
+	padding-bottom: 12px;
+    clear: both;
 }
 
 blockquote {
@@ -590,6 +591,10 @@ content: "\2014 \2009";
 .mfp-iframe-holder .mfp-content{
     width:auto;
     max-width: 700px !important;
+}
+
+.mfp-iframe-scaler iframe {
+    background-color: white !important;
 }
 
 .image-left,img.left,figure.left {

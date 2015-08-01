@@ -132,7 +132,7 @@ addthisevent.settings({
   <p><?php print render($content['field_event_cost']) ?></p>
 
   <p><h3><?php print render($content['field_event_registration_link']) ?></h3></p>
-
+  <p></p>
   <p><?php print render($content['field_event_files']) ?></p>
 
     <a href="#" title="Add to Calendar" class="addthisevent">
