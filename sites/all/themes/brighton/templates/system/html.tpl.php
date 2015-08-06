@@ -51,7 +51,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
-  
+  <link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700" media="all" />
   <link type="text/css" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" media="all" />
   <link type="text/css" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.0.2/yeti/bootstrap.min.css" media="all" />
   <?php print $styles; ?>
@@ -78,7 +78,6 @@
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-route.js"></script>
 <script src="/<?php print path_to_theme(); ?>/js/instagram.feed.js"></script>
-<link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700" media="all" />
 
 </body>
 </html>
