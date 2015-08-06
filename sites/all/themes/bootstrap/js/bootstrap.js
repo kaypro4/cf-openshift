@@ -123,7 +123,7 @@ var Drupal = Drupal || {};
       });
     },
     bootstrapAnchor: function (element) {
-      element.validAnchor = element.nodeName === 'A' && (location.hostname === element.hostname || !element.hostname) && element.hash.replace(/#/,'').length;
+      //element.validAnchor = element.nodeName === 'A' && (location.hostname === element.hostname || !element.hostname) && element.hash.replace(/#/,'').length;
       element.scrollTo = function(event) {
         var attr = 'id';
         var $target = $(element.hash);
