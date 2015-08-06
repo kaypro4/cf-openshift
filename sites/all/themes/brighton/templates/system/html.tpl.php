@@ -52,8 +52,7 @@
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
   <link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700" media="all" />
-  <link type="text/css" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" media="all" />
-  <link type="text/css" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.0.2/yeti/bootstrap.min.css" media="all" />
+  <link type="text/css" rel="stylesheet" href="/<?php print path_to_theme(); ?>/css/bootstrap.min.css" media="all" />
   <?php print $styles; ?>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <!-- HTML5 element support for IE6-8 -->
