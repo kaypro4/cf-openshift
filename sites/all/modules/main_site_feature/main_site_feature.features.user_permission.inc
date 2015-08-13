@@ -1037,7 +1037,9 @@ function main_site_feature_user_default_permissions() {
   // Exported permission: 'delete own page content'.
   $permissions['delete own page content'] = array(
     'name' => 'delete own page content',
-    'roles' => array(),
+    'roles' => array(
+      'Editor' => 'Editor',
+    ),
     'module' => 'node',
   );
 
@@ -1559,6 +1561,113 @@ function main_site_feature_user_default_permissions() {
     'module' => 'comment',
   );
 
+  // Exported permission: 'publish any article content'.
+  $permissions['publish any article content'] = array(
+    'name' => 'publish any article content',
+    'roles' => array(),
+    'module' => 'publishcontent',
+  );
+
+  // Exported permission: 'publish any content'.
+  $permissions['publish any content'] = array(
+    'name' => 'publish any content',
+    'roles' => array(
+      'Super User' => 'Super User',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'publishcontent',
+  );
+
+  // Exported permission: 'publish any event content'.
+  $permissions['publish any event content'] = array(
+    'name' => 'publish any event content',
+    'roles' => array(),
+    'module' => 'publishcontent',
+  );
+
+  // Exported permission: 'publish any orchard content'.
+  $permissions['publish any orchard content'] = array(
+    'name' => 'publish any orchard content',
+    'roles' => array(),
+    'module' => 'publishcontent',
+  );
+
+  // Exported permission: 'publish any page content'.
+  $permissions['publish any page content'] = array(
+    'name' => 'publish any page content',
+    'roles' => array(),
+    'module' => 'publishcontent',
+  );
+
+  // Exported permission: 'publish editable article content'.
+  $permissions['publish editable article content'] = array(
+    'name' => 'publish editable article content',
+    'roles' => array(),
+    'module' => 'publishcontent',
+  );
+
+  // Exported permission: 'publish editable content'.
+  $permissions['publish editable content'] = array(
+    'name' => 'publish editable content',
+    'roles' => array(
+      'Editor' => 'Editor',
+      'Super User' => 'Super User',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'publishcontent',
+  );
+
+  // Exported permission: 'publish editable event content'.
+  $permissions['publish editable event content'] = array(
+    'name' => 'publish editable event content',
+    'roles' => array(),
+    'module' => 'publishcontent',
+  );
+
+  // Exported permission: 'publish editable orchard content'.
+  $permissions['publish editable orchard content'] = array(
+    'name' => 'publish editable orchard content',
+    'roles' => array(),
+    'module' => 'publishcontent',
+  );
+
+  // Exported permission: 'publish editable page content'.
+  $permissions['publish editable page content'] = array(
+    'name' => 'publish editable page content',
+    'roles' => array(),
+    'module' => 'publishcontent',
+  );
+
+  // Exported permission: 'publish own article content'.
+  $permissions['publish own article content'] = array(
+    'name' => 'publish own article content',
+    'roles' => array(
+      'Blogger' => 'Blogger',
+    ),
+    'module' => 'publishcontent',
+  );
+
+  // Exported permission: 'publish own event content'.
+  $permissions['publish own event content'] = array(
+    'name' => 'publish own event content',
+    'roles' => array(),
+    'module' => 'publishcontent',
+  );
+
+  // Exported permission: 'publish own orchard content'.
+  $permissions['publish own orchard content'] = array(
+    'name' => 'publish own orchard content',
+    'roles' => array(),
+    'module' => 'publishcontent',
+  );
+
+  // Exported permission: 'publish own page content'.
+  $permissions['publish own page content'] = array(
+    'name' => 'publish own page content',
+    'roles' => array(),
+    'module' => 'publishcontent',
+  );
+
   // Exported permission: 'rename features'.
   $permissions['rename features'] = array(
     'name' => 'rename features',
@@ -1650,6 +1759,113 @@ function main_site_feature_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'password_policy',
+  );
+
+  // Exported permission: 'unpublish any article content'.
+  $permissions['unpublish any article content'] = array(
+    'name' => 'unpublish any article content',
+    'roles' => array(),
+    'module' => 'publishcontent',
+  );
+
+  // Exported permission: 'unpublish any content'.
+  $permissions['unpublish any content'] = array(
+    'name' => 'unpublish any content',
+    'roles' => array(
+      'Super User' => 'Super User',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'publishcontent',
+  );
+
+  // Exported permission: 'unpublish any event content'.
+  $permissions['unpublish any event content'] = array(
+    'name' => 'unpublish any event content',
+    'roles' => array(),
+    'module' => 'publishcontent',
+  );
+
+  // Exported permission: 'unpublish any orchard content'.
+  $permissions['unpublish any orchard content'] = array(
+    'name' => 'unpublish any orchard content',
+    'roles' => array(),
+    'module' => 'publishcontent',
+  );
+
+  // Exported permission: 'unpublish any page content'.
+  $permissions['unpublish any page content'] = array(
+    'name' => 'unpublish any page content',
+    'roles' => array(),
+    'module' => 'publishcontent',
+  );
+
+  // Exported permission: 'unpublish editable article content'.
+  $permissions['unpublish editable article content'] = array(
+    'name' => 'unpublish editable article content',
+    'roles' => array(),
+    'module' => 'publishcontent',
+  );
+
+  // Exported permission: 'unpublish editable content'.
+  $permissions['unpublish editable content'] = array(
+    'name' => 'unpublish editable content',
+    'roles' => array(
+      'Editor' => 'Editor',
+      'Super User' => 'Super User',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'publishcontent',
+  );
+
+  // Exported permission: 'unpublish editable event content'.
+  $permissions['unpublish editable event content'] = array(
+    'name' => 'unpublish editable event content',
+    'roles' => array(),
+    'module' => 'publishcontent',
+  );
+
+  // Exported permission: 'unpublish editable orchard content'.
+  $permissions['unpublish editable orchard content'] = array(
+    'name' => 'unpublish editable orchard content',
+    'roles' => array(),
+    'module' => 'publishcontent',
+  );
+
+  // Exported permission: 'unpublish editable page content'.
+  $permissions['unpublish editable page content'] = array(
+    'name' => 'unpublish editable page content',
+    'roles' => array(),
+    'module' => 'publishcontent',
+  );
+
+  // Exported permission: 'unpublish own article content'.
+  $permissions['unpublish own article content'] = array(
+    'name' => 'unpublish own article content',
+    'roles' => array(
+      'Blogger' => 'Blogger',
+    ),
+    'module' => 'publishcontent',
+  );
+
+  // Exported permission: 'unpublish own event content'.
+  $permissions['unpublish own event content'] = array(
+    'name' => 'unpublish own event content',
+    'roles' => array(),
+    'module' => 'publishcontent',
+  );
+
+  // Exported permission: 'unpublish own orchard content'.
+  $permissions['unpublish own orchard content'] = array(
+    'name' => 'unpublish own orchard content',
+    'roles' => array(),
+    'module' => 'publishcontent',
+  );
+
+  // Exported permission: 'unpublish own page content'.
+  $permissions['unpublish own page content'] = array(
+    'name' => 'unpublish own page content',
+    'roles' => array(),
+    'module' => 'publishcontent',
   );
 
   // Exported permission: 'update paragraph content banner_image'.
