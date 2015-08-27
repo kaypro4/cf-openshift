@@ -1437,6 +1437,82 @@ function main_site_feature_user_default_permissions() {
     'module' => 'webform',
   );
 
+  // Exported permission: 'enter article revision log entry'.
+  $permissions['enter article revision log entry'] = array(
+    'name' => 'enter article revision log entry',
+    'roles' => array(
+      'Editor' => 'Editor',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'enter event revision log entry'.
+  $permissions['enter event revision log entry'] = array(
+    'name' => 'enter event revision log entry',
+    'roles' => array(
+      'Editor' => 'Editor',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'enter faq_item revision log entry'.
+  $permissions['enter faq_item revision log entry'] = array(
+    'name' => 'enter faq_item revision log entry',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'enter fresh_sheet revision log entry'.
+  $permissions['enter fresh_sheet revision log entry'] = array(
+    'name' => 'enter fresh_sheet revision log entry',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'enter homepage_slide revision log entry'.
+  $permissions['enter homepage_slide revision log entry'] = array(
+    'name' => 'enter homepage_slide revision log entry',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'enter orchard revision log entry'.
+  $permissions['enter orchard revision log entry'] = array(
+    'name' => 'enter orchard revision log entry',
+    'roles' => array(
+      'Editor' => 'Editor',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'enter page revision log entry'.
+  $permissions['enter page revision log entry'] = array(
+    'name' => 'enter page revision log entry',
+    'roles' => array(
+      'Editor' => 'Editor',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'enter webform revision log entry'.
+  $permissions['enter webform revision log entry'] = array(
+    'name' => 'enter webform revision log entry',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
   // Exported permission: 'execute php code'.
   $permissions['execute php code'] = array(
     'name' => 'execute php code',
@@ -1536,6 +1612,450 @@ function main_site_feature_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'oauth_common',
+  );
+
+  // Exported permission: 'override article authored by option'.
+  $permissions['override article authored by option'] = array(
+    'name' => 'override article authored by option',
+    'roles' => array(
+      'Editor' => 'Editor',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override article authored on option'.
+  $permissions['override article authored on option'] = array(
+    'name' => 'override article authored on option',
+    'roles' => array(
+      'Editor' => 'Editor',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override article promote to front page option'.
+  $permissions['override article promote to front page option'] = array(
+    'name' => 'override article promote to front page option',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override article published option'.
+  $permissions['override article published option'] = array(
+    'name' => 'override article published option',
+    'roles' => array(
+      'Editor' => 'Editor',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override article revision option'.
+  $permissions['override article revision option'] = array(
+    'name' => 'override article revision option',
+    'roles' => array(
+      'Editor' => 'Editor',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override article sticky option'.
+  $permissions['override article sticky option'] = array(
+    'name' => 'override article sticky option',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override event authored by option'.
+  $permissions['override event authored by option'] = array(
+    'name' => 'override event authored by option',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override event authored on option'.
+  $permissions['override event authored on option'] = array(
+    'name' => 'override event authored on option',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override event promote to front page option'.
+  $permissions['override event promote to front page option'] = array(
+    'name' => 'override event promote to front page option',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override event published option'.
+  $permissions['override event published option'] = array(
+    'name' => 'override event published option',
+    'roles' => array(
+      'Editor' => 'Editor',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override event revision option'.
+  $permissions['override event revision option'] = array(
+    'name' => 'override event revision option',
+    'roles' => array(
+      'Editor' => 'Editor',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override event sticky option'.
+  $permissions['override event sticky option'] = array(
+    'name' => 'override event sticky option',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override faq_item authored by option'.
+  $permissions['override faq_item authored by option'] = array(
+    'name' => 'override faq_item authored by option',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override faq_item authored on option'.
+  $permissions['override faq_item authored on option'] = array(
+    'name' => 'override faq_item authored on option',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override faq_item promote to front page option'.
+  $permissions['override faq_item promote to front page option'] = array(
+    'name' => 'override faq_item promote to front page option',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override faq_item published option'.
+  $permissions['override faq_item published option'] = array(
+    'name' => 'override faq_item published option',
+    'roles' => array(
+      'Editor' => 'Editor',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override faq_item revision option'.
+  $permissions['override faq_item revision option'] = array(
+    'name' => 'override faq_item revision option',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override faq_item sticky option'.
+  $permissions['override faq_item sticky option'] = array(
+    'name' => 'override faq_item sticky option',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override fresh_sheet authored by option'.
+  $permissions['override fresh_sheet authored by option'] = array(
+    'name' => 'override fresh_sheet authored by option',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override fresh_sheet authored on option'.
+  $permissions['override fresh_sheet authored on option'] = array(
+    'name' => 'override fresh_sheet authored on option',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override fresh_sheet promote to front page option'.
+  $permissions['override fresh_sheet promote to front page option'] = array(
+    'name' => 'override fresh_sheet promote to front page option',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override fresh_sheet published option'.
+  $permissions['override fresh_sheet published option'] = array(
+    'name' => 'override fresh_sheet published option',
+    'roles' => array(
+      'Editor' => 'Editor',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override fresh_sheet revision option'.
+  $permissions['override fresh_sheet revision option'] = array(
+    'name' => 'override fresh_sheet revision option',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override fresh_sheet sticky option'.
+  $permissions['override fresh_sheet sticky option'] = array(
+    'name' => 'override fresh_sheet sticky option',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override homepage_slide authored by option'.
+  $permissions['override homepage_slide authored by option'] = array(
+    'name' => 'override homepage_slide authored by option',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override homepage_slide authored on option'.
+  $permissions['override homepage_slide authored on option'] = array(
+    'name' => 'override homepage_slide authored on option',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override homepage_slide promote to front page option'.
+  $permissions['override homepage_slide promote to front page option'] = array(
+    'name' => 'override homepage_slide promote to front page option',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override homepage_slide published option'.
+  $permissions['override homepage_slide published option'] = array(
+    'name' => 'override homepage_slide published option',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override homepage_slide revision option'.
+  $permissions['override homepage_slide revision option'] = array(
+    'name' => 'override homepage_slide revision option',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override homepage_slide sticky option'.
+  $permissions['override homepage_slide sticky option'] = array(
+    'name' => 'override homepage_slide sticky option',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override orchard authored by option'.
+  $permissions['override orchard authored by option'] = array(
+    'name' => 'override orchard authored by option',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override orchard authored on option'.
+  $permissions['override orchard authored on option'] = array(
+    'name' => 'override orchard authored on option',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override orchard promote to front page option'.
+  $permissions['override orchard promote to front page option'] = array(
+    'name' => 'override orchard promote to front page option',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override orchard published option'.
+  $permissions['override orchard published option'] = array(
+    'name' => 'override orchard published option',
+    'roles' => array(
+      'Editor' => 'Editor',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override orchard revision option'.
+  $permissions['override orchard revision option'] = array(
+    'name' => 'override orchard revision option',
+    'roles' => array(
+      'Editor' => 'Editor',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override orchard sticky option'.
+  $permissions['override orchard sticky option'] = array(
+    'name' => 'override orchard sticky option',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override page authored by option'.
+  $permissions['override page authored by option'] = array(
+    'name' => 'override page authored by option',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override page authored on option'.
+  $permissions['override page authored on option'] = array(
+    'name' => 'override page authored on option',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override page promote to front page option'.
+  $permissions['override page promote to front page option'] = array(
+    'name' => 'override page promote to front page option',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override page published option'.
+  $permissions['override page published option'] = array(
+    'name' => 'override page published option',
+    'roles' => array(
+      'Editor' => 'Editor',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override page revision option'.
+  $permissions['override page revision option'] = array(
+    'name' => 'override page revision option',
+    'roles' => array(
+      'Editor' => 'Editor',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override page sticky option'.
+  $permissions['override page sticky option'] = array(
+    'name' => 'override page sticky option',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override webform authored by option'.
+  $permissions['override webform authored by option'] = array(
+    'name' => 'override webform authored by option',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override webform authored on option'.
+  $permissions['override webform authored on option'] = array(
+    'name' => 'override webform authored on option',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override webform promote to front page option'.
+  $permissions['override webform promote to front page option'] = array(
+    'name' => 'override webform promote to front page option',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override webform published option'.
+  $permissions['override webform published option'] = array(
+    'name' => 'override webform published option',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override webform revision option'.
+  $permissions['override webform revision option'] = array(
+    'name' => 'override webform revision option',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override webform sticky option'.
+  $permissions['override webform sticky option'] = array(
+    'name' => 'override webform sticky option',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'override_node_options',
   );
 
   // Exported permission: 'perform backup'.
