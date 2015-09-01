@@ -158,7 +158,8 @@ function main_site_feature_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_collect_slide-field_image'
+  // Exported field_instance:
+  // 'field_collection_item-field_collect_slide-field_image'
   $field_instances['field_collection_item-field_collect_slide-field_image'] = array(
     'bundle' => 'field_collect_slide',
     'deleted' => 0,
@@ -200,16 +201,10 @@ function main_site_feature_field_default_field_instances() {
         'manualcrop_inline_crop' => 0,
         'manualcrop_instant_crop' => 0,
         'manualcrop_instant_preview' => 1,
-        'manualcrop_require_cropping' => array(
-          'banner_image' => 0,
-          'feature_image' => 0,
-          'homepage_slide' => 0,
-          'slideshow_4_3' => 0,
-        ),
+        'manualcrop_keyboard' => TRUE,
+        'manualcrop_maximize_default_crop_area' => FALSE,
+        'manualcrop_require_cropping' => array(),
         'manualcrop_styles_list' => array(
-          'banner_image' => 0,
-          'feature_image' => 0,
-          'homepage_slide' => 0,
           'slideshow_4_3' => 'slideshow_4_3',
         ),
         'manualcrop_styles_mode' => 'include',
@@ -222,7 +217,8 @@ function main_site_feature_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_collect_slide-field_slide_caption'
+  // Exported field_instance:
+  // 'field_collection_item-field_collect_slide-field_slide_caption'
   $field_instances['field_collection_item-field_collect_slide-field_slide_caption'] = array(
     'bundle' => 'field_collect_slide',
     'default_value' => NULL,
@@ -256,7 +252,8 @@ function main_site_feature_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_collect_slide-field_slide_title'
+  // Exported field_instance:
+  // 'field_collection_item-field_collect_slide-field_slide_title'
   $field_instances['field_collection_item-field_collect_slide-field_slide_title'] = array(
     'bundle' => 'field_collect_slide',
     'default_value' => NULL,
@@ -378,19 +375,11 @@ function main_site_feature_field_default_field_instances() {
         'manualcrop_inline_crop' => 0,
         'manualcrop_instant_crop' => 0,
         'manualcrop_instant_preview' => 0,
-        'manualcrop_require_cropping' => array(
-          'banner_image' => 0,
-          'feature_image' => 0,
-          'homepage_slide' => 0,
-          'profile_image' => 0,
-          'slideshow_4_3' => 0,
-        ),
+        'manualcrop_keyboard' => 1,
+        'manualcrop_maximize_default_crop_area' => 0,
+        'manualcrop_require_cropping' => array(),
         'manualcrop_styles_list' => array(
           'banner_image' => 'banner_image',
-          'feature_image' => 0,
-          'homepage_slide' => 0,
-          'profile_image' => 0,
-          'slideshow_4_3' => 0,
         ),
         'manualcrop_styles_mode' => 'include',
         'manualcrop_thumblist' => 0,
@@ -826,19 +815,11 @@ function main_site_feature_field_default_field_instances() {
         'manualcrop_inline_crop' => 0,
         'manualcrop_instant_crop' => 0,
         'manualcrop_instant_preview' => 0,
-        'manualcrop_require_cropping' => array(
-          'banner_image' => 0,
-          'feature_image' => 0,
-          'homepage_slide' => 0,
-          'profile_image' => 0,
-          'slideshow_4_3' => 0,
-        ),
+        'manualcrop_keyboard' => TRUE,
+        'manualcrop_maximize_default_crop_area' => FALSE,
+        'manualcrop_require_cropping' => array(),
         'manualcrop_styles_list' => array(
           'banner_image' => 'banner_image',
-          'feature_image' => 0,
-          'homepage_slide' => 0,
-          'profile_image' => 0,
-          'slideshow_4_3' => 0,
         ),
         'manualcrop_styles_mode' => 'include',
         'manualcrop_thumblist' => 0,
@@ -1973,13 +1954,11 @@ function main_site_feature_field_default_field_instances() {
         'manualcrop_inline_crop' => 0,
         'manualcrop_instant_crop' => 0,
         'manualcrop_instant_preview' => 0,
-        'manualcrop_require_cropping' => array(
-          'banner_image' => 0,
-          'homepage_slide' => 0,
-        ),
+        'manualcrop_keyboard' => TRUE,
+        'manualcrop_maximize_default_crop_area' => FALSE,
+        'manualcrop_require_cropping' => array(),
         'manualcrop_styles_list' => array(
           'banner_image' => 'banner_image',
-          'homepage_slide' => 0,
         ),
         'manualcrop_styles_mode' => 'include',
         'manualcrop_thumblist' => 0,
@@ -2155,7 +2134,8 @@ function main_site_feature_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'paragraphs_item-call_to_action-field_action_link_new'
+  // Exported field_instance:
+  // 'paragraphs_item-call_to_action-field_action_link_new'
   $field_instances['paragraphs_item-call_to_action-field_action_link_new'] = array(
     'bundle' => 'call_to_action',
     'default_value' => NULL,
@@ -2199,7 +2179,8 @@ function main_site_feature_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'paragraphs_item-call_to_action-field_action_link_text'
+  // Exported field_instance:
+  // 'paragraphs_item-call_to_action-field_action_link_text'
   $field_instances['paragraphs_item-call_to_action-field_action_link_text'] = array(
     'bundle' => 'call_to_action',
     'default_value' => NULL,
@@ -2364,7 +2345,8 @@ function main_site_feature_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'paragraphs_item-feature_block-field_feature_image'
+  // Exported field_instance:
+  // 'paragraphs_item-feature_block-field_feature_image'
   $field_instances['paragraphs_item-feature_block-field_feature_image'] = array(
     'bundle' => 'feature_block',
     'deleted' => 0,
@@ -2412,17 +2394,11 @@ function main_site_feature_field_default_field_instances() {
         'manualcrop_inline_crop' => 0,
         'manualcrop_instant_crop' => 0,
         'manualcrop_instant_preview' => 1,
-        'manualcrop_require_cropping' => array(
-          'banner_image' => 0,
-          'feature_image' => 0,
-          'homepage_slide' => 0,
-          'slideshow_4_3' => 0,
-        ),
+        'manualcrop_keyboard' => TRUE,
+        'manualcrop_maximize_default_crop_area' => FALSE,
+        'manualcrop_require_cropping' => array(),
         'manualcrop_styles_list' => array(
-          'banner_image' => 0,
           'feature_image' => 'feature_image',
-          'homepage_slide' => 0,
-          'slideshow_4_3' => 0,
         ),
         'manualcrop_styles_mode' => 'include',
         'manualcrop_thumblist' => 0,
@@ -2531,7 +2507,8 @@ function main_site_feature_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'paragraphs_item-feature_block-field_feature_title'
+  // Exported field_instance:
+  // 'paragraphs_item-feature_block-field_feature_title'
   $field_instances['paragraphs_item-feature_block-field_feature_title'] = array(
     'bundle' => 'feature_block',
     'default_value' => NULL,
@@ -2959,7 +2936,8 @@ function main_site_feature_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'paragraphs_item-upcoming_events_listing-field_event_categories'
+  // Exported field_instance:
+  // 'paragraphs_item-upcoming_events_listing-field_event_categories'
   $field_instances['paragraphs_item-upcoming_events_listing-field_event_categories'] = array(
     'bundle' => 'upcoming_events_listing',
     'default_value' => NULL,
@@ -2996,7 +2974,8 @@ function main_site_feature_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'paragraphs_item-upcoming_events_listing-field_listing_title'
+  // Exported field_instance:
+  // 'paragraphs_item-upcoming_events_listing-field_listing_title'
   $field_instances['paragraphs_item-upcoming_events_listing-field_listing_title'] = array(
     'bundle' => 'upcoming_events_listing',
     'default_value' => NULL,
@@ -3036,7 +3015,8 @@ function main_site_feature_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'paragraphs_item-upcoming_events_listing-field_summary'
+  // Exported field_instance:
+  // 'paragraphs_item-upcoming_events_listing-field_summary'
   $field_instances['paragraphs_item-upcoming_events_listing-field_summary'] = array(
     'bundle' => 'upcoming_events_listing',
     'default_value' => NULL,
@@ -3095,6 +3075,7 @@ function main_site_feature_field_default_field_instances() {
           'youtube_controls' => 0,
           'youtube_height' => '',
           'youtube_iv_load_policy' => 0,
+          'youtube_loop' => FALSE,
           'youtube_showinfo' => 1,
           'youtube_size' => 'responsive',
           'youtube_width' => '',
@@ -3377,19 +3358,11 @@ function main_site_feature_field_default_field_instances() {
         'manualcrop_inline_crop' => 0,
         'manualcrop_instant_crop' => 0,
         'manualcrop_instant_preview' => 1,
-        'manualcrop_require_cropping' => array(
-          'banner_image' => 0,
-          'feature_image' => 0,
-          'homepage_slide' => 0,
-          'profile_image' => 0,
-          'slideshow_4_3' => 0,
-        ),
+        'manualcrop_keyboard' => TRUE,
+        'manualcrop_maximize_default_crop_area' => FALSE,
+        'manualcrop_require_cropping' => array(),
         'manualcrop_styles_list' => array(
-          'banner_image' => 0,
-          'feature_image' => 0,
-          'homepage_slide' => 0,
           'profile_image' => 'profile_image',
-          'slideshow_4_3' => 0,
         ),
         'manualcrop_styles_mode' => 'include',
         'manualcrop_thumblist' => 0,

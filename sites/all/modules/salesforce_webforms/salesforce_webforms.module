@@ -328,7 +328,8 @@ function salesforce_webforms_get_object_fields($obj, $use_cache = TRUE) {
         time() + SALESFORCE_WEBFORMS_CACHE_DURATION);
     }
     catch (SalesforceException $e) {
-      drupal_set_message(check_plain($e->getMessage()), 'error');
+      drupal_set_message(t('Get Object fields: @msg', array('@msg' => $e->getMessage())), 'error');
+
       watchdog(
         'salesforce_webforms',
         'Salesforce Exception @code: @msg',
@@ -399,7 +400,7 @@ function salesforce_webforms_webform_component_info() {
     ),
 
     // Conditional comparison type.
-    'conditional_type' => 'select',
+    'conditional_type' => 'sf_picklist',
 
     'file' => 'salesforce_webforms.picklist.inc',
   );
@@ -476,10 +477,17 @@ function salesforce_webforms_map_save(array $values) {
  */
 function salesforce_webforms_save_fields($mapid, array $fields) {
   $i = 1;
-  foreach ($fields as $fname => $values) {
+  foreach ($fields as $fname => &$values) {
     // Only process if we are given source data.
-    if (isset($values['picklist']) && $values['picklist'] != '') {
-      $values['target'] = $values['picklist'];
+    if (isset($values['picklist'])) {
+      if (is_array($values['picklist'])) {
+        if (count($values['picklist']) > 0) {
+          $values['target'] = implode(';', $values['picklist']);
+        }
+      }
+      elseif ($values['picklist'] != '') {
+        $values['target'] = $values['picklist'];
+      }
     }
 
     if ($values['target']) {
@@ -521,7 +529,12 @@ function salesforce_webforms_webform_version() {
 /**
  * Implements hook_webform_submission_insert().
  */
-function salesforce_webforms_webform_submission_insert($node, $sub, $update = FALSE) {
+function salesforce_webforms_webform_submission_insert($node, $sub, $update = FALSE, $force_error_display = FALSE) {
+  // Skip if draft.
+  if ($sub->is_draft) {
+    return;
+  }
+
   // Get the version of Webform to know how to filter.
   $webform_version = salesforce_webforms_webform_version();
 
@@ -531,6 +544,13 @@ function salesforce_webforms_webform_submission_insert($node, $sub, $update = FA
     return;
   }
   else {
+    // Load the settings.
+    $settings = salesforce_webforms_settings_get($node->nid);
+    if ($force_error_display) {
+      // In admin. Always show error messages.
+      $settings['suppress_errors'] = FALSE;
+    }
+
     if ($update) {
       // Get any existing keys.
       $existing_keys = salesforce_webforms_get_submission_keys($sub->sid);
@@ -553,17 +573,21 @@ function salesforce_webforms_webform_submission_insert($node, $sub, $update = FA
         $source = $field['source_data'];
         $key = $field['keyfield'];
 
-        $filtered_source = _webform_filter_values($source, $node, $sub, NULL, NULL, TRUE);
-
         // See if we're running on webform 3.x. If so, replace tokens.
-        if ($webform_version < 4 && $filtered_source != '') {
-          $tokens = array(
-            'node' => $node,
-            'webform-submission' => $sub,
-          );
+        if ($webform_version < 4) {
+          $filtered_source = _webform_filter_values($source, $node, $sub, NULL, FALSE);
+          if ($filtered_source != '') {
+            $tokens = array(
+              'node' => $node,
+              'webform-submission' => $sub,
+            );
 
-          $new = token_replace($filtered_source, $tokens, array('clear' => TRUE));
-          $filtered_source = $new;
+            $new = token_replace($filtered_source, $tokens, array('clear' => TRUE));
+            $filtered_source = $new;
+          }
+        }
+        else {
+          $filtered_source = webform_replace_tokens($source, $node, $sub, NULL, FALSE);
         }
 
         if ($key) {
@@ -580,7 +604,7 @@ function salesforce_webforms_webform_submission_insert($node, $sub, $update = FA
       }
 
       // See if we are always creating new, or trying to update existing.
-      $target_id = $existing_keys[$mapname];
+      $target_id = isset($existing_keys[$mapname]) ? $existing_keys[$mapname] : FALSE;
       if (!$target_id && count($keyfields) > 0) {
         // Try to find the ID.
         $sql = "SELECT Id FROM $object WHERE ";
@@ -589,18 +613,27 @@ function salesforce_webforms_webform_submission_insert($node, $sub, $update = FA
           $sql .= "$union$field = '$val'";
           $union = " AND ";
         }
-        $res = _salesforce_webforms_fetch("query?q=" . urlencode($sql));
+        $res = _salesforce_webforms_fetch("query?q=" . urlencode($sql), FALSE, $settings['suppress_errors']);
         if (count($res['records']) > 0) {
           $target_id = $res['records'][0]['Id'];
         }
       }
 
+      // Add hook_salesforce_webforms_push_params_alter.
+      $context = array(
+        'map' => $map,
+        'node' => $node,
+        'submission' => $sub,
+        'id' => $target_id,
+      );
+      drupal_alter('salesforce_webforms_save_submission', $fields, $context);
+
       if ($target_id) {
         // Do an update.
-        $res = salesforce_webforms_update_object($object, $target_id, $fields);
+        $res = salesforce_webforms_update_object($object, $target_id, $fields, $settings['suppress_errors']);
       }
       else {
-        $res = salesforce_webforms_create_object($object, $fields);
+        $res = salesforce_webforms_create_object($object, $fields, $settings['suppress_errors']);
         $target_id = $res['id'];
       }
 
@@ -618,6 +651,14 @@ function salesforce_webforms_webform_submission_insert($node, $sub, $update = FA
 
     module_invoke_all('salesforce_webforms_save_submission', $mapped_ids, $sub->sid);
   }
+}
+
+/**
+ * Implements hook_webform_submission_update().
+ */
+function salesforce_webforms_webform_submission_update($node, $sub) {
+  // Call the insert hook, with instructions to update any existing maps.
+  salesforce_webforms_webform_submission_insert($node, $sub, TRUE);
 }
 
 /**
@@ -733,6 +774,40 @@ function salesforce_webforms_webform_select_options_info() {
 }
 
 /**
+ * Implements hook_webform_conditional_operator_info().
+ */
+function salesforce_webforms_webform_conditional_operator_info() {
+  return array(
+    'sf_picklist' => array(
+      'equal' => array(
+        'label' => t('is'),
+        'comparison callback' => 'webform_conditional_operator_string_equal',
+        'js comparison callback' => 'conditionalOperatorStringEqual',
+        'form callback' => 'salesforce_webforms_conditional_select',
+      ),
+      'not_equal' => array(
+        'label' => t('is not'),
+        'comparison callback' => 'webform_conditional_operator_string_not_equal',
+        'js comparison callback' => 'conditionalOperatorStringNotEqual',
+        'form callback' => 'salesforce_webforms_conditional_select',
+      ),
+      'empty' => array(
+        'label' => t('is empty'),
+        'comparison callback' => 'webform_conditional_operator_string_empty',
+        'js comparison callback' => 'conditionalOperatorStringEmpty',
+        'form callback' => FALSE,
+      ),
+      'not_empty' => array(
+        'label' => t('is not empty'),
+        'comparison callback' => 'webform_conditional_operator_string_not_empty',
+        'js comparison callback' => 'conditionalOperatorStringNotEmpty',
+        'form callback' => FALSE,
+      ),
+    ),
+  );
+}
+
+/**
  * Callback to build the list of records of the given object.
  *
  * @param array $object
@@ -750,6 +825,38 @@ function salesforce_webforms_object_select_list(array $object) {
 }
 
 /**
+ * Callback for picklist conditional fields.
+ *
+ * Patterned after webform_conditional_form_select() from webform module.
+ */
+function salesforce_webforms_conditional_select($node) {
+  static $count = 0;
+  $forms = array();
+
+  webform_component_include('sf_picklist');
+  foreach ($node->webform['components'] as $cid => $component) {
+    if (webform_component_property($component['type'], 'conditional_type') == 'sf_picklist') {
+      list($options) = _webform_sf_picklist_options($component);
+      $element = array(
+        '#type' => 'select',
+        '#multiple' => FALSE,
+        '#size' => NULL,
+        '#attributes' => array(),
+        '#id' => NULL,
+        '#name' => 'webform-conditional-sf-picklist-' . $cid . '-' . $count,
+        '#options' => $options,
+        '#parents' => array(),
+      );
+
+      $forms[$cid] = drupal_render($element);
+    }
+  }
+
+  $count++;
+  return $forms;
+}
+
+/**
  * Loads data from Salesforce, optionally thorugh a cache.
  *
  * @param string $url
@@ -761,7 +868,7 @@ function salesforce_webforms_object_select_list(array $object) {
  * @return array
  *   The Salesforce response data.
  */
-function _salesforce_webforms_fetch($url, $use_cache = TRUE) {
+function _salesforce_webforms_fetch($url, $use_cache = TRUE, $suppress_errors = FALSE) {
   $data = NULL;
   // Do we need to switch languages for the connection?
   $lang = salesforce_webforms_language_prefix();
@@ -787,7 +894,10 @@ function _salesforce_webforms_fetch($url, $use_cache = TRUE) {
     $data = $sf->apiCall($url);
   }
   catch (SalesforceException $e) {
-    drupal_set_message(check_plain($e->getMessage()), 'error');
+    if (!$suppress_errors) {
+      drupal_set_message(t('Salesforce webforms fetch data: @msg', array('@msg' => $e->getMessage())), 'error');
+    }
+
     watchdog(
       'salesforce_webforms',
       'Salesforce Exception @code: @msg',
@@ -889,7 +999,7 @@ function salesforce_webforms_queue_obj($objlist) {
  * @return array|NULL
  *   The Salesforce response as an array.
  */
-function salesforce_webforms_update_object($object, $id, array $fields) {
+function salesforce_webforms_update_object($object, $id, array $fields, $suppress_errors = FALSE) {
   $sf = salesforce_webforms_get_sfapi();
   if (!$sf->isAuthorized()) {
     return NULL;
@@ -899,7 +1009,10 @@ function salesforce_webforms_update_object($object, $id, array $fields) {
     $res = $sf->objectUpsert($object, 'id', $id, $fields);
   }
   catch (SalesforceException $e) {
-    drupal_set_message(check_plain($e->getMessage()), 'error');
+    if (!$suppress_errors) {
+      drupal_set_message(t('Error updating Salesforce object: @msg', array('@msg' => $e->getMessage())), 'error');
+    }
+
     watchdog(
       'salesforce_webforms',
       'Salesforce Exception @code: @msg',
@@ -926,13 +1039,16 @@ function salesforce_webforms_update_object($object, $id, array $fields) {
  * @return array|NULL
  *   The Salesforce response as an array.
  */
-function salesforce_webforms_create_object($object, array $fields) {
+function salesforce_webforms_create_object($object, array $fields, $suppress_errors = FALSE) {
   $sf = salesforce_webforms_get_sfapi();
   try {
     $res = $sf->objectCreate($object, $fields);
   }
   catch (SalesforceException $e) {
-    drupal_set_message(check_plain($e->getMessage()), 'error');
+    if (!$suppress_errors) {
+      drupal_set_message(t('Error creating Salesforce object: @msg', array('@msg' => $e->getMessage())), 'error');
+    }
+
     watchdog(
       'salesforce_webforms',
       'Salesforce Exception @code: @msg',
@@ -1157,9 +1273,14 @@ function salesforce_webforms_get_picklist_options($limit = TRUE) {
  * In most cases, SalesForce and Drupal use the same code. However,
  * for English, Drupal, uses 'en' while SalesForce expects 'en_US'
  */
-function salesforce_webforms_language_code($language = null) {
-  if(!isset($language)) $language = $GLOBALS['language']->language;
-  if($language == 'en') $language = 'en_US';
+function salesforce_webforms_language_code($language = NULL) {
+  if (!isset($language)) {
+    $language = $GLOBALS['language']->language;
+  }
+
+  if ($language == 'en') {
+    $language = 'en_US';
+  }
 
   return $language;
 }

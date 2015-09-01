@@ -19,6 +19,7 @@
  */
 function salesforce_webforms_maps_form($form, &$form_state, $node) {
   $maps = salesforce_webforms_get_webform_maps($node);
+  $settings = salesforce_webforms_settings_get($node->nid);
 
   $form = array(
     '#tree' => TRUE,
@@ -29,7 +30,31 @@ function salesforce_webforms_maps_form($form, &$form_state, $node) {
       '#type' => 'value',
       '#value' => $node->nid,
     ),
+    'settings' => array(
+      '#type' => 'fieldset',
+      '#title' => t('Settings'),
+      'suppress_errors' => array(
+        '#title' => t('Suppress Errors?'),
+        '#description' => t('Check this field to suppress display of Salesforce error messages when a user submits this form. Note that this setting has no effect on errors produced when resubmitting results through the admin UI, or on error messages sent to the system log.'),
+        '#type' => 'checkboxes',
+        '#options' => array(
+          '1' => t('Yes'),
+        ),
+        '#default_value' => $settings['suppress_errors'] ? array('1') : array(),
+      ),
+    ),
+    'helptext' => array(
+      '#type' => 'markup',
+      '#markup' => t("Maps are used to allow multiple Salesforce objects to be updated / inserted from a single form.  Typically, you will have only one map per Salesforce object, unless the intent is to create/update multiple records of the same object from one form.  For each map that you want to use to update an existing object, you will need to specify the key(s) as well as the fields you want updated."),
+    ),
   );
+
+  if (isset($settings['settingid'])) {
+    $form['settingid'] = array(
+      '#type' => 'value',
+      '#value' => $settings['settingid'],
+    );
+  }
 
   $objects = salesforce_webforms_get_objects_selection();
 
@@ -171,7 +196,7 @@ function theme_salesforce_webforms_maps_form(array $vars) {
 
   $header = array(
     t('Map name'),
-    t('Object'),
+    t('Salesforce Object'),
     t('Fields (* indicates key field)'),
     t('Weight'),
     array(
@@ -234,6 +259,18 @@ function theme_salesforce_webforms_maps_form(array $vars) {
  * @see salesforce_webforms_maps_form()
  */
 function salesforce_webforms_maps_form_submit($form, &$state) {
+  // Save the settings.
+  $settings = array(
+    'nid' => $state['values']['nid'],
+    'suppress_errors' => $state['values']['settings']['suppress_errors'],
+  );
+
+  if (isset($state['values']['settingid'])) {
+    $settings['settingid'] = $state['values']['settingid'];
+  }
+
+  salesforce_webforms_settings_save($settings);
+
   if (isset($state['values']['maps']) && !empty($state['values']['maps'])) {
     foreach ($state['values']['maps'] as $id => $map) {
       db_update('salesforce_webforms_map')
@@ -386,11 +423,23 @@ function salesforce_webforms_resubmit($form, $form_state, $node, $sub) {
  * @see salesforce_webforms_resubmit()
  */
 function salesforce_webforms_resubmit_submit($form, $form_state) {
+  // Load the submission if not already in the state (Webform 3.x).
+  if (!isset($form_state['submission'])) {
+    $sid = $form_state['values']['sid'];
+    $submissions = webform_get_submissions(array('sid' => $sid));
+    $form_state['submission'] = $submissions[$sid];
+  }
   $sub = $form_state['submission'];
+
   $update = $form_state['values']['update']['1'];
+
+  // Load the node if not already in the state (Webform 3.x).
+  if (!isset($form_state['node'])) {
+    $form_state['node'] = node_load($sub->nid);
+  }
   $node = $form_state['node'];
 
-  salesforce_webforms_webform_submission_insert($node, $sub, $update);
+  salesforce_webforms_webform_submission_insert($node, $sub, $update, TRUE);
 
   drupal_set_message(t('Salesforce updated'));
 }
@@ -508,6 +557,7 @@ function salesforce_webforms_manage_map($form, $form_state, $node, $action, $obj
     $tmp = array(
       '#title' => t('Source data'),
       '#required' => FALSE,
+      '#description' => t('Select Token or Constant to insert/update or to use as the key value for this field.  Typically this will be the token [submission:values:?] where ? is replaced with the field key.  See more details under Webform submission values by clicking on Browse available tokens.'),
     );
 
     if ($fdata['type'] == 'textarea') {
@@ -525,6 +575,14 @@ function salesforce_webforms_manage_map($form, $form_state, $node, $action, $obj
         '#type' => 'select',
         '#title' => t('Or select a predefined value'),
         '#options' => salesforce_webforms_picklist_select($fdata['picklistValues']),
+      );
+    }
+    elseif ($fdata['type'] == 'multipicklist') {
+      $form['map']['map_fields'][$fname]['picklist'] = array(
+        '#type' => 'select',
+        '#multiple' => TRUE,
+        '#title' => t('Or select predefined value(s)'),
+        '#options' => salesforce_webforms_picklist_select($fdata['picklistValues'], FALSE),
       );
     }
     elseif ($fdata['type'] == 'boolean') {
@@ -554,12 +612,14 @@ function salesforce_webforms_manage_map($form, $form_state, $node, $action, $obj
 
     // Did we add a picklist?
     if (isset($form['map']['map_fields'][$fname]['picklist'])) {
+      $field = $form['map']['map_fields'][$fname]['picklist'];
+      $multiple = isset($field['#multiple']) ? $field['#multiple'] : FALSE;
       $form['map']['map_fields'][$fname]['target']['#states'] = array(
         'enabled' => array(
-          ':input[name="map_fields[' . $fname . '][picklist]"]' => array('value' => ''),
+          ':input[name^="map_fields[' . $fname . '][picklist]"]' => $multiple ? array('select_not_empty' => FALSE) : array('value' => ''),
         ),
         'disabled' => array(
-          ':input[name="map_fields[' . $fname . '][picklist]"]' => array('!value' => ''),
+          ':input[name^="map_fields[' . $fname . '][picklist]"]' => $multiple ? array('select_not_empty' => TRUE) : array('!value' => ''),
         ),
       );
     }
@@ -576,8 +636,8 @@ function salesforce_webforms_manage_map($form, $form_state, $node, $action, $obj
     foreach ($map['fields'] as $field) {
       $form['map']['map_fields'][$field['sf_fieldname']]['#collapsed'] = FALSE;
       $form['map']['map_fields'][$field['sf_fieldname']]['target']['#default_value'] = $field['source_data'];
-      if ($form['map']['map_fields'][$field['sf_fieldname']]['picklist']) {
-        $form['map']['map_fields'][$field['sf_fieldname']]['picklist']['#default_value'] = array($field['source_data']);
+      if (isset($form['map']['map_fields'][$field['sf_fieldname']]['picklist'])) {
+        $form['map']['map_fields'][$field['sf_fieldname']]['picklist']['#default_value'] = $multiple ? explode(';', $field['source_data']) : array($field['source_data']);
       }
       $form['map']['map_fields'][$field['sf_fieldname']]['keyfield']['#default_value'] = $field['keyfield'] ? array('1') : array();
     }
@@ -588,6 +648,8 @@ function salesforce_webforms_manage_map($form, $form_state, $node, $action, $obj
     '#value' => (isset($map['mapid'])) ? t('Save map') : t('Add map'),
     '#weight' => 25,
   );
+
+  $form['#attached']['js'][] = drupal_get_path('module', 'salesforce_webforms') . '/js/salesforce-admin.js';
 
   return $form;
 }
@@ -728,8 +790,13 @@ function salesforce_webforms_config($form, $form_state) {
  * @return array
  *   An array suitable for use as an 'options' element in a form.
  */
-function salesforce_webforms_picklist_select(array $picklist) {
-  $options = array('' => t('- Select -'));
+function salesforce_webforms_picklist_select(array $picklist, $include_select = TRUE) {
+  if ($include_select) {
+    $options = array('' => t('- Select -'));
+  }
+  else {
+    $options = array();
+  }
 
   foreach ($picklist as $pick) {
     if ($pick['active']) {

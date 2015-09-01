@@ -37,17 +37,9 @@ function main_site_feature_image_default_styles() {
 
   // Exported image style: banner_image.
   $styles['banner_image'] = array(
-    'name' => 'banner_image',
     'label' => 'Banner Image',
     'effects' => array(
       5 => array(
-        'label' => 'Crop and scale manually',
-        'help' => 'Crop and scale a user-selected area, respecting the ratio of the destination width and height.',
-        'effect callback' => 'manualcrop_crop_and_scale_effect',
-        'dimensions callback' => 'image_resize_dimensions',
-        'form callback' => 'manualcrop_crop_and_scale_form',
-        'summary theme' => 'manualcrop_crop_and_scale_summary',
-        'module' => 'manualcrop',
         'name' => 'manualcrop_crop_and_scale',
         'data' => array(
           'width' => 831,
@@ -60,13 +52,6 @@ function main_site_feature_image_default_styles() {
         'weight' => 0,
       ),
       6 => array(
-        'label' => 'Scale and crop',
-        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
-        'effect callback' => 'image_scale_and_crop_effect',
-        'dimensions callback' => 'image_resize_dimensions',
-        'form callback' => 'image_resize_form',
-        'summary theme' => 'image_resize_summary',
-        'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 831,
@@ -79,17 +64,9 @@ function main_site_feature_image_default_styles() {
 
   // Exported image style: feature_image.
   $styles['feature_image'] = array(
-    'name' => 'feature_image',
     'label' => 'Feature Image',
     'effects' => array(
       1 => array(
-        'label' => 'Manual crop',
-        'help' => 'Crop a freely user-selected area.',
-        'effect callback' => 'manualcrop_crop_effect',
-        'dimensions callback' => 'image_resize_dimensions',
-        'form callback' => 'manualcrop_crop_form',
-        'summary theme' => 'manualcrop_crop_summary',
-        'module' => 'manualcrop',
         'name' => 'manualcrop_crop',
         'data' => array(
           'width' => 680,
@@ -100,13 +77,6 @@ function main_site_feature_image_default_styles() {
         'weight' => 0,
       ),
       2 => array(
-        'label' => 'Scale and crop',
-        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
-        'effect callback' => 'image_scale_and_crop_effect',
-        'dimensions callback' => 'image_resize_dimensions',
-        'form callback' => 'image_resize_form',
-        'summary theme' => 'image_resize_summary',
-        'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 680,
@@ -119,17 +89,9 @@ function main_site_feature_image_default_styles() {
 
   // Exported image style: profile_image.
   $styles['profile_image'] = array(
-    'name' => 'profile_image',
     'label' => 'Profile Image',
     'effects' => array(
       3 => array(
-        'label' => 'Manual crop',
-        'help' => 'Crop a freely user-selected area.',
-        'effect callback' => 'manualcrop_crop_effect',
-        'dimensions callback' => 'image_resize_dimensions',
-        'form callback' => 'manualcrop_crop_form',
-        'summary theme' => 'manualcrop_crop_summary',
-        'module' => 'manualcrop',
         'name' => 'manualcrop_crop',
         'data' => array(
           'width' => 100,
@@ -140,13 +102,6 @@ function main_site_feature_image_default_styles() {
         'weight' => 0,
       ),
       4 => array(
-        'label' => 'Scale and crop',
-        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
-        'effect callback' => 'image_scale_and_crop_effect',
-        'dimensions callback' => 'image_resize_dimensions',
-        'form callback' => 'image_resize_form',
-        'summary theme' => 'image_resize_summary',
-        'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 100,
@@ -159,17 +114,9 @@ function main_site_feature_image_default_styles() {
 
   // Exported image style: slideshow_4_3.
   $styles['slideshow_4_3'] = array(
-    'name' => 'slideshow_4_3',
     'label' => 'Slideshow 4:3',
     'effects' => array(
       5 => array(
-        'label' => 'Manual crop',
-        'help' => 'Crop a freely user-selected area.',
-        'effect callback' => 'manualcrop_crop_effect',
-        'dimensions callback' => 'image_resize_dimensions',
-        'form callback' => 'manualcrop_crop_form',
-        'summary theme' => 'manualcrop_crop_summary',
-        'module' => 'manualcrop',
         'name' => 'manualcrop_crop',
         'data' => array(
           'width' => 831,
@@ -180,13 +127,6 @@ function main_site_feature_image_default_styles() {
         'weight' => 0,
       ),
       6 => array(
-        'label' => 'Scale and crop',
-        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
-        'effect callback' => 'image_scale_and_crop_effect',
-        'dimensions callback' => 'image_resize_dimensions',
-        'form callback' => 'image_resize_form',
-        'summary theme' => 'image_resize_summary',
-        'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 831,

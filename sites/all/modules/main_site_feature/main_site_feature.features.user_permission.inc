@@ -392,6 +392,13 @@ function main_site_feature_user_default_permissions() {
     'module' => 'linkchecker',
   );
 
+  // Exported permission: 'administer manualcrop settings'.
+  $permissions['administer manualcrop settings'] = array(
+    'name' => 'administer manualcrop settings',
+    'roles' => array(),
+    'module' => 'manualcrop',
+  );
+
   // Exported permission: 'administer media'.
   $permissions['administer media'] = array(
     'name' => 'administer media',
@@ -878,6 +885,13 @@ function main_site_feature_user_default_permissions() {
     'module' => 'paragraphs_bundle_permissions',
   );
 
+  // Exported permission: 'create salesforce mapping object'.
+  $permissions['create salesforce mapping object'] = array(
+    'name' => 'create salesforce mapping object',
+    'roles' => array(),
+    'module' => 'salesforce_mapping',
+  );
+
   // Exported permission: 'create url aliases'.
   $permissions['create url aliases'] = array(
     'name' => 'create url aliases',
@@ -1170,6 +1184,13 @@ function main_site_feature_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'delete salesforce mapping object'.
+  $permissions['delete salesforce mapping object'] = array(
+    'name' => 'delete salesforce mapping object',
+    'roles' => array(),
+    'module' => 'salesforce_mapping',
+  );
+
   // Exported permission: 'delete terms in calendar_event_category'.
   $permissions['delete terms in calendar_event_category'] = array(
     'name' => 'delete terms in calendar_event_category',
@@ -1399,6 +1420,13 @@ function main_site_feature_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'webform',
+  );
+
+  // Exported permission: 'edit salesforce mapping object'.
+  $permissions['edit salesforce mapping object'] = array(
+    'name' => 'edit salesforce mapping object',
+    'roles' => array(),
+    'module' => 'salesforce_mapping',
   );
 
   // Exported permission: 'edit terms in calendar_event_category'.
@@ -2526,6 +2554,20 @@ function main_site_feature_user_default_permissions() {
     'module' => 'panels',
   );
 
+  // Exported permission: 'use manualcrop'.
+  $permissions['use manualcrop'] = array(
+    'name' => 'use manualcrop',
+    'roles' => array(
+      'Blogger' => 'Blogger',
+      'Editor' => 'Editor',
+      'Super User' => 'Super User',
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'manualcrop',
+  );
+
   // Exported permission: 'use page manager'.
   $permissions['use page manager'] = array(
     'name' => 'use page manager',
@@ -2581,6 +2623,91 @@ function main_site_feature_user_default_permissions() {
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'filter',
+  );
+
+  // Exported permission: 'view any unpublished article content'.
+  $permissions['view any unpublished article content'] = array(
+    'name' => 'view any unpublished article content',
+    'roles' => array(
+      'Editor' => 'Editor',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'view_unpublished',
+  );
+
+  // Exported permission: 'view any unpublished content'.
+  $permissions['view any unpublished content'] = array(
+    'name' => 'view any unpublished content',
+    'roles' => array(
+      'Super User' => 'Super User',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'view_unpublished',
+  );
+
+  // Exported permission: 'view any unpublished event content'.
+  $permissions['view any unpublished event content'] = array(
+    'name' => 'view any unpublished event content',
+    'roles' => array(
+      'Editor' => 'Editor',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'view_unpublished',
+  );
+
+  // Exported permission: 'view any unpublished faq_item content'.
+  $permissions['view any unpublished faq_item content'] = array(
+    'name' => 'view any unpublished faq_item content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'view_unpublished',
+  );
+
+  // Exported permission: 'view any unpublished fresh_sheet content'.
+  $permissions['view any unpublished fresh_sheet content'] = array(
+    'name' => 'view any unpublished fresh_sheet content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'view_unpublished',
+  );
+
+  // Exported permission: 'view any unpublished homepage_slide content'.
+  $permissions['view any unpublished homepage_slide content'] = array(
+    'name' => 'view any unpublished homepage_slide content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'view_unpublished',
+  );
+
+  // Exported permission: 'view any unpublished orchard content'.
+  $permissions['view any unpublished orchard content'] = array(
+    'name' => 'view any unpublished orchard content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'view_unpublished',
+  );
+
+  // Exported permission: 'view any unpublished page content'.
+  $permissions['view any unpublished page content'] = array(
+    'name' => 'view any unpublished page content',
+    'roles' => array(
+      'Editor' => 'Editor',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'view_unpublished',
+  );
+
+  // Exported permission: 'view any unpublished webform content'.
+  $permissions['view any unpublished webform content'] = array(
+    'name' => 'view any unpublished webform content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'view_unpublished',
   );
 
   // Exported permission: 'view disqus comments'.
@@ -2759,12 +2886,10 @@ function main_site_feature_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: 'view salesforce mapping'.
-  $permissions['view salesforce mapping'] = array(
-    'name' => 'view salesforce mapping',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
+  // Exported permission: 'view salesforce mapping object'.
+  $permissions['view salesforce mapping object'] = array(
+    'name' => 'view salesforce mapping object',
+    'roles' => array(),
     'module' => 'salesforce_mapping',
   );
 

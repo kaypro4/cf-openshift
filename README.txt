@@ -1,5 +1,5 @@
 
-CONTENTS OF THIS FILE CHANGE
+CONTENTS OF THIS FILE
 ---------------------
 
  * About Drupal
